@@ -1,0 +1,11 @@
+# Original Age of Empires II localization data
+/source/**
+!/source/README.md
+
+# Generated output
+/dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
