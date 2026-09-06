@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "description": "Reviewed extraction metadata only; no adopted translations. See docs/phase1a.md.",
+  "name_to_help_offsets": [21000, 12000, 11000],
+  "heading_aliases": {"Blackwood Archers": "Blackwood Archer", "Elite Blackwood Archers": "Elite Blackwood Archer", "Champions": "Champion"},
+  "file_families": {
+    "key-value-paphos-strings-utf8.txt": "chronicles",
+    "paphos-campaign-key-value-strings-utf8.txt": "chronicles",
+    "providence-campaign-key-value-strings-utf8.txt": "chronicles"
+  },
+  "dlc_help_ids": {
+    "the_last_chieftains": ["26506", "26507", "26508", "26509", "26510", "26511", "26512", "26513", "26514", "26515", "26516", "26517", "26519", "26520", "26521", "26522", "26526", "28487", "28488", "28489", "28490", "28491", "28492", "28493", "28494", "28495", "28496", "28497", "28498", "28499"]
+  },
+  "dlc_civ_ids": {"the_last_chieftains": ["120206", "120207", "120208"]},
+  "series": {
+    "eagle": ["5672", "5671", "5673"],
+    "ram": ["5094", "5289", "5446"],
+    "champi": ["5526", "5506", "5507", "5508"]
+  },
+  "review_links": [{"name_id": "17490", "help_id": "28490", "basis": "Inspected adjacent compact technology labels; correspondence requires review"}]
+}

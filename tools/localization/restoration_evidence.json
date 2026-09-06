@@ -1,0 +1,27 @@
+{
+  "5510": {
+    "hd_en_sha256": "24f1fc25f88567ce12c4789403d862860ef8c2094b46052d671887c6a3587d12",
+    "de_en_sha256": "1f88152d41ab5726be2d138eaa556c213351e407419b23fc27aeb4fb965d7ef5",
+    "reason": "Historical flag object is now a trainable warrior; name/help reference 26510 confirms the current unit context."
+  },
+  "5512": {
+    "hd_en_sha256": "9b94c8f406b214a20ddfac1b9cb835505c75fc9481e2008bb0710a2b54d7eac5",
+    "de_en_sha256": "8a4668452c9e347cfc223acdb39249f4b638ccaa6271185788b629157827d565",
+    "reason": "Historical bridge segment is now a trainable Kona unit; current name/help reference 26512."
+  },
+  "5514": {
+    "hd_en_sha256": "ec2ab9b89bf2a451025909d4a41fc2e720b6971e6038c05bbd76fd761a333bfc",
+    "de_en_sha256": "17d422b2949ae97742dc5a542e25a07e1c78bfb07251b516d26342696acf830c",
+    "reason": "Historical bridge segment is now a trainable Bolas Rider unit; current name/help reference 26514."
+  },
+  "5516": {
+    "hd_en_sha256": "f8330311130d5514c41adc15bea37923bdf63dce8c1ed484c71a47adaa004a1d",
+    "de_en_sha256": "01c171ebf503d4f730807549d47e2ce48e50b2753edb905c5ddf565d3fe2a012",
+    "reason": "Historical bridge segment is now a trainable Blackwood Archer unit; current name/help reference 26516."
+  },
+  "5522": {
+    "hd_en_sha256": "b2d33fed4432989d04574bcc4f44397869b2cbf0a09bdfbcfc0bc9809c7c0da9",
+    "de_en_sha256": "67c6556fac8d4409a6101fc8c3a6050d602687f0b08043a5cced6f4cc2de1e85",
+    "reason": "Historical pavilion object is now a trainable Ibirapema Warrior; current name/help reference 26522."
+  }
+}

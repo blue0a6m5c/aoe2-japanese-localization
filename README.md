@@ -15,7 +15,7 @@ This project aims to systematically review these strings and produce a coherent 
 The general principles are:
 
 - Preserve established terminology from the original Japanese releases of Age of Empires II where appropriate.
-- Restore legacy terminology where later changes provide no clear improvement.
+- Use official AoK/AoC Japanese terminology as the default baseline; record specific exceptions before preferring changed DE terminology.
 - Correct mistranslations, omissions, inconsistent terminology, typographical errors, and malformed strings.
 - Improve awkward or unclear Japanese while preserving the meaning of the English source.
 - Apply the localization conventions of classic AoE II consistently to content introduced in later expansions.
@@ -63,10 +63,17 @@ Phase 0.5 also extracts AoK/AoC Japanese RT_STRING resources from local DLLs wit
 Legacy datasets join the existing search and String ID views automatically when present; no external dependencies are required.
 See [Legacy extraction documentation](docs/phase0.5.md) for counts, duplicate handling, and limitations.
 
+Phase 1A adds an evidence-linked gameplay name inventory and audit reports, preserving source ambiguity and separating Chronicles contexts.
+See [Name inventory documentation](docs/phase1a.md) for classification limits, review flags, and TSV export.
+
+Phase 1B preparation documents the [localization adoption policy](docs/localization-policy.md).
+`python -m tools.localization restoration --output-dir reports/phase1b` generates evidence-linked proposals without changing translations.
+
 ```powershell
 python -m tools.localization stats
 python -m tools.localization legacy-stats
 python -m tools.localization show 5131
+python -m tools.localization names --primary --family core --review
 python -m tools.localization compare --category jp_only_changed --limit 20 --values
 python -m unittest discover -v
 ```

@@ -7,6 +7,8 @@ from pathlib import Path
 import sys
 
 from .analysis import (CATEGORIES, all_ids, classify, legacy_summary, load_datasets, row, summary)
+from .gameplay import (FAMILIES, FLAGS, NAME_CATEGORIES, build_inventory, filter_rows, inventory_stats, render_tsv)
+from . import restoration
 
 
 def positive(value: str) -> int:
@@ -23,6 +25,26 @@ def argument_parser() -> argparse.ArgumentParser:
     commands = parser.add_subparsers(dest='command', required=True)
     commands.add_parser('stats', help='Counts, categories, and source SHA-256 inventory')
     commands.add_parser('legacy-stats', help='Legacy DLL counts, ranges, overlaps, and generation ID intersections')
+    restore = commands.add_parser('restoration', help='Legacy policy review proposals; never translation overrides')
+    restore.add_argument('--classification', choices=restoration.CLASSES)
+    restore.add_argument('--limit', type=positive, default=25)
+    restore.add_argument('--output-dir', type=Path)
+    names = commands.add_parser('names', help='Evidence-linked gameplay name inventory and audit')
+    names.add_argument('--stats', action='store_true')
+    names.add_argument('--category', choices=NAME_CATEGORIES)
+    names.add_argument('--family', choices=FAMILIES)
+    names.add_argument('--flag', choices=FLAGS)
+    names.add_argument('--pack')
+    names.add_argument('--series')
+    names.add_argument('--id', dest='string_id')
+    names.add_argument('--review', action='store_true')
+    names.add_argument('--primary', action='store_true', help='Full-name offset matches only; omit compact labels/aliases')
+    names.add_argument('--suspicious', action='store_true')
+    names.add_argument('--limit', type=positive, default=50)
+    names.add_argument('--offset', type=int, default=0)
+    names.add_argument('--all', action='store_true', help='Export all filtered name candidates; requires --output')
+    names.add_argument('--format', choices=('json', 'tsv'), default='json')
+    names.add_argument('--output', type=Path)
     show = commands.add_parser('show', help='Show all occurrences of a String ID across datasets')
     show.add_argument('string_id')
     for name in ('search', 'compare', 'changes', 'report', 'issues'):
@@ -110,7 +132,45 @@ def main(argv=None) -> int:
                   'diagnostic_count': len(diagnostics),
                   'duplicate_dataset_id_pairs': stats['duplicate_dataset_id_pairs'],
                   'incomplete': incomplete}
-        if args.command == 'stats':
+        if args.command == 'restoration':
+            if args.limit > 200:
+                raise ValueError('--limit must be <= 200')
+            output = restoration.build_restoration(datasets)
+            if args.classification:
+                output['rows'] = [r for r in output['rows'] if r['classification'] == args.classification]
+                output['total'] = len(output['rows'])
+                output['counts'] = {c: sum(r['classification'] == c for r in output['rows']) for c in restoration.CLASSES}
+                output['filter'] = args.classification
+            output.update(common)
+            if args.output_dir:
+                targets = [args.output_dir / 'candidates.tsv', args.output_dir / 'summary.md']
+                if any(p.exists() for p in targets):
+                    raise ValueError('Report already exists; choose a new output directory')
+                write_report(targets[0], restoration.render_tsv(output).rstrip('\n'), args.source_root)
+                write_report(targets[1], restoration.render_markdown(output), args.source_root)
+                output = {k:v for k,v in output.items() if k != 'rows'}
+                output['reports'] = [p.as_posix() for p in targets]
+            else:
+                output['rows'] = output['rows'][:args.limit]
+        elif args.command == 'names':
+            if args.offset < 0 or (args.limit > 200 and not args.output):
+                raise ValueError('Use nonnegative --offset; stdout is limited to 200 names')
+            if args.all and not args.output:
+                raise ValueError('--all requires --output inside reports/')
+            if args.stats and args.format == 'tsv':
+                raise ValueError('--stats requires JSON format')
+            audit = build_inventory(datasets)
+            filtered = filter_rows(audit['rows'], category=args.category, family=args.family, flag=args.flag,
+                                   pack=args.pack, series=args.series, review=args.review,
+                                   suspicious=args.suspicious, string_id=args.string_id, primary=args.primary)
+            page = [] if args.stats else filtered[args.offset:] if args.all else filtered[args.offset:args.offset + args.limit]
+            output = {**common, 'name_inventory_version': audit['schema_version'],
+                      'rules_sha256': audit['rules_sha256'], 'statistics': audit['statistics'],
+                      'selected_statistics': inventory_stats(filtered),
+                      'coverage': audit['coverage'], 'inventory': inventory, 'total': len(filtered),
+                      'offset': args.offset, 'rows': page,
+                      'filters': {k: getattr(args, k) for k in ('category', 'family', 'flag', 'pack', 'series', 'review', 'suspicious', 'string_id', 'primary')}}
+        elif args.command == 'stats':
             output = {**common, **stats, 'inventory': inventory, 'legacy': legacy_summary(datasets)}
         elif args.command == 'legacy-stats':
             output = {**common, **legacy_summary(datasets)}
@@ -135,8 +195,9 @@ def main(argv=None) -> int:
                     output.update(statistics=stats, inventory=inventory, legacy=legacy_summary(datasets),
                                   filters={k: getattr(args, k) for k in
                                            ('query', 'dataset', 'ignore_case', 'category', 'missing', 'id_type', 'limit', 'offset', 'values')})
-        content = json.dumps(output, ensure_ascii=False, indent=2) + '\n'
-        if args.command == 'report':
+        content = (render_tsv(output['rows']) if args.command == 'names' and args.format == 'tsv'
+                   else json.dumps(output, ensure_ascii=False, indent=2) + '\n')
+        if args.command == 'report' or (args.command == 'names' and args.output):
             write_report(args.output, content.rstrip('\n'), args.source_root)
             print(json.dumps({'report': args.output.as_posix(), 'total': output['total'],
                               'rows_written': len(output['rows'])}, ensure_ascii=False))
