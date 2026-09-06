@@ -59,8 +59,14 @@ Users and contributors must obtain original game data from their own legitimate 
 Phase 0 parsing and comparison tools are available (Python 3.10+, no external dependencies).
 See [Phase 0 documentation](docs/phase0.md) for source-format findings, CLI usage, comparison definitions, and tests.
 
+Phase 0.5 also extracts AoK/AoC Japanese RT_STRING resources from local DLLs without executing them.
+Legacy datasets join the existing search and String ID views automatically when present; no external dependencies are required.
+See [Legacy extraction documentation](docs/phase0.5.md) for counts, duplicate handling, and limitations.
+
 ```powershell
 python -m tools.localization stats
+python -m tools.localization legacy-stats
+python -m tools.localization show 5131
 python -m tools.localization compare --category jp_only_changed --limit 20 --values
 python -m unittest discover -v
 ```

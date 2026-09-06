@@ -16,8 +16,12 @@ class Entry:
     string_id: str
     value: str  # Exact text inside quotes, including literal backslashes.
     path: str
-    line: int
+    line: int | None
     ambiguous: bool = False
+    generation: str | None = None
+    language: str | None = None
+    resource: dict | None = None
+    value_format: str = 'key_value_raw'
 
 
 @dataclass(frozen=True)
@@ -38,6 +42,9 @@ class ParsedFile:
     sha256: str = ''
     size_bytes: int = 0
     bom: bool = False
+    format: str = 'key_value'
+    metadata: dict = field(default_factory=dict)
+    empty_slots: list[Entry] = field(default_factory=list)
 
 
 def parse_text(text: str, path: str = '<memory>') -> ParsedFile:

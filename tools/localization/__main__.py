@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import sys
 
-from .analysis import (CATEGORIES, ROLES, all_ids, classify, load_datasets, row, summary)
+from .analysis import (CATEGORIES, all_ids, classify, legacy_summary, load_datasets, row, summary)
 
 
 def positive(value: str) -> int:
@@ -17,11 +17,12 @@ def positive(value: str) -> int:
 
 
 def argument_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description='Read-only HD/DE localization analysis; exact raw-value comparison')
+    parser = argparse.ArgumentParser(description='Read-only AoK/AoC/HD/DE localization analysis')
     parser.add_argument('--source-root', type=Path, default=Path('source'))
     parser.add_argument('--config', type=Path, help='JSON object mapping dataset names to directories under source-root')
     commands = parser.add_subparsers(dest='command', required=True)
     commands.add_parser('stats', help='Counts, categories, and source SHA-256 inventory')
+    commands.add_parser('legacy-stats', help='Legacy DLL counts, ranges, overlaps, and generation ID intersections')
     show = commands.add_parser('show', help='Show all occurrences of a String ID across datasets')
     show.add_argument('string_id')
     for name in ('search', 'compare', 'changes', 'report', 'issues'):
@@ -33,7 +34,7 @@ def argument_parser() -> argparse.ArgumentParser:
         cmd.add_argument('--dataset', action='append', help='Search these datasets (OR); repeatable')
         cmd.add_argument('--ignore-case', action='store_true')
         cmd.add_argument('--category', choices=CATEGORIES, action='append', default=[], help='Repeat for AND')
-        cmd.add_argument('--missing', choices=ROLES, action='append', default=[])
+        cmd.add_argument('--missing', action='append', default=[], help='Dataset name; repeat for AND')
         cmd.add_argument('--id-type', choices=('all', 'numeric', 'symbolic'), default='all')
         cmd.add_argument('--limit', type=positive, default=50)
         cmd.add_argument('--offset', type=int, default=0)
@@ -45,7 +46,7 @@ def argument_parser() -> argparse.ArgumentParser:
 
 def selected_ids(args, datasets) -> list[str]:
     names = args.dataset or list(datasets)
-    unknown = set(names) - set(datasets)
+    unknown = (set(names) | set(args.missing)) - set(datasets)
     if unknown:
         raise ValueError('Unknown dataset(s): ' + ', '.join(sorted(unknown)))
     if args.offset < 0:
@@ -94,21 +95,25 @@ def main(argv=None) -> int:
         datasets = load_datasets(args.source_root, config)
         stats = summary(datasets)
         inventory = [dict(dataset=n, path=f.path, sha256=f.sha256, size_bytes=f.size_bytes,
-                          bom=f.bom, entries=len(f.entries), issues=len(f.issues))
+                          bom=f.bom, format=f.format, entries=len(f.entries), issues=len(f.issues),
+                          empty_resource_slots=len(f.empty_slots), metadata=f.metadata)
                      for n, d in datasets.items() for f in d.files]
         diagnostics = [dict(dataset=n, **{k: v for k, v in asdict(i).items() if k != 'raw'})
                        for n, d in datasets.items() for i in d.issues]
         duplicates = [row(sid, datasets) for sid in all_ids(datasets)
                       if 'duplicate' in classify(sid, datasets)]
         issue_count = len(diagnostics) + stats['duplicate_dataset_id_pairs']
-        if stats['encoding_errors'] and args.command not in ('stats', 'issues'):
-            raise ValueError('Invalid UTF-8 makes comparison incomplete; inspect stats or issues')
-        common = {'schema_version': 1, 'comparison_mode': 'exact_raw_value',
+        incomplete = bool(stats['encoding_errors'] or stats['pe_errors'])
+        if incomplete and args.command not in ('stats', 'legacy-stats', 'issues'):
+            raise ValueError('Input encoding or PE errors make comparison incomplete; inspect stats or issues')
+        common = {'schema_version': 2, 'comparison_mode': 'literal_stored_value',
                   'diagnostic_count': len(diagnostics),
                   'duplicate_dataset_id_pairs': stats['duplicate_dataset_id_pairs'],
-                  'incomplete': bool(stats['encoding_errors'])}
+                  'incomplete': incomplete}
         if args.command == 'stats':
-            output = {**common, **stats, 'inventory': inventory}
+            output = {**common, **stats, 'inventory': inventory, 'legacy': legacy_summary(datasets)}
+        elif args.command == 'legacy-stats':
+            output = {**common, **legacy_summary(datasets)}
         elif args.command == 'show':
             output = {**common, **row(args.string_id, datasets, True),
                       'diagnostics': [d for d in diagnostics if d['string_id'] == args.string_id]}
@@ -127,7 +132,7 @@ def main(argv=None) -> int:
                 output = {**common, 'total': len(ids), 'offset': args.offset,
                           'rows': [row(sid, datasets, args.values) for sid in page]}
                 if args.command == 'report':
-                    output.update(statistics=stats, inventory=inventory,
+                    output.update(statistics=stats, inventory=inventory, legacy=legacy_summary(datasets),
                                   filters={k: getattr(args, k) for k in
                                            ('query', 'dataset', 'ignore_case', 'category', 'missing', 'id_type', 'limit', 'offset', 'values')})
         content = json.dumps(output, ensure_ascii=False, indent=2) + '\n'
