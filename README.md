@@ -56,6 +56,15 @@ Users and contributors must obtain original game data from their own legitimate 
 
 ## Project Status
 
+Phase 0 parsing and comparison tools are available (Python 3.10+, no external dependencies).
+See [Phase 0 documentation](docs/phase0.md) for source-format findings, CLI usage, comparison definitions, and tests.
+
+```powershell
+python -m tools.localization stats
+python -m tools.localization compare --category jp_only_changed --limit 20 --values
+python -m unittest discover -v
+```
+
 This project is currently in its early development stage.
 
 The initial work focuses on:

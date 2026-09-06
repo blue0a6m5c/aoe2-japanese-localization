@@ -1,0 +1,7 @@
+// Synthetic project fixture
+1 "Example"
+2 "Previous"
+3 "HD only"
+4 ""
+6 "Unpaired"
+TOKEN_A "Stable symbol"

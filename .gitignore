@@ -4,6 +4,7 @@
 
 # Generated output
 /dist/
+/reports/
 
 # Python
 __pycache__/
