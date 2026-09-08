@@ -143,19 +143,19 @@ class ScopeTests(unittest.TestCase):
         data=synthetic(); human=ledger(data,['5001'],jp='旧走者')
         before_data=copy.deepcopy(data); before_human=copy.deepcopy(human)
         Path('reports').mkdir(exist_ok=True)
-        with patch('tools.localization.__main__.load_datasets',return_value=data), patch('tools.localization.scope.load_ledger',return_value=human):
+        with patch('tools.localization.__main__.load_datasets',return_value=data), patch('tools.localization.__main__.load_ledger',return_value=human):
             out=io.StringIO()
             with contextlib.redirect_stdout(out),contextlib.redirect_stderr(io.StringIO()):
-                self.assertEqual(main(['scope-review','--class','required','--limit','1']),0)
+                self.assertEqual(main(['scope-review','--names-only','--class','required','--limit','1']),0)
             self.assertEqual(len(json.loads(out.getvalue())['rows']),1)
             with tempfile.TemporaryDirectory(dir='reports') as directory,contextlib.redirect_stdout(io.StringIO()),contextlib.redirect_stderr(io.StringIO()):
-                args=['scope-audit','--output-dir',directory]
+                args=['scope-audit','--names-only','--output-dir',directory]
                 self.assertEqual(main(args),0)
                 saved={p.name:p.read_bytes() for p in Path(directory).iterdir()}
                 self.assertEqual(len(saved),4)
                 self.assertEqual(main(args),2)
                 self.assertEqual(saved,{p.name:p.read_bytes() for p in Path(directory).iterdir()})
-                self.assertEqual(main(['scope-audit','--output-dir','source/scope-test']),2)
+                self.assertEqual(main(['scope-audit','--names-only','--output-dir','source/scope-test']),2)
                 self.assertFalse(Path('source/scope-test').exists())
         self.assertEqual(data,before_data)
         self.assertEqual(human,before_human)

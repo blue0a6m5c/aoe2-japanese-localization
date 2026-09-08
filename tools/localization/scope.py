@@ -10,6 +10,7 @@ from .gameplay import ACTION, build_inventory, normalized
 from .human_reviews import load_ledger
 from .restoration import digest
 from .duplicate_audit import audit_duplicates
+from . import context_overrides
 
 CLASSES = ('required', 'recommended', 'review', 'unrelated', 'already_consistent')
 FIELDS = ['decision_string_id','decision_en','current_jp','effective_jp','effective_decision',
@@ -101,7 +102,9 @@ def conflicts(rows):
     return found
 
 
-def build_scope(data, ledger=None, inventory=None, adoption=None):
+def build_scope(data, ledger=None, inventory=None, adoption=None, context_path=None):
+    if ledger is None and context_path is None:
+        context_path=context_overrides.DEFAULT_PATH
     ledger=load_ledger() if ledger is None else ledger
     inventory=build_inventory(data) if inventory is None else inventory
     adoption=build_adoption(data,inventory,human_ledger=ledger) if adoption is None else adoption
@@ -255,13 +258,17 @@ def build_scope(data, ledger=None, inventory=None, adoption=None):
                         **comparison,
                         conflict=False,match_basis=sorted(({'prior_evidence'} if s in pair_refs[other] else set()) |
                                                         ({'jp_alias'} if jtargets[s] else set()) | ({'english_name'} if etargets[s] else set()))))
+    direct=context_overrides.load(context_path) if context_path is not None else None
+    if direct and set(records)&{r['string_id'] for r in direct['records']}:
+        raise ValueError('Decision ID occurs in both name and context ledgers; assign one authority')
+    if direct: rows=context_overrides.merge_scope(rows,context_overrides.rows(data,direct))
     rows.sort(key=lambda r:(id_sort(r['decision_string_id']),id_sort(r['related_string_id']),r['source_path'],r['source_line'] or 0,r['start'] if r['start'] is not None else -1))
     found=conflicts(rows)
     multi=defaultdict(set)
     for r in rows: multi[r['related_string_id']].add(r['decision_string_id'])
     external={r['decision_string_id'] for r in rows if r['related_string_id']!=r['decision_string_id']}
     counts=Counter(r['scope_class'] for r in rows)
-    return dict(schema_version=2,decision_count=len(records),audited_decision_ids=sorted(records,key=id_sort),
+    report=dict(schema_version=2,decision_count=len(records),audited_decision_ids=sorted(records,key=id_sort),
         literal_scope_counts=dict(sorted(Counter(r['literal_scope_class'] for r in rows).items())),
         former_required_split={c:sum(r['literal_scope_class']=='required' and r['scope_class']==c for r in rows) for c in CLASSES},
         relation_statistics=relation_statistics(rows),duplicate_audit=audit_duplicates(data),
@@ -275,9 +282,21 @@ def build_scope(data, ledger=None, inventory=None, adoption=None):
         ledger_sha256=digest(json.dumps(ledger,ensure_ascii=False,sort_keys=True)),
         aliases={s:sorted(a for a,ids in aliases.items() if s in ids) for s in sorted(records,key=id_sort)},
         inputs=adoption['inputs'],rows=rows)
+    if direct:
+        all_ids=set(records)|{r['string_id'] for r in direct['records']}
+        report.update(context_override_ledger=dict(path=str(Path(context_path).resolve()),sha256=context_overrides.fingerprint(direct)),
+            name_decision_count=len(records),context_decision_count=len(direct['records']),
+            decision_count=len(records)+len(direct['records']),
+            audited_decision_ids=sorted(set(records)|{r['string_id'] for r in direct['records']},key=id_sort),
+            no_related_decisions=sorted(all_ids-external,key=id_sort),
+            no_occurrence_decisions=sorted(all_ids-{r['decision_string_id'] for r in rows},key=id_sort),
+            suppressed_name_rows=sum(bool(r.get('suppressed_by_context_override')) for r in rows))
+    return report
 
 
-def render_audit(report): return tsv(report['rows'],FIELDS)
+def render_audit(report):
+    extra=['context_signature','suppressed_by_context_override','suppression_signature'] if 'context_override_ledger' in report else []
+    return tsv(report['rows'],FIELDS+extra)
 
 
 def render_summary(report):
@@ -286,6 +305,12 @@ def render_summary(report):
            f"裁定 {report['decision_count']}件 / 関連String ID {report['related_id_count']}件 / 出現行 {report['total']}件。",'',
            '| scope_class | 出現行数 |','|---|---:|']
     lines += [f'| {c} | {report["scope_counts"][c]} |' for c in CLASSES]
+    if 'context_override_ledger' in report:
+        lines += ['', '## 文脈付き全文裁定', '',
+                  f"名称 {report['name_decision_count']}件 / 直接override {report['context_decision_count']}件。",
+                  f"直接裁定の出現位置への名称伝播 {report['suppressed_name_rows']}行は適用せず、証拠として残す。",
+                  'explicit_context_overrideのみ全文を裁定どおり使用する。他の出現へは伝播しない。',
+                  '直接裁定正本: '+json.dumps(report['context_override_ledger'],ensure_ascii=False)]
     lines += ['', '## 保存値比較とレイアウト正規化', '',
               'literal比較結果・対象原文・位置を保持したまま表示用改行/空白だけを比較キーから除く。sourceのレイアウトは変更しない。',
               '保存値比較時のrequiredの再分類: '+json.dumps(report['former_required_split'],ensure_ascii=False), '',

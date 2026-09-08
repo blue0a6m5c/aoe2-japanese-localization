@@ -112,6 +112,10 @@ def prepare(source_root,plan_path,ledger_path,layout_path,scope_dir):
     if plan.get('mode')!='dry_run_only' or plan.get('schema_version')!=1:
         raise ValueError('Unsupported patch plan schema/mode')
     rows,metadata,hashes=read_audit(scope_dir)
+    if 'context_override_ledger' in metadata:
+        direct_path=Path(metadata['context_override_ledger']['path'])
+        input_paths.append(direct_path)
+        input_hashes[str(direct_path)]=sha(direct_path.read_bytes())
     data=load_datasets(source_root)
     regenerated=integrate(data,load_ledger(ledger_path),rows,metadata,hashes,load_json(layout_path))
     if regenerated['blocked'] or plan!={k:v for k,v in regenerated.items() if k!='blocked'}:

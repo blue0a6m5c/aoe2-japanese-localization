@@ -1,16 +1,27 @@
 # 人間裁定の永続記録
 
+実機確認は [game-validation.json](game-validation.json) に別記録する。ユーザーが報告した10名称のPASSを翻訳ファイルhashへ結び付け、名称・全文・layout裁定のsignatureは変更しない。確認範囲と未提供情報は [実機確認記録](../docs/game-validation.md) を参照。
+
 `phase1b-decisions.json` は2026-09-08にユーザーが明示した裁定を記録する正本。
 自動生成レポートやMod用翻訳ファイルではない。採用訳はユーザー指定をそのまま保存し、新たな翻訳判断を追加していない。
 
-元の80候補に対する裁定と、明示された追加5 IDの裁定を保持する。
+現在は名称103件を保持する。文脈付き全文裁定28件は `context-overrides.json` に分離し、合計131裁定を保持する。
+元の80候補と最初の追加5 IDは履歴上の基準。現在の仕様・件数・再生成手順は [文脈付きoverride](../docs/context-overrides.md) を参照。
 一覧形式の records にすることで重複IDを読み込み時に検出できる。
 review_id / reviewer / reviewed_on / authority に裁定の主体・日付を記録し、各項目はdecision、proposed_jp、notesを持つ。
 expected_de_english と signature / help_ids でレビュー時の資料へ結び付ける。
 baseline_ids と baseline_report_sha256 は元の80件との照合根拠であり、生成物が消えても裁定を復元できる。
 
-人間裁定は自動提案より優先する。特に5455/7392はreviseの「エリート イェニチェリ」、7432はrestoreの「砲弾術」。以前の自動案へ戻さない。
+人間裁定は自動提案より優先する。特に5455/7392はreviseの「エリート イェニチェリ」、7432の現在の採用訳は「火箭術」。以前の「砲弾術」や自動案へ戻さない。
 未指定の関連IDへ裁定をコピーしない。
+
+`context-overrides.json` は全文を確定したHelp・文明説明・シナリオ文章・改行付き表示の専用正本。
+指定source出現位置の全文だけを所有し、名称への逆伝播・別文章への語句置換はしない。
+元のsignatureに加え、JP/EN sourceの出現位置・hash・採用全文をbinding_signatureで拘束する。
+無効なbindingでは名前伝播へフォールバックせず停止する。両正本への同一ID登録は禁止。
+正本の分離で既存129件の採用訳・判断理由・signatureは変更していない。
+その後、ユーザーがShinkichonの名称ID 7438 / 17438に「神機箭」を明示裁定したため、名称正本へreviseとして2件追加した。
+研究Help 28438との対応をsourceで確認し、既存signature方式で拘束した。8438 / 28438 / 120167の全文裁定は変更しない。
 
 資料更新により英語、関連Help、値、出現位置の指紋が変わった場合、人間裁定自体は消さない。
 その行を approved_requires_revalidation とし、reviewer_* に指定値を保存したまま effective_* の適用候補を保留する。

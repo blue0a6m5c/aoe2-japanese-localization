@@ -1,7 +1,7 @@
 # Phase 1F ローカルMod：手動導入と削除
 
 ゲーム内表示検証用。自動インストール・ゲーム起動・公開は行わない。
-構造とファイル整合性を検証したパッケージであり、実ゲームでの読込は未検証。
+構造・ファイル整合性に加え、ユーザーが10名称の実機表示を確認済み。[確認記録](game-validation.md)を参照。
 CHECKLIST.mdで結果を記録する。
 
 ## 調査した構造と根拠
@@ -18,35 +18,40 @@ CHECKLIST.mdで結果を記録する。
   上記UGC Guideの例に従う。Workshop ID、サムネイル、datファイルは不要なため作らない。
 
 ゲーム付属ファイルのヘッダは、既存文字列の変更では対象の文字列だけをmoddedファイルへ置き、
-元ファイルから削除しないよう案内している。この明示的な指示に従い、**変更済み346 IDだけの差分方式**を採用する。
+元ファイルから削除しないよう案内している。この明示的な指示に従い、**変更済み385 IDだけの差分方式**を採用する。
 作者向け資料は同じmoddedファイル名・言語別ディレクトリを案内しており、この構造とも整合する。
 以前の全文方式はファイル全体hash一致という当時の要件を満たしたが、未変更IDと既存重複IDまでoverride側へ持ち込んでいた。
 今後は差分方式を使用し、旧 `dist/phase1f-local-mod` は過去の成果物として残す。両方式を同時に導入しない。
 変更のない11ファイル、対象外ID、英語source、Legacy DLL、ゲームデータは収録しない。
 全体hashではなく、対象ID集合と各valueの完全一致を検証する。
 
-## 生成と検証
+## 現行の入力と生成
+
+名称103件 + 直接全文28件から385 operationsを生成する。
+現在の入力は `dist/final-mod`、対応scopeは `reports/final/scope`、planは `reports/final/layout/patch-plan.json`。
+完全な再生成順序は [文脈付きoverride](context-overrides.md) を参照。
+最新ledgerと過去の346件成果物を混用しない。
 
 ```powershell
-python -m tools.localization mod-package
-python -m tools.localization mod-package --verify-only
+python -m tools.localization mod-package --input-dir dist/final-mod --plan reports/final/layout/patch-plan.json --scope-dir reports/final/scope --output-dir dist/final-local-mod
+python -m tools.localization mod-package --input-dir dist/final-mod --plan reports/final/layout/patch-plan.json --scope-dir reports/final/scope --output-dir dist/final-local-mod --verify-only
 # 再生成する場合は別のディレクトリを指定
-python -m tools.localization mod-package --output-dir dist/phase1f-local-mod-delta-next
+python -m tools.localization mod-package --input-dir dist/final-mod --plan reports/final/layout/patch-plan.json --scope-dir reports/final/scope --output-dir dist/final-local-mod-next
 ```
 
-入力は `dist/phase1e-mod`。Phase 1Eの検証処理を再実行してから、そのディスク上のファイルを読む。
-Phase 1E自体のファイルhashを検証した上で、再検証済みplanの346 IDを選ぶ。
+入力は `dist/final-mod`。Phase 1Eの検証処理を再実行してから、そのディスク上のファイルを読む。
+Phase 1E自体のファイルhashを検証した上で、再検証済みplanの385 IDを選ぶ。
 各IDはPhase 1Eの全翻訳ファイルを通して一意であることを要求し、同値の重複でも勝手に解決しない。
 source occurrence（ファイル・行）とplanのafterも照合して最終valueを取得する。
-UTF-8、LF、ID順で346行を生成し、保存値のescape・markup・改行を再エスケープ/正規化しない。
-ID集合一致、missing=0、extra=0、duplicate=0、value mismatch=0、346件の完全一致を検証する。
+UTF-8、LF、ID順で385行を生成し、保存値のescape・markup・改行を再エスケープ/正規化しない。
+ID集合一致、missing=0、extra=0、duplicate=0、value mismatch=0、385件の完全一致を検証する。
 manifest schema 2は差分ファイルSHA-256、Phase 1E manifest・plan・入力ファイルhash、
 IDごとの元ファイル/行・operation ID・value hashと検証件数を記録する。
 差分ファイル全体とPhase 1E全文ファイルのhash一致は要求しない。
 生成後も全ファイルを再読込して期待するバイト列と照合する。source、reviews、Phase 1E、patch planは読み取り専用。
 
 ```text
-dist/phase1f-local-mod-delta/
+dist/final-local-mod/
 ├── manifest.json                   検証情報（コピー不要）
 ├── INSTALL.md                      本書（コピー不要）
 ├── CHECKLIST.md                    検証票（コピー不要）

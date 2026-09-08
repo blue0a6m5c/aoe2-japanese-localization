@@ -1,5 +1,9 @@
 # Phase 1B 採用候補レビュー
 
+現行正本は名称103件＋文脈付き全文28件＝131裁定。restore 80 / keep_de 2 / revise 49。
+385 operationsへ統合し、ユーザーによる[実機確認](game-validation.md)を記録した。
+最新仕様と再生成手順は [context overrides](context-overrides.md) を参照。以下の80/85件は初回レビューの履歴。
+
 ## 2026-09-08 人間裁定の反映
 
 正本は [reviews/phase1b-decisions.json](../reviews/phase1b-decisions.json)。生成レポートとは独立してGit管理する入力データである。

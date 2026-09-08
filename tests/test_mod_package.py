@@ -93,23 +93,25 @@ class ModPackageTests(unittest.TestCase):
         with self.assertRaises(ValueError):mod_build.generate(p,self.root/'new-output')
 
     def test_local_phase1e_integration(self):
-        if not Path('dist/phase1e-mod/manifest.json').exists():self.skipTest('Local verified Phase 1E unavailable')
-        from tools.localization.human_reviews import DEFAULT_LEDGER
-        p=mod_package.prepare(Path('source'),Path('reports/phase1d-layout/patch-plan.json'),DEFAULT_LEDGER,
-             Path('reviews/phase1d-layout-decisions.json'),Path('reports/phase1c-normalized'),Path('dist/phase1e-mod'))
-        self.assertEqual(p['manifest']['verified_phase1e_operations'],346)
+        from tests.local_pipeline import inputs,payload
+        item=inputs();input_dir=payload()[1]
+        p=mod_package.prepare(*item['args'],input_dir)
+        self.assertEqual(p['manifest']['verified_phase1e_operations'],385)
+        self.assertTrue(p['manifest']['runtime_verified'])
+        self.assertEqual(p['manifest']['runtime_validation']['status'],'matching_user_report')
+        self.assertEqual(len(p['manifest']['runtime_validation']['confirmed_names']),10)
         mod_build.generate(p,self.root/'real-package');mod_build.generate(p,self.root/'real-package','verify-only')
         raw=(self.root/'real-package'/mod_package.OUTPUT_TRANSLATION).read_bytes()
         from tools.localization.parser import parse_text
-        phase1e=parse_text(Path('dist/phase1e-mod',mod_package.INPUT_TRANSLATION).read_bytes().decode('utf-8-sig'))
-        plan=json.loads(Path('reports/phase1d-layout/patch-plan.json').read_text(encoding='utf8'))
+        phase1e=parse_text((input_dir/mod_package.INPUT_TRANSLATION).read_bytes().decode('utf-8-sig'))
+        plan=json.loads(item['args'][1].read_text(encoding='utf8'))
         ids={o['string_id'] for o in plan['operations']}
         expected={e.string_id:e.value for e in phase1e.entries if e.string_id in ids}
         report=mod_package.verify_delta(raw,expected)
-        self.assertEqual(report['matching_value_count'],346)
-        self.assertEqual(report['output_entry_count'],346)
+        self.assertEqual(report['matching_value_count'],385)
+        self.assertEqual(report['output_entry_count'],385)
         self.assertTrue(report['id_set_equal'])
-        self.assertEqual(len(ids),346)
+        self.assertEqual(len(ids),385)
         with (self.root/'real-package/manifest.json').open(encoding='utf8') as f:self.assertEqual(json.load(f),p['manifest'])
 
     def test_missing_extra_duplicate_and_wrong_values_fail(self):
@@ -118,6 +120,22 @@ class ModPackageTests(unittest.TestCase):
         for text in ['',valid+'99 "extra"\n',valid+valid,'17415 "wrong"\n','17415 "unterminated']:
             with self.subTest(text=text),self.assertRaises(ValueError):
                 mod_package.verify_delta(text.encode('utf8'),expected)
+
+    def test_runtime_report_bound_to_translation_hash_and_preserved_as_input(self):
+        path=self.root/'runtime.json'
+        record=dict(schema_version=1,authority='explicit_user_runtime_report',result='pass',
+                    confirmed_names=['試験名称'],record_id='synthetic',translation_sha256='expected')
+        path.write_text(json.dumps(record),encoding='utf8')
+        bundle=dict(manifest={'delta_sha256':'expected'},input_hashes={})
+        mod_package.attach_game_validation(bundle,path)
+        self.assertTrue(bundle['manifest']['runtime_verified'])
+        self.assertIn(str(path),bundle['input_hashes'])
+        bundle['manifest']['delta_sha256']='different'
+        mod_package.attach_game_validation(bundle,path)
+        self.assertFalse(bundle['manifest']['runtime_verified'])
+        self.assertEqual(bundle['manifest']['runtime_validation']['confirmed_names'],[])
+        record['result']='unknown';path.write_text(json.dumps(record),encoding='utf8')
+        with self.assertRaises(ValueError):mod_package.attach_game_validation(bundle,path)
 
     def test_missing_or_duplicate_target_in_phase1e_is_not_resolved(self):
         for sid in ['99999','5001','5002']:

@@ -200,11 +200,9 @@ class BlockedAuditTests(unittest.TestCase):
         from tools.localization.patch_plan import read_audit
         from tools.localization.blocked_audit import json_artifacts,serialize_json,verify_json
         from tools.localization.__main__ import write_report
-        scope=Path('reports/phase1c-normalized')
-        if not (scope/'scope-metadata.json').exists() or not Path('source/de/jp/key-value').is_dir():
-            self.skipTest('Local official sources and normalized audit are optional, never test fixtures')
-        rows,meta,hashes=read_audit(scope)
-        result=audit_blocked(load_datasets(Path('source')),load_ledger(DEFAULT_LEDGER),rows,meta,hashes)
+        from tests.local_pipeline import inputs
+        item=inputs()
+        result=audit_blocked(*(item[k] for k in ('data','ledger','rows','meta','hashes')))
         artifacts=json_artifacts(result)
         manual=artifacts['manual-review.json']['locations']
         self.assertEqual({x['string_id'] for x in manual},{'14130','14169','14452','14456','14457','14573',

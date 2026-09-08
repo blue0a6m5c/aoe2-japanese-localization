@@ -107,16 +107,14 @@ class ModBuildTests(unittest.TestCase):
 class LocalModIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        from tools.localization.human_reviews import DEFAULT_LEDGER
-        cls.plan=Path('reports/phase1d-layout/patch-plan.json')
-        if not cls.plan.exists():raise unittest.SkipTest('Local audited source data unavailable')
-        cls.args=(Path('source'),cls.plan,DEFAULT_LEDGER,Path('reviews/phase1d-layout-decisions.json'),Path('reports/phase1c-normalized'))
-        cls.b=prepare(*cls.args)
+        from tests.local_pipeline import inputs,payload
+        cls.args=inputs()['args'];cls.plan=cls.args[1]
+        cls.b=payload()[0]
 
-    def test_real_346_output_and_unchanged_records(self):
+    def test_real_current_output_and_unchanged_records(self):
         b=self.b;m=b['manifest']
         self.assertEqual((m['applied_operation_count'],m['full_value_replacements'],m['span_replacements'],m['changed_output_files']),
-                         (346,186,160,1))
+                         (385,227,158,1))
         self.assertEqual(len(b['files']),12)
         Path('dist').mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir='dist') as temp:

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "record_id": "phase1f-user-display-confirmation-2026-09-09",
+  "recorded_on": "2026-09-09",
+  "authority": "explicit_user_runtime_report",
+  "reporter": "project owner (user)",
+  "result": "pass",
+  "confirmed_names": [
+    "火箭車",
+    "重装火箭車",
+    "火箭術",
+    "神機箭",
+    "トルコ",
+    "ローマ",
+    "蜀",
+    "ムイスカ",
+    "マプチェ",
+    "トゥピ"
+  ],
+  "translation_sha256": "fd8eebbe726e36ca1c3a6173427b2ec95394950007c26b10e5bff1c24a57374c",
+  "decision_count": 131,
+  "patch_operations": 385,
+  "artifact_binding_basis": "Last generated Shinkichon package preceding the user report; installed bytes were not independently measured.",
+  "game_build": null,
+  "test_date": null,
+  "display_settings": null,
+  "notes": "User reports in-game display confirmation completed without problems for the ten listed names. No exhaustive per-ID or 13-layout checklist results were supplied. The agent did not access the game directory or launch the game."
+}

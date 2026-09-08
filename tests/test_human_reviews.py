@@ -100,12 +100,18 @@ class HumanReviewTests(unittest.TestCase):
     def test_recorded_user_coverage_and_counts(self):
         human=load_ledger()
         records=human['records']; ids=[r['string_id'] for r in records]
-        self.assertEqual(len(ids),85)
-        self.assertEqual(len(set(ids)),85)
+        self.assertEqual(len(ids),103)
+        self.assertEqual(len(set(ids)),103)
         self.assertEqual(len(human['baseline_ids']),80)
         self.assertTrue(set(human['baseline_ids']).issubset(ids))
-        self.assertEqual(set(ids)-set(human['baseline_ids']),{'5115','5118','5130','5186','5205'})
-        self.assertEqual([sum(r['decision']==d for r in records) for d in ('restore','keep_de','revise')],[81,2,2])
+        from tools.localization.context_overrides import load
+        direct=load()['records']
+        self.assertEqual(len(direct),28)
+        self.assertFalse(set(ids)&{r['string_id'] for r in direct})
+        self.assertEqual(len(ids)+len(direct),131)
+        combined=records+direct
+        self.assertEqual([sum(r['decision']==d for r in combined) for d in ('restore','keep_de','revise')],[80,2,49])
+
 
 
 if __name__=='__main__': unittest.main()

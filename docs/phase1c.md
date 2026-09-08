@@ -1,5 +1,7 @@
 # Phase 1C 適用範囲監査
 
+> Current pipeline: [context-bound overrides](context-overrides.md). 103 name + 28 direct decisions; 385 operations, conflicts 0, final blocked 0. Counts and default paths below document the original phase baseline. Use matching current scope/plan paths.
+
 ## 表示正規化と重複監査の追加
 
 改良版のレポートは `reports/phase1c-normalized/` に保存し、元の556件のrequiredを含むレポートは比較用に残した。
@@ -28,7 +30,7 @@ normalized-equivalentとliteral already-consistentは重複しない。元のreq
 同値のsafeは値の選択による差がない意味に限定し、Dataset.resolvedやDLL優先順位は変更しない。不正・曖昧な同値はother_invalidとする。
 異値は全出現の位置・値SHA-256・最大200文字の抜粋で明示する。原資料に重複が収録されていることと、その原因・ロード順が分かることは区別する。
 
-正本 `reviews/phase1b-decisions.json` の85件を起点に、DE日本語の適用範囲を監査する。
+現行は名称正本 `reviews/phase1b-decisions.json` の103件と、文脈付き全文正本28件を分離して監査する（合計131件）。初回実装は名称85件を対象とした。
 source、正本の裁定、Mod用翻訳は変更しない。翻訳適用・置換処理は実装していない。
 
 ## 実行と出力
@@ -98,7 +100,7 @@ related_en/related_jpは最大180文字と省略記号の抜粋。全文の大�
 excerpted=trueのときは `python -m tools.localization show ID` またはsourceの該当行で全文を確認する。
 抜粋だけを置換入力として使用しない。数値、タグ、エスケープ、プレースホルダーの変更案は生成しない。
 
-summaryには全85裁定の内訳、全体件数、出現がない裁定、衝突、重複参照例、注意点を記載。
+summaryには全131裁定の内訳、全体件数、出現がない裁定、衝突、重複参照例、注意点を記載。
 metadataには複数裁定参照の全件・検出別名・全入力SHA-256・欠損/署名不一致を記録する。
 監査開始前後でsourceとreviewsのSHA-256を照合し、変更しなかったことを別途記録する。
 

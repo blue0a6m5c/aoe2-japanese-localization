@@ -1,5 +1,7 @@
 # Phase 1E: verified Mod payload generation
 
+> Current pipeline: [context-bound overrides](context-overrides.md). 103 name + 28 direct decisions; 385 operations, conflicts 0, final blocked 0. Counts and default paths below document the original phase baseline. Use matching current scope/plan paths.
+
 確定した `reports/phase1d-layout/patch-plan.json` だけを入力計画として使用し、
 公式sourceから独立したローカル成果物を生成する。ゲームへのインストール機能はない。
 source、人間裁定、プロジェクトの翻訳データは変更しない。
@@ -29,7 +31,7 @@ Phase 1B・layoutの正本とPhase 1C監査を使って統合planを再計算し
 source path、line、ID、ファイルSHA-256、現在値のSHA-256と文字列、matched span、before/after、
 full-value/span区分も各operationについて検証する。
 同じ物理行への複数operationは、非重複spanでもこのgeneratorでは拒否する。
-現行planの346位置はいずれも1 operation。
+現行planの385位置はいずれも1 operation。
 
 UTF-8値の引用符内だけを変更し、BOM、CRLF/LF/CR、コメント、インデント、末尾空白、
 他のString ID、別出現の同じIDは保存する。
@@ -66,5 +68,5 @@ Windowsの一時的なファイルロックにはrenameだけを有限回再試�
 出力先を変えてもpayloadとmanifestの全バイトが一致する。
 manifest自身のhashは循環するためmanifestには含めないが、verify-onlyで内容を完全照合する。
 
-現行結果: 346 operations、346 ID、全文186 / span160、変更ファイル1 / 12。
-ゲーム内表示や他Modとの競合検証はまだ実施していない。
+現行結果: 385 operations、385 ID、全文227 / span158、変更ファイル1 / 12。
+ユーザーによる10名称の[ゲーム内表示確認](game-validation.md)を記録した。他Modとの競合検証の詳細は未報告。

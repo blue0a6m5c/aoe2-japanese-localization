@@ -12,6 +12,7 @@ from .gameplay import ACTION, build_inventory, normalized
 from .human_reviews import validate
 from .restoration import digest
 from .scope import excerpt, layout_key
+from . import context_overrides
 
 RELATIONS={'adjudicated_name','same_name_shared_help','same_name_action_button',
            'same_name_action_help','same_action_and_exact_name_prefix'}
@@ -56,6 +57,8 @@ def relation_valid(row,rec,en,inventory):
 
 def build_plan(data,ledger,rows,metadata,artifact_hashes=None):
     validate(ledger)
+    direct=context_overrides.validate_scope(data,rows,metadata)
+    direct_records={r['string_id']:r for r in direct['records']} if direct else {}
     records={r['string_id']:r for r in ledger['records']}
     required=[r for r in rows if r.get('scope_class')=='required']
     groups=defaultdict(list)
@@ -84,16 +87,17 @@ def build_plan(data,ledger,rows,metadata,artifact_hashes=None):
         if entry and (entry.ambiguous or sid in data['de_jp'].invalid_ids): errors.append('malformed_occurrence')
         before=entry.value if entry else None
         for r in requests:
-            rec=records.get(r.get('decision_string_id'))
+            is_direct=r['relation']==context_overrides.RELATION
+            rec=(direct_records if is_direct else records).get(r.get('decision_string_id'))
             if rec is None:
                 errors.append('unknown_decision'); continue
-            if not valid_decisions[rec['string_id']] or r.get('decision_signature')!=rec['signature']:
+            if (not is_direct and not valid_decisions[rec['string_id']]) or r.get('decision_signature')!=rec['signature']:
                 errors.append('decision_signature_mismatch')
             if r.get('effective_jp')!=rec['proposed_jp'] or r.get('effective_decision')!=rec['decision']:
                 errors.append('canonical_translation_mismatch')
             if r.get('evidence_status')!='matches' or r.get('conflict'):
                 errors.append('unapproved_or_conflicting_audit')
-            if r.get('change_candidate') is not True or r.get('normalized_equal') is not False or r.get('normalized_equivalent'):
+            if r.get('change_candidate') is not True or (not is_direct and (r.get('normalized_equal') is not False or r.get('normalized_equivalent'))):
                 errors.append('not_a_required_change')
             if not r.get('source_sha256') or r['source_sha256']!=expected_hashes.get(path) or r['source_sha256']!=live_hashes.get(path):
                 errors.append('occurrence_file_hash_mismatch')
@@ -102,7 +106,7 @@ def build_plan(data,ledger,rows,metadata,artifact_hashes=None):
                         occurrence(e)==proof and Path(e.path).name==Path(path or '').name]
             if len(en_entries)!=1 or en_entries[0].ambiguous or sid in data['de_en'].invalid_ids:
                 errors.append('english_occurrence_not_unique')
-            elif not relation_valid(r,rec,en_entries[0],inventory):
+            elif not is_direct and not relation_valid(r,rec,en_entries[0],inventory):
                 errors.append('relation_evidence_mismatch')
             a,b=r.get('start'),r.get('end'); matched=r.get('matched_jp')
             if before is None or type(a)!=int or type(b)!=int or not 0<=a<b<=len(before):
@@ -113,7 +117,7 @@ def build_plan(data,ledger,rows,metadata,artifact_hashes=None):
             # original value, and this comparison also checks the saved review context.
             if r.get('related_jp')!=excerpt(before,a): errors.append('expected_current_value_mismatch')
             replacement=rec['proposed_jp']
-            if layout_key(matched)==layout_key(replacement): errors.append('normalized_equivalent')
+            if not is_direct and layout_key(matched)==layout_key(replacement): errors.append('normalized_equivalent')
             if r.get('relation') in ('adjudicated_name','same_name_shared_help') and (a,b)!=(0,len(before)):
                 errors.append('name_span_not_full_value')
             if r.get('relation')=='same_name_action_help':
@@ -157,6 +161,9 @@ def build_plan(data,ledger,rows,metadata,artifact_hashes=None):
             items=by_span[(a,b)]; replacement=items[0]['replacement']
             proofs=[dict(decision_string_id=c['request']['decision_string_id'],decision_signature=c['request']['decision_signature'],
                          relation=c['request']['relation'],english_source=c['request']['english_source']) for c in items]
+            for proof,item in zip(proofs,items):
+                if item['request']['relation']==context_overrides.RELATION:
+                    proof.update(context_signature=item['request']['context_signature'],context_ledger_sha256=metadata['context_override_ledger']['sha256'])
             proofs=sorted({json.dumps(p,sort_keys=True):p for p in proofs}.values(),key=lambda p:(id_sort(p['decision_string_id']),p['relation']))
             opid=digest(json.dumps([path,line,sid,a,b,replacement],ensure_ascii=False))[:20]
             operation_ids.append(opid)

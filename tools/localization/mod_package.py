@@ -106,4 +106,24 @@ def prepare(source_root,plan,ledger,layout_ledger,scope_dir,phase1e_dir):
     documents={name:path.read_bytes() for name,path in DOCS.items()}
     bundle=assemble(verified,phase1e_dir,documents)
     bundle['input_hashes'].update({str(path):mod_build.sha(documents[name]) for name,path in DOCS.items()})
+    validation=Path(__file__).resolve().parents[2]/'reviews/game-validation.json'
+    if validation.exists():attach_game_validation(bundle,validation)
     return bundle
+
+
+def attach_game_validation(bundle,path):
+    """Bind a user's display-test report to exact translation bytes, never launch."""
+    from .blocked_audit import load_json
+    record=load_json(path)
+    if (record.get('schema_version')!=1 or record.get('authority')!='explicit_user_runtime_report'
+            or record.get('result')!='pass' or not record.get('confirmed_names')):
+        raise ValueError('Invalid human runtime validation record')
+    matched=record.get('translation_sha256')==bundle['manifest']['delta_sha256']
+    record_hash=mod_build.sha(path.read_bytes())
+    bundle['manifest'].update(runtime_verified=matched,runtime_validation=dict(
+        status='matching_user_report' if matched else 'report_for_different_translation',
+        record_sha256=record_hash,record_id=record['record_id'],
+        authority=record['authority'],coverage='user_reported_named_displays',
+        confirmed_names=record['confirmed_names'] if matched else [],
+        installed_bytes_independently_verified=False))
+    bundle['input_hashes'][str(path)]=record_hash

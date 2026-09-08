@@ -84,11 +84,9 @@ class LayoutPlanTests(unittest.TestCase):
         from tools.localization.analysis import load_datasets
         from tools.localization.human_reviews import load_ledger,DEFAULT_LEDGER
         from tools.localization.patch_plan import read_audit,build_plan
-        source=Path('reports/phase1c-normalized')
-        if not (source/'scope-metadata.json').exists():self.skipTest('Local audit unavailable')
-        rows,meta,hashes=read_audit(source)
-        data=load_datasets(Path('source'));ledger=load_ledger(DEFAULT_LEDGER)
-        h=json.loads(Path('reviews/phase1d-layout-decisions.json').read_text(encoding='utf8'))
+        from tests.local_pipeline import inputs
+        item=inputs(historical=True)
+        data,ledger,rows,meta,hashes,h=(item[k] for k in ('data','ledger','rows','meta','hashes','human'))
         result=integrate(data,ledger,rows,meta,hashes,h)
         again=integrate(data,ledger,rows,meta,hashes,h)
         self.assertEqual(result,again)

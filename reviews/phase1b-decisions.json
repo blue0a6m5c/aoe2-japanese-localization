@@ -89,6 +89,29 @@
   "baseline_report_sha256": "8ee9fbf41e30a0f8bb15f58bfd1d89fb1fa639da557af016d018b982f3a69b90",
   "records": [
     {
+      "string_id": "5064",
+      "expected_de_english": "Rocket Cart",
+      "decision": "revise",
+      "proposed_jp": "火箭車",
+      "notes": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "help_ids": [
+        "26064"
+      ],
+      "signature": "cabfc507f583b8334adebd116ede009d87c588926fae9c939d4d2c940d1cf734"
+    },
+    {
+      "string_id": "5065",
+      "expected_de_english": "Heavy Rocket Cart",
+      "decision": "revise",
+      "proposed_jp": "重装火箭車",
+      "notes": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "help_ids": [
+        "26065",
+        "28470"
+      ],
+      "signature": "a1c91b499e3a379bdab62083ea022d11cc141632fc6ca27f7b82ee2250ff44c4"
+    },
+    {
       "string_id": "5084",
       "expected_de_english": "Crossbowman",
       "decision": "restore",
@@ -99,6 +122,17 @@
         "28100"
       ],
       "signature": "10fc4a0fa749f7bc52802ea01fd005d01a95b0025c6720dd1c737a633395bdbb"
+    },
+    {
+      "string_id": "5105",
+      "expected_de_english": "Janissary",
+      "decision": "keep_de",
+      "proposed_jp": "イェニチェリ",
+      "notes": "????????????????????????",
+      "help_ids": [
+        "26105"
+      ],
+      "signature": "c70077d6f102121e09cad4eff36ac5c97df7234436f3891f7d290452890c2509"
     },
     {
       "string_id": "5107",
@@ -121,6 +155,17 @@
         "26112"
       ],
       "signature": "432f446e44b1e0ed5c69884748ceb24c4f643022eeed6c8348c1096c1f92f526"
+    },
+    {
+      "string_id": "5115",
+      "expected_de_english": "Royal Janissary",
+      "decision": "keep_de",
+      "proposed_jp": "近衛イェニチェリ",
+      "notes": "????????????????????????",
+      "help_ids": [
+        "26115"
+      ],
+      "signature": "6e9774707152e0f263ffdb0de3750caa54f9d6114ac34ff6c2361995c3eb5da4"
     },
     {
       "string_id": "5118",
@@ -338,6 +383,18 @@
         "28386"
       ],
       "signature": "9ed97640797577696ecdd440fab491d63a038a90ba188b8b465c06d35739db93"
+    },
+    {
+      "string_id": "5455",
+      "expected_de_english": "Elite Janissary",
+      "decision": "revise",
+      "proposed_jp": "エリート イェニチェリ",
+      "notes": "?????DE?????????????Elite??????????????",
+      "help_ids": [
+        "26455",
+        "28392"
+      ],
+      "signature": "3fef588d8d8f41d65a8b5be3920a28c427b0410af950f04bef54b343e96954aa"
     },
     {
       "string_id": "5456",
@@ -868,6 +925,18 @@
       "signature": "a629a9b1428e6f8e01a3ad7656e7e233eac974742f306bbda83b392cc0be74fe"
     },
     {
+      "string_id": "7392",
+      "expected_de_english": "Elite Janissary",
+      "decision": "revise",
+      "proposed_jp": "エリート イェニチェリ",
+      "notes": "?????DE?????????????Elite??????????????",
+      "help_ids": [
+        "26455",
+        "28392"
+      ],
+      "signature": "fe1cf6e1684e7a333354cf1703346e540d1d1d60f4f5ae39158835a1ff7cbb7c"
+    },
+    {
       "string_id": "7393",
       "expected_de_english": "Elite Longboat",
       "decision": "restore",
@@ -963,9 +1032,9 @@
     {
       "string_id": "7432",
       "expected_de_english": "Rocketry",
-      "decision": "restore",
-      "proposed_jp": "砲弾術",
-      "notes": "??????????????????????????????????? ?????keep_de???????????????",
+      "decision": "revise",
+      "proposed_jp": "火箭術",
+      "notes": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
       "help_ids": [
         "28432"
       ],
@@ -1020,6 +1089,17 @@
       "signature": "231957922fb23029b82fda28af6f28dc44835cba4d52ce7d6ab1f2a50701882f"
     },
     {
+      "string_id": "7438",
+      "expected_de_english": "Shinkichon",
+      "decision": "revise",
+      "proposed_jp": "神機箭",
+      "notes": "Explicit user follow-up adjudication: adopt Shinkichon as 神機箭 for name IDs 7438 and 17438; consistent with approved contextual overrides 8438, 28438 and 120167. Name authority only; existing full-text decisions remain unchanged.",
+      "help_ids": [
+        "28438"
+      ],
+      "signature": "7a3f08ec2bce430356e56086c66d3aba70ac0a9cd1084ebd377982221eb960bd"
+    },
+    {
       "string_id": "7439",
       "expected_de_english": "Perfusion",
       "decision": "restore",
@@ -1031,50 +1111,146 @@
       "signature": "5119158b84e94a774aff383431217b004c0e409d181ac4d299b0e6a9d29009fc"
     },
     {
-      "string_id": "5105",
-      "expected_de_english": "Janissary",
-      "decision": "keep_de",
-      "proposed_jp": "イェニチェリ",
-      "notes": "????????????????????????",
-      "help_ids": [
-        "26105"
-      ],
-      "signature": "c70077d6f102121e09cad4eff36ac5c97df7234436f3891f7d290452890c2509"
-    },
-    {
-      "string_id": "5115",
-      "expected_de_english": "Royal Janissary",
-      "decision": "keep_de",
-      "proposed_jp": "近衛イェニチェリ",
-      "notes": "????????????????????????",
-      "help_ids": [
-        "26115"
-      ],
-      "signature": "6e9774707152e0f263ffdb0de3750caa54f9d6114ac34ff6c2361995c3eb5da4"
-    },
-    {
-      "string_id": "5455",
-      "expected_de_english": "Elite Janissary",
+      "string_id": "7470",
+      "expected_de_english": "Heavy Rocket Cart",
       "decision": "revise",
-      "proposed_jp": "エリート イェニチェリ",
-      "notes": "?????DE?????????????Elite??????????????",
+      "proposed_jp": "重装火箭車",
+      "notes": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
       "help_ids": [
-        "26455",
-        "28392"
+        "26065",
+        "28470"
       ],
-      "signature": "3fef588d8d8f41d65a8b5be3920a28c427b0410af950f04bef54b343e96954aa"
+      "signature": "9eb6b576a1ebb62b30059b4a909b9edb9c68951cba1689e302002d0035e6681d"
     },
     {
-      "string_id": "7392",
-      "expected_de_english": "Elite Janissary",
+      "string_id": "10280",
+      "expected_de_english": "Turks",
       "decision": "revise",
-      "proposed_jp": "エリート イェニチェリ",
-      "notes": "?????DE?????????????Elite??????????????",
+      "proposed_jp": "トルコ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "86c45dd64dec069808e85105c3f0f3b9b705019c59001fb8b348e2b6dd41ef5b"
+    },
+    {
+      "string_id": "10313",
+      "expected_de_english": "Romans",
+      "decision": "revise",
+      "proposed_jp": "ローマ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "cc5d07c36a05a8786812298f865b8a2d00d7cc07b90f294a8966417b6fbbff89"
+    },
+    {
+      "string_id": "10319",
+      "expected_de_english": "Shu",
+      "decision": "revise",
+      "proposed_jp": "蜀",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "f961c92c979eb8b5b5a9bbd2cc2a47f0cb8cb2d1ca253b7681eddb19edecac35"
+    },
+    {
+      "string_id": "10327",
+      "expected_de_english": "Muisca",
+      "decision": "revise",
+      "proposed_jp": "ムイスカ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "c85b51a38493c9213a3c39667f6a9aaee04c66781474371255bb54057120150b"
+    },
+    {
+      "string_id": "10328",
+      "expected_de_english": "Mapuche",
+      "decision": "revise",
+      "proposed_jp": "マプチェ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "447670a8560e24982fbcfef1cf3073aefededea70722d207127836aa1cd376a6"
+    },
+    {
+      "string_id": "10329",
+      "expected_de_english": "Tupi",
+      "decision": "revise",
+      "proposed_jp": "トゥピ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "571917870ae96d69e1aeb69112b045dc05bbad6b6d853064dc353302e4d8368d"
+    },
+    {
+      "string_id": "17432",
+      "expected_de_english": "Rocketry",
+      "decision": "revise",
+      "proposed_jp": "火箭術",
+      "notes": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
       "help_ids": [
-        "26455",
-        "28392"
+        "28432"
       ],
-      "signature": "fe1cf6e1684e7a333354cf1703346e540d1d1d60f4f5ae39158835a1ff7cbb7c"
+      "signature": "2e5d2433920bd5906514c031d007e46ff949f6b6c21b644b716415d62664ddd3"
+    },
+    {
+      "string_id": "17438",
+      "expected_de_english": "Shinkichon",
+      "decision": "revise",
+      "proposed_jp": "神機箭",
+      "notes": "Explicit user follow-up adjudication: adopt Shinkichon as 神機箭 for name IDs 7438 and 17438; consistent with approved contextual overrides 8438, 28438 and 120167. Name authority only; existing full-text decisions remain unchanged.",
+      "help_ids": [
+        "28438"
+      ],
+      "signature": "5598928ace49145b942d40049498fc8daca482348fe062d3fc237bad72c5568b"
+    },
+    {
+      "string_id": "20310",
+      "expected_de_english": "The Muisca",
+      "decision": "revise",
+      "proposed_jp": "ムイスカ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "bf995a7875097d0cfb99fb923820656ccb37d68e3097c5b0d640f8656c3e0d11"
+    },
+    {
+      "string_id": "20348",
+      "expected_de_english": "The Romans",
+      "decision": "revise",
+      "proposed_jp": "ローマ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "f834371b656b5e15b54b44f14b496f9700578118125069220777531891987796"
+    },
+    {
+      "string_id": "20350",
+      "expected_de_english": "The Shu",
+      "decision": "revise",
+      "proposed_jp": "蜀",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "72495c7b07b88cff8c48148a38a58c61a8f58ec169338441e0aa9bfa732871b4"
+    },
+    {
+      "string_id": "20356",
+      "expected_de_english": "The Turks",
+      "decision": "revise",
+      "proposed_jp": "トルコ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "ae6edb9ff2ea38c11ba7cc8d809e5b720bf7c80902e760fec86681e049103b00"
+    },
+    {
+      "string_id": "20361",
+      "expected_de_english": "The Mapuche",
+      "decision": "revise",
+      "proposed_jp": "マプチェ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "89406561db1ec67663c2586838e3fdf252949d8700bf13e452cf42f964ba2d8d"
+    },
+    {
+      "string_id": "20380",
+      "expected_de_english": "The Tupi",
+      "decision": "revise",
+      "proposed_jp": "トゥピ",
+      "notes": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "help_ids": [],
+      "signature": "18cfcdd330ae549920197aabbb0e332273f032c33a38da56daa8182ff1ac58ad"
     }
   ]
 }

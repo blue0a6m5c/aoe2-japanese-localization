@@ -17,6 +17,7 @@ from . import layout_plan
 from . import mod_build
 from . import mod_package
 from .human_reviews import load_ledger, DEFAULT_LEDGER
+from . import context_overrides
 
 
 def positive(value: str) -> int:
@@ -41,9 +42,13 @@ def argument_parser() -> argparse.ArgumentParser:
     adopt.add_argument('--output-dir', type=Path, required=True)
     scope_audit = commands.add_parser('scope-audit', help='Read-only Phase 1C application scope report')
     scope_audit.add_argument('--output-dir', type=Path, default=Path('reports/phase1c'))
+    scope_audit.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
+    scope_audit.add_argument('--context-overrides', type=Path, default=context_overrides.DEFAULT_PATH)
+    scope_audit.add_argument('--names-only', action='store_true', help='Legacy name-only audit; omit direct overrides')
     scope_review = commands.add_parser('scope-review', help='Inspect bounded scope candidates')
     scope_review.add_argument('--class', dest='scope_class', choices=scope.CLASSES, default='review')
     scope_review.add_argument('--limit', type=positive, default=10)
+    scope_review.add_argument('--names-only', action='store_true')
     patch = commands.add_parser('patch-plan', help='Occurrence-bound dry-run only; no apply command')
     patch.add_argument('--scope-dir', type=Path, default=Path('reports/phase1c-normalized'))
     patch.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
@@ -243,7 +248,11 @@ def main(argv=None) -> int:
         elif args.command in ('scope-audit','scope-review'):
             if args.command=='scope-review' and args.limit>200:
                 raise ValueError('--limit must be <= 200')
-            audit=scope.build_scope(datasets)
+            if args.command=='scope-audit':
+                context_path=None if args.names_only else args.context_overrides
+                audit=scope.build_scope(datasets,load_ledger(args.ledger),context_path=context_path)
+            else:
+                audit=scope.build_scope(datasets,load_ledger() if args.names_only else None)
             if args.command=='scope-audit':
                 metadata={k:v for k,v in audit.items() if k!='rows'}
                 reports={'scope-audit.tsv':scope.render_audit(audit), 'scope-summary.md':scope.render_summary(audit),
