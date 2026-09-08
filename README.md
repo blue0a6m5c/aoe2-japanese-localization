@@ -69,6 +69,20 @@ See [Name inventory documentation](docs/phase1a.md) for classification limits, r
 Phase 1B preparation documents the [localization adoption policy](docs/localization-policy.md).
 `python -m tools.localization restoration --output-dir reports/phase1b` generates evidence-linked proposals without changing translations.
 
+Phase 1B adds [unapproved editorial review sheets](docs/phase1b.md), linked button/help evidence, and separate ID-reuse findings via `python -m tools.localization adoption --output-dir reports/phase1b/review`.
+
+Explicit human adjudications are retained in [reviews/](reviews/README.md) and take precedence when reports are regenerated. Use a new output directory, such as `reports/phase1b/human-review-next`, to preserve earlier reports.
+
+Phase 1C adds a [read-only application scope audit](docs/phase1c.md): `python -m tools.localization scope-audit` and `scope-review --class required --limit 10`. It reports name/button/help occurrences and conflicts without applying translations.
+
+Phase 1D adds an [occurrence-bound dry-run patch plan](docs/phase1d.md): `python -m tools.localization patch-plan`. It preserves technical syntax, merges identical requests, and blocks unsafe edits without writing translations.
+
+The [blocked audit](docs/phase1d-blocked-audit.md) proposes conservative layout-preserving replacements via `python -m tools.localization blocked-audit`, without applying or altering the existing plan.
+
+The [verified Mod payload generator](docs/phase1e-mod-build.md) builds an independent local artifact via `python -m tools.localization mod-build`, with `--dry-run` and `--verify-only` modes. It never modifies source or installs into the game.
+
+Phase 1F creates a [local display-test delta package](docs/phase1f-local-mod.md) containing only the 346 changed IDs via `python -m tools.localization mod-package`, with a [game verification checklist](docs/phase1f-checklist.md). Installation and in-game checks remain manual.
+
 ```powershell
 python -m tools.localization stats
 python -m tools.localization legacy-stats

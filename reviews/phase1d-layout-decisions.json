@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "review_id": "phase1d-human-layout-13",
+  "reviewer": "project user",
+  "authority": "explicit_user_layout_decisions",
+  "records": [
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 4750,
+      "string_id": "14130",
+      "replacement": "\u6539\u826f\u578b\\n\u30aa\u30eb\u30ac\u30f3\u7832",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 4750,
+        "string_id": "14130",
+        "current": "\u7cbe\u92ed\\n\u30aa\u30eb\u30ac\u30f3\u7832",
+        "requests": [
+          {
+            "decision_string_id": "5130",
+            "decision_signature": "83658e1f7b520b77d3e5d58760e932b5db1cf9f6bc2766de889dcc915aa10fd3",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4750,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6539\u826f\u578b\u30aa\u30eb\u30ac\u30f3\u7832",
+            "matched_span": [
+              0,
+              9
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30aa\u30eb\u30ac\u30f3\u7832"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "5d9db625968b6a9e18261cb6b70f1531bb2d9f3e53c9c3c4503a48379b672d9c"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 4776,
+      "string_id": "14169",
+      "replacement": "\u5305\u56f2\u653b\u6483\\n\u8a13\u7df4\u6240",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 4776,
+        "string_id": "14169",
+        "current": "\u653b\u56f2\\n\u5175\u5668\u5de5\u623f",
+        "requests": [
+          {
+            "decision_string_id": "5169",
+            "decision_signature": "07105cb385dbcd8afefcd5715f9ece57473876923c6d4d9805f460b4af825170",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4776,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u5305\u56f2\u653b\u6483\u8a13\u7df4\u6240",
+            "matched_span": [
+              0,
+              8
+            ],
+            "matched": "\u653b\u56f2\\n\u5175\u5668\u5de5\u623f"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "4e69ddb05eaf1c25b599599ae0b4aa65147d97be0d65339c944825335e69fe3b"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 4820,
+      "string_id": "14452",
+      "replacement": "\u6539\u826f\u578b\\n\u9023\u5f29\u5175",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 4820,
+        "string_id": "14452",
+        "current": "\u7cbe\u92ed\\n\u9023\u5f29\u5175",
+        "requests": [
+          {
+            "decision_string_id": "5452",
+            "decision_signature": "f4e56fd4932349ada2acf09671a5fdc588a42b66a4541c5da3d383108fdb4c76",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4820,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6539\u826f\u578b\u9023\u5f29\u5175",
+            "matched_span": [
+              0,
+              7
+            ],
+            "matched": "\u7cbe\u92ed\\n\u9023\u5f29\u5175"
+          },
+          {
+            "decision_string_id": "7384",
+            "decision_signature": "982f59bb8e3af60131ab75b7af0011e90fc3bafbc814cbb70cbfb1b18b5d525a",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4820,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6539\u826f\u578b\u9023\u5f29\u5175",
+            "matched_span": [
+              0,
+              7
+            ],
+            "matched": "\u7cbe\u92ed\\n\u9023\u5f29\u5175"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "e1e639f1b5367c832bcb1fff6e4d310f9f5b1b8b301f3a66feb91d8f31015eac"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 4824,
+      "string_id": "14456",
+      "replacement": "\u30a8\u30ea\u30fc\u30c8\\n\u30ed\u30f3\u30b0\u30dc\u30a6",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 4824,
+        "string_id": "14456",
+        "current": "\u7cbe\u92ed\\n\u30ed\u30f3\u30b0\u30dc\u30a6\u5175",
+        "requests": [
+          {
+            "decision_string_id": "5456",
+            "decision_signature": "9c77220ee1ce1f6330e359ec7e78dbf5f6e318f8cbc19aff3d3074e4057011bb",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4824,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u30a8\u30ea\u30fc\u30c8 \u30ed\u30f3\u30b0\u30dc\u30a6",
+            "matched_span": [
+              0,
+              10
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30ed\u30f3\u30b0\u30dc\u30a6\u5175"
+          },
+          {
+            "decision_string_id": "7381",
+            "decision_signature": "2c741dd159481de10c73f79f47d38884602b76dafad90f2799574f518ba05409",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4824,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u30a8\u30ea\u30fc\u30c8 \u30ed\u30f3\u30b0\u30dc\u30a6",
+            "matched_span": [
+              0,
+              10
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30ed\u30f3\u30b0\u30dc\u30a6\u5175"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "9245ecebb06c5912d787a43fd1bea8a010387d287ffbcea219fc973a4125051e"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 4825,
+      "string_id": "14457",
+      "replacement": "\u91cd\u88c5\\n\u30d0\u30a4\u30ad\u30f3\u30b0\u8239",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 4825,
+        "string_id": "14457",
+        "current": "\u7cbe\u92ed\\n\u30d0\u30a4\u30ad\u30f3\u30b0\u8239",
+        "requests": [
+          {
+            "decision_string_id": "5457",
+            "decision_signature": "76545721d13e8cf4738c895e56328a430ffd6e343893620a5aa6458a5b553361",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4825,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u91cd\u88c5\u30d0\u30a4\u30ad\u30f3\u30b0\u8239",
+            "matched_span": [
+              0,
+              10
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30d0\u30a4\u30ad\u30f3\u30b0\u8239"
+          },
+          {
+            "decision_string_id": "7393",
+            "decision_signature": "3bce0850f8991a1ca2b903281c09cd8c6d772b064292db6e880b2a382cdfcf60",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4825,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u91cd\u88c5\u30d0\u30a4\u30ad\u30f3\u30b0\u8239",
+            "matched_span": [
+              0,
+              10
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30d0\u30a4\u30ad\u30f3\u30b0\u8239"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "def4e5c70db320073563ee424858f62af554773059b99975ab751cc1748bb6dc"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 4839,
+      "string_id": "14573",
+      "replacement": "\u6a5f\u52d5\\n\u30ad\u30e3\u30ce\u30f3 \u30ac\u30ea\u30aa\u30f3\u8239",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 4839,
+        "string_id": "14573",
+        "current": "\u7cbe\u92ed\u30ad\u30e3\u30ce\u30f3\\n\u30ac\u30ec\u30aa\u30f3\u8239",
+        "requests": [
+          {
+            "decision_string_id": "5573",
+            "decision_signature": "b98c001f2468fb6938bce94e0aa7dd67bad6f6010c17f7345198c4da5e7145ed",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4839,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6a5f\u52d5\u30ad\u30e3\u30ce\u30f3 \u30ac\u30ea\u30aa\u30f3\u8239",
+            "matched_span": [
+              0,
+              13
+            ],
+            "matched": "\u7cbe\u92ed\u30ad\u30e3\u30ce\u30f3\\n\u30ac\u30ec\u30aa\u30f3\u8239"
+          },
+          {
+            "decision_string_id": "7375",
+            "decision_signature": "8cd69d8ee984a4aded9896ef271dd5d0af86f5c82f10a572cff24176eadac1b2",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 4839,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6a5f\u52d5\u30ad\u30e3\u30ce\u30f3 \u30ac\u30ea\u30aa\u30f3\u8239",
+            "matched_span": [
+              0,
+              13
+            ],
+            "matched": "\u7cbe\u92ed\u30ad\u30e3\u30ce\u30f3\\n\u30ac\u30ec\u30aa\u30f3\u8239"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "c919d5278c7f990f569499c1ccbc1e69f9690260e7b06672c1aee2cc28af4cc7"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 5578,
+      "string_id": "17074",
+      "replacement": "\u6b69\u5175\u7528\\n\u3046\u308d\u3053\u306e\u93a7",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 5578,
+        "string_id": "17074",
+        "current": "\u6b69\u5175\u7528\\n\u9b5a\u9c57\u93a7",
+        "requests": [
+          {
+            "decision_string_id": "7074",
+            "decision_signature": "3fcc64220821df77e2b12809952c0498984ac37e75731373b7c529937610959b",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5578,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6b69\u5175\u7528\u3046\u308d\u3053\u306e\u93a7",
+            "matched_span": [
+              0,
+              8
+            ],
+            "matched": "\u6b69\u5175\u7528\\n\u9b5a\u9c57\u93a7"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "641fad05053ae70552febb756dee94ff5080b9edfa79271c4ae683aa781344be"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 5583,
+      "string_id": "17081",
+      "replacement": "\u9a0e\u99ac\u7528\\n\u3046\u308d\u3053\u306e\u93a7",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 5583,
+        "string_id": "17081",
+        "current": "\u9a0e\u99ac\u7528\\n\u9b5a\u9c57\u93a7",
+        "requests": [
+          {
+            "decision_string_id": "7081",
+            "decision_signature": "8ea870b8bb14047cc82b44e532eefcb37e8fc5c46429196b982fef15b7cbb0b1",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5583,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u9a0e\u99ac\u7528\u3046\u308d\u3053\u306e\u93a7",
+            "matched_span": [
+              0,
+              8
+            ],
+            "matched": "\u9a0e\u99ac\u7528\\n\u9b5a\u9c57\u93a7"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "9a3591d1e93cb5576dc885656d360e48d57fe6b46680df93f2a15dfe4070d402"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 5685,
+      "string_id": "17375",
+      "replacement": "\u6a5f\u52d5\\n\u30ad\u30e3\u30ce\u30f3 \u30ac\u30ea\u30aa\u30f3\u8239",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 5685,
+        "string_id": "17375",
+        "current": "\u7cbe\u92ed\u30ad\u30e3\u30ce\u30f3\\n\u30ac\u30ec\u30aa\u30f3\u8239",
+        "requests": [
+          {
+            "decision_string_id": "5573",
+            "decision_signature": "b98c001f2468fb6938bce94e0aa7dd67bad6f6010c17f7345198c4da5e7145ed",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5685,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6a5f\u52d5\u30ad\u30e3\u30ce\u30f3 \u30ac\u30ea\u30aa\u30f3\u8239",
+            "matched_span": [
+              0,
+              13
+            ],
+            "matched": "\u7cbe\u92ed\u30ad\u30e3\u30ce\u30f3\\n\u30ac\u30ec\u30aa\u30f3\u8239"
+          },
+          {
+            "decision_string_id": "7375",
+            "decision_signature": "8cd69d8ee984a4aded9896ef271dd5d0af86f5c82f10a572cff24176eadac1b2",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5685,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6a5f\u52d5\u30ad\u30e3\u30ce\u30f3 \u30ac\u30ea\u30aa\u30f3\u8239",
+            "matched_span": [
+              0,
+              13
+            ],
+            "matched": "\u7cbe\u92ed\u30ad\u30e3\u30ce\u30f3\\n\u30ac\u30ec\u30aa\u30f3\u8239"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "8c4b768dcc4fa100e42dab01ceb1bddbd6b144e3aa253d10543d5c1f00b521e5"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 5691,
+      "string_id": "17381",
+      "replacement": "\u30a8\u30ea\u30fc\u30c8\\n\u30ed\u30f3\u30b0\u30dc\u30a6",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 5691,
+        "string_id": "17381",
+        "current": "\u7cbe\u92ed\\n\u30ed\u30f3\u30b0\u30dc\u30a6\u5175",
+        "requests": [
+          {
+            "decision_string_id": "5456",
+            "decision_signature": "9c77220ee1ce1f6330e359ec7e78dbf5f6e318f8cbc19aff3d3074e4057011bb",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5691,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u30a8\u30ea\u30fc\u30c8 \u30ed\u30f3\u30b0\u30dc\u30a6",
+            "matched_span": [
+              0,
+              10
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30ed\u30f3\u30b0\u30dc\u30a6\u5175"
+          },
+          {
+            "decision_string_id": "7381",
+            "decision_signature": "2c741dd159481de10c73f79f47d38884602b76dafad90f2799574f518ba05409",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5691,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u30a8\u30ea\u30fc\u30c8 \u30ed\u30f3\u30b0\u30dc\u30a6",
+            "matched_span": [
+              0,
+              10
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30ed\u30f3\u30b0\u30dc\u30a6\u5175"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "f27fffee72b573702c540310c276f990575aa822bc259e3d0df984c130e01ab9"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 5694,
+      "string_id": "17384",
+      "replacement": "\u6539\u826f\u578b\\n\u9023\u5f29\u5175",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 5694,
+        "string_id": "17384",
+        "current": "\u7cbe\u92ed\\n\u9023\u5f29\u5175",
+        "requests": [
+          {
+            "decision_string_id": "5452",
+            "decision_signature": "f4e56fd4932349ada2acf09671a5fdc588a42b66a4541c5da3d383108fdb4c76",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5694,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6539\u826f\u578b\u9023\u5f29\u5175",
+            "matched_span": [
+              0,
+              7
+            ],
+            "matched": "\u7cbe\u92ed\\n\u9023\u5f29\u5175"
+          },
+          {
+            "decision_string_id": "7384",
+            "decision_signature": "982f59bb8e3af60131ab75b7af0011e90fc3bafbc814cbb70cbfb1b18b5d525a",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5694,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u6539\u826f\u578b\u9023\u5f29\u5175",
+            "matched_span": [
+              0,
+              7
+            ],
+            "matched": "\u7cbe\u92ed\\n\u9023\u5f29\u5175"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "4e5bc3397c0185d573878c8e70bda219042aac6a0b0e5a5bd1ff7425b84e62d9"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 5702,
+      "string_id": "17393",
+      "replacement": "\u91cd\u88c5\\n\u30d0\u30a4\u30ad\u30f3\u30b0\u8239",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 5702,
+        "string_id": "17393",
+        "current": "\u7cbe\u92ed\\n\u30d0\u30a4\u30ad\u30f3\u30b0\u8239",
+        "requests": [
+          {
+            "decision_string_id": "5457",
+            "decision_signature": "76545721d13e8cf4738c895e56328a430ffd6e343893620a5aa6458a5b553361",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5702,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u91cd\u88c5\u30d0\u30a4\u30ad\u30f3\u30b0\u8239",
+            "matched_span": [
+              0,
+              10
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30d0\u30a4\u30ad\u30f3\u30b0\u8239"
+          },
+          {
+            "decision_string_id": "7393",
+            "decision_signature": "3bce0850f8991a1ca2b903281c09cd8c6d772b064292db6e880b2a382cdfcf60",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5702,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u91cd\u88c5\u30d0\u30a4\u30ad\u30f3\u30b0\u8239",
+            "matched_span": [
+              0,
+              10
+            ],
+            "matched": "\u7cbe\u92ed\\n\u30d0\u30a4\u30ad\u30f3\u30b0\u8239"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "8c03568775e14b26304e438e1f26166855477c15b3ad44458b417903a5869e39"
+    },
+    {
+      "source_path": "de_jp/key-value-strings-utf8.txt",
+      "source_line": 5712,
+      "string_id": "17415",
+      "replacement": "\u30d1\u30eb\u30c6\u30a3\u30a2\u30f3\\n\u6226\u8853",
+      "binding": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 5712,
+        "string_id": "17415",
+        "current": "\u30d1\u30eb\u30c6\u30a3\u30a2\\n\u6226\u8853",
+        "requests": [
+          {
+            "decision_string_id": "7415",
+            "decision_signature": "88aef7a3ba40edad153fce2b09ab4acf09e8322f43151f102275c5717f627514",
+            "relation": "same_name_shared_help",
+            "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+            "english_source": {
+              "path": "de_en/key-value-strings-utf8.txt",
+              "line": 5712,
+              "value_format": "key_value_raw"
+            },
+            "canonical": "\u30d1\u30eb\u30c6\u30a3\u30a2\u30f3\u6226\u8853",
+            "matched_span": [
+              0,
+              9
+            ],
+            "matched": "\u30d1\u30eb\u30c6\u30a3\u30a2\\n\u6226\u8853"
+          }
+        ]
+      },
+      "notes": "User explicitly specified the layout; canonical Phase 1B translation is unchanged.",
+      "signature": "9eb9c02e65e2354f1dff4a83b4e6e4abea06c929029a6fe14d7a0d9ee925775c"
+    }
+  ]
+}

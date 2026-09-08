@@ -1,0 +1,1080 @@
+{
+  "schema_version": 1,
+  "review_id": "phase1b-human-2026-09-08",
+  "reviewer": "project owner (user)",
+  "reviewed_on": "2026-09-08",
+  "authority": "explicit user adjudication; supersedes automated proposals",
+  "baseline_ids": [
+    "5084",
+    "5105",
+    "5107",
+    "5112",
+    "5128",
+    "5131",
+    "5138",
+    "5169",
+    "5176",
+    "5202",
+    "5287",
+    "5309",
+    "5426",
+    "5439",
+    "5444",
+    "5451",
+    "5452",
+    "5453",
+    "5454",
+    "5455",
+    "5456",
+    "5457",
+    "5458",
+    "5459",
+    "5460",
+    "5461",
+    "5462",
+    "5463",
+    "5504",
+    "5573",
+    "5576",
+    "5661",
+    "5669",
+    "5673",
+    "5677",
+    "5689",
+    "5729",
+    "5732",
+    "7023",
+    "7037",
+    "7055",
+    "7068",
+    "7074",
+    "7081",
+    "7100",
+    "7103",
+    "7180",
+    "7210",
+    "7244",
+    "7261",
+    "7276",
+    "7317",
+    "7374",
+    "7375",
+    "7378",
+    "7381",
+    "7382",
+    "7383",
+    "7384",
+    "7386",
+    "7387",
+    "7388",
+    "7389",
+    "7390",
+    "7391",
+    "7392",
+    "7393",
+    "7394",
+    "7401",
+    "7408",
+    "7415",
+    "7417",
+    "7418",
+    "7429",
+    "7432",
+    "7433",
+    "7434",
+    "7436",
+    "7437",
+    "7439"
+  ],
+  "baseline_report_sha256": "8ee9fbf41e30a0f8bb15f58bfd1d89fb1fa639da557af016d018b982f3a69b90",
+  "records": [
+    {
+      "string_id": "5084",
+      "expected_de_english": "Crossbowman",
+      "decision": "restore",
+      "proposed_jp": "石弓射手",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26084",
+        "28100"
+      ],
+      "signature": "10fc4a0fa749f7bc52802ea01fd005d01a95b0025c6720dd1c737a633395bdbb"
+    },
+    {
+      "string_id": "5107",
+      "expected_de_english": "Longbowman",
+      "decision": "restore",
+      "proposed_jp": "ロングボウ",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26107"
+      ],
+      "signature": "b0588196be579874430e38500c68b2d6000a14d21b29c92754816bdcbae93b81"
+    },
+    {
+      "string_id": "5112",
+      "expected_de_english": "Teutonic Knight",
+      "decision": "restore",
+      "proposed_jp": "チュートン ナイト",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26112"
+      ],
+      "signature": "432f446e44b1e0ed5c69884748ceb24c4f643022eeed6c8348c1096c1f92f526"
+    },
+    {
+      "string_id": "5118",
+      "expected_de_english": "Flamethrower",
+      "decision": "restore",
+      "proposed_jp": "火炎放射器",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26118"
+      ],
+      "signature": "3f24326b691218d504b514bba2032c666c6c0e40a6aaa5f518d8a1eec405ec5e"
+    },
+    {
+      "string_id": "5128",
+      "expected_de_english": "Archery Range",
+      "decision": "restore",
+      "proposed_jp": "射手育成所",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26128"
+      ],
+      "signature": "4aa06bb4b05425fc570f26da1aedec57b04b8331cc4db1a1fc1403e0eb8a31aa"
+    },
+    {
+      "string_id": "5130",
+      "expected_de_english": "Elite Organ Gun",
+      "decision": "restore",
+      "proposed_jp": "改良型オルガン砲",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26130",
+        "28237"
+      ],
+      "signature": "83658e1f7b520b77d3e5d58760e932b5db1cf9f6bc2766de889dcc915aa10fd3"
+    },
+    {
+      "string_id": "5131",
+      "expected_de_english": "Blacksmith",
+      "decision": "restore",
+      "proposed_jp": "鉄工所",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26131"
+      ],
+      "signature": "a60c450bda538c9eeadfd6dc93d305dfeb8f357336c83be5983890df6276aca4"
+    },
+    {
+      "string_id": "5138",
+      "expected_de_english": "Monastery",
+      "decision": "restore",
+      "proposed_jp": "神殿",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26138"
+      ],
+      "signature": "c7b6beb2011fb7565ae4b93590d252f7bbd28da2349709e563cd6f8b048c9139"
+    },
+    {
+      "string_id": "5169",
+      "expected_de_english": "Siege Workshop",
+      "decision": "restore",
+      "proposed_jp": "包囲攻撃訓練所",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26169"
+      ],
+      "signature": "07105cb385dbcd8afefcd5715f9ece57473876923c6d4d9805f460b4af825170"
+    },
+    {
+      "string_id": "5176",
+      "expected_de_english": "University",
+      "decision": "restore",
+      "proposed_jp": "学問所",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26176"
+      ],
+      "signature": "a1e96d83ad10f882ff27b98deb818570ed56d0221c4f7b2bc3516a483248e394"
+    },
+    {
+      "string_id": "5186",
+      "expected_de_english": "Palisade Gate",
+      "decision": "restore",
+      "proposed_jp": "柵の門",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26186"
+      ],
+      "signature": "7204a19b6d0fd4d9fbcb56b372c20d1ef866d04d6129ddfcf771c1d2fea88fdd"
+    },
+    {
+      "string_id": "5202",
+      "expected_de_english": "Palisade Wall",
+      "decision": "restore",
+      "proposed_jp": "柵",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26202"
+      ],
+      "signature": "021ea90e6d37db76a7d8d3a9f8d7e66deb1425f8255349b57bacb0f183f52ccd"
+    },
+    {
+      "string_id": "5205",
+      "expected_de_english": "Fortified Palisade Wall",
+      "decision": "restore",
+      "proposed_jp": "強化柵",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26205"
+      ],
+      "signature": "5bb1529c7ecf325ea5b5978f64ebe7fb5d267dd1f431d258639c37673179dea5"
+    },
+    {
+      "string_id": "5287",
+      "expected_de_english": "Cannon Galleon",
+      "decision": "restore",
+      "proposed_jp": "キャノン ガリオン船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26287",
+        "28037"
+      ],
+      "signature": "36e192fcf66566570e06030ae78460954fcf2f08fef320619f58e50e465734ad"
+    },
+    {
+      "string_id": "5309",
+      "expected_de_english": "Galleon",
+      "decision": "restore",
+      "proposed_jp": "ガリオン船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26309"
+      ],
+      "signature": "590715bdad3bc8605ee7b9361c9d306358e36aac7b230ad9898d59563fd133f4"
+    },
+    {
+      "string_id": "5426",
+      "expected_de_english": "Fire Ship",
+      "decision": "restore",
+      "proposed_jp": "火炎船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26426"
+      ],
+      "signature": "1c914e1a6634b652bd4f4c04724bbb9b87ff360d85c4e49c7729fb194c61d9e2"
+    },
+    {
+      "string_id": "5439",
+      "expected_de_english": "Heavy Scorpion",
+      "decision": "restore",
+      "proposed_jp": "ヘビー スコーピオン",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26439",
+        "28244"
+      ],
+      "signature": "c78038b4ab332a42018939ab330536f16aab08f08633e6bdb44e8a31b5d3cf73"
+    },
+    {
+      "string_id": "5444",
+      "expected_de_english": "Light Cavalry",
+      "decision": "restore",
+      "proposed_jp": "騎兵",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26444",
+        "28261"
+      ],
+      "signature": "eb307b3dea77b33a988ce5ef45f62eb4fb374bf0f067eec3f0bc12b68913c185"
+    },
+    {
+      "string_id": "5451",
+      "expected_de_english": "Elite Cataphract",
+      "decision": "restore",
+      "proposed_jp": "エリート カタフラクト",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26451",
+        "28382"
+      ],
+      "signature": "72c791acc47079165482c6bcdcbd73e7df6fe538ddd5b50cc8c26393dc4baffc"
+    },
+    {
+      "string_id": "5452",
+      "expected_de_english": "Elite Chu Ko Nu",
+      "decision": "restore",
+      "proposed_jp": "改良型連弩兵",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26452",
+        "28384"
+      ],
+      "signature": "f4e56fd4932349ada2acf09671a5fdc588a42b66a4541c5da3d383108fdb4c76"
+    },
+    {
+      "string_id": "5453",
+      "expected_de_english": "Elite Mameluke",
+      "decision": "restore",
+      "proposed_jp": "エリート マムルーク",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26453",
+        "28390"
+      ],
+      "signature": "b327dbe3c32b61ecfe6038d2052ff8b37a60f80caa54e6458cd6d612b1d0ad02"
+    },
+    {
+      "string_id": "5454",
+      "expected_de_english": "Elite Huskarl",
+      "decision": "restore",
+      "proposed_jp": "エリート ハスカール",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26454",
+        "28386"
+      ],
+      "signature": "9ed97640797577696ecdd440fab491d63a038a90ba188b8b465c06d35739db93"
+    },
+    {
+      "string_id": "5456",
+      "expected_de_english": "Elite Longbowman",
+      "decision": "restore",
+      "proposed_jp": "エリート ロングボウ",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26456",
+        "28381"
+      ],
+      "signature": "9c77220ee1ce1f6330e359ec7e78dbf5f6e318f8cbc19aff3d3074e4057011bb"
+    },
+    {
+      "string_id": "5457",
+      "expected_de_english": "Elite Longboat",
+      "decision": "restore",
+      "proposed_jp": "重装バイキング船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26457",
+        "28393"
+      ],
+      "signature": "76545721d13e8cf4738c895e56328a430ffd6e343893620a5aa6458a5b553361"
+    },
+    {
+      "string_id": "5458",
+      "expected_de_english": "Elite Mangudai",
+      "decision": "restore",
+      "proposed_jp": "エリート マングダイ",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26458",
+        "28388"
+      ],
+      "signature": "31bb4dba1d046754f98817067ffd942db87124158fe6e0dda7449e5119ed517e"
+    },
+    {
+      "string_id": "5459",
+      "expected_de_english": "Elite War Elephant",
+      "decision": "restore",
+      "proposed_jp": "エリート エレファント",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26459",
+        "28389"
+      ],
+      "signature": "24ab09232d561e466a492da1103572144cf92b516f5162d72dc17a0226897362"
+    },
+    {
+      "string_id": "5460",
+      "expected_de_english": "Elite Samurai",
+      "decision": "restore",
+      "proposed_jp": "剣豪",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26460",
+        "28387"
+      ],
+      "signature": "3ee760f2d1b1c6e3a1622df81d5b698db66b6ce468f10e68099cf747bbe9f170"
+    },
+    {
+      "string_id": "5461",
+      "expected_de_english": "Elite Throwing Axeman",
+      "decision": "restore",
+      "proposed_jp": "エリート フランカ スロウ",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26461",
+        "28394"
+      ],
+      "signature": "ab9ae750e047f2b448ce055e36714dee0b86882c9ee5720996d7c6f17913cad9"
+    },
+    {
+      "string_id": "5462",
+      "expected_de_english": "Elite Teutonic Knight",
+      "decision": "restore",
+      "proposed_jp": "エリート チュートン ナイト",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26462",
+        "28391"
+      ],
+      "signature": "ffa202edffb619e55503f71d55f61deaf986174f2677604e35c70bb6e9d76e51"
+    },
+    {
+      "string_id": "5463",
+      "expected_de_english": "Elite Woad Raider",
+      "decision": "restore",
+      "proposed_jp": "エリート ウォード レイダー",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26463",
+        "28383"
+      ],
+      "signature": "2abd0c8ad85b6d7de3de92f95c3cf7554064deb4e48d317cfad7ec3ece6e0ce5"
+    },
+    {
+      "string_id": "5504",
+      "expected_de_english": "Outpost",
+      "decision": "restore",
+      "proposed_jp": "前哨",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26504"
+      ],
+      "signature": "e100f667baa444b318b24024b5bd502f609791dfe071d9c041bb19088a526528"
+    },
+    {
+      "string_id": "5573",
+      "expected_de_english": "Elite Cannon Galleon",
+      "decision": "restore",
+      "proposed_jp": "機動キャノン ガリオン船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26573",
+        "28375"
+      ],
+      "signature": "b98c001f2468fb6938bce94e0aa7dd67bad6f6010c17f7345198c4da5e7145ed"
+    },
+    {
+      "string_id": "5576",
+      "expected_de_english": "Elite Berserk",
+      "decision": "restore",
+      "proposed_jp": "エリート ベルセルク",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26576",
+        "28401"
+      ],
+      "signature": "465540f388a6aeece6ba40c1059440a6c35af8d5fc779374d9833f2a614d98f5"
+    },
+    {
+      "string_id": "5661",
+      "expected_de_english": "Hussar",
+      "decision": "restore",
+      "proposed_jp": "ハサー",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26661",
+        "28417"
+      ],
+      "signature": "2118a45117bf791371ec36ea64c42725cbb1d1cb29cf9d9b163b0e90fb1539f1"
+    },
+    {
+      "string_id": "5669",
+      "expected_de_english": "Elite Jaguar Warrior",
+      "decision": "restore",
+      "proposed_jp": "エリート ジャガー ウォリア",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26669",
+        "28434"
+      ],
+      "signature": "e64296c3006cdc3dad4cf264eab01186e7a82e37820f1b7bd732e7941c268970"
+    },
+    {
+      "string_id": "5673",
+      "expected_de_english": "Elite Eagle Warrior",
+      "decision": "restore",
+      "proposed_jp": "エリート イーグル ウォリア",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26673",
+        "28433"
+      ],
+      "signature": "6dbb8f9c726bd3bb81119d2211aaf8ba98add23e1be351a2f1b26027741d54c8"
+    },
+    {
+      "string_id": "5677",
+      "expected_de_english": "Elite Tarkan",
+      "decision": "restore",
+      "proposed_jp": "エリート タルカン",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26677",
+        "28418"
+      ],
+      "signature": "51a00575641ae689800790b5a9bef3d0d1234acd650919022f00b88371cd4e57"
+    },
+    {
+      "string_id": "5689",
+      "expected_de_english": "Elite Conquistador",
+      "decision": "restore",
+      "proposed_jp": "エリート コンキスタドール",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26689",
+        "28317"
+      ],
+      "signature": "f2a7b6cae8b4ebab15dd6fb827dd5a3ff259170a6dde45b0e6d1cb500a0c08ff"
+    },
+    {
+      "string_id": "5729",
+      "expected_de_english": "Elite War Wagon",
+      "decision": "restore",
+      "proposed_jp": "強化戦車",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26729",
+        "28436"
+      ],
+      "signature": "9430ae96c2f54a2172e794dca483fde0197704aa4ce9fda0178b556e823ca413"
+    },
+    {
+      "string_id": "5732",
+      "expected_de_english": "Elite Turtle Ship",
+      "decision": "restore",
+      "proposed_jp": "重装亀甲船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26732",
+        "28437"
+      ],
+      "signature": "bf64a8d7219aa3074b51b920d960034397d6dcdef01f8c23e3ee1df3c6fdc365"
+    },
+    {
+      "string_id": "7023",
+      "expected_de_english": "Coinage",
+      "decision": "restore",
+      "proposed_jp": "貨幣制度",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28023"
+      ],
+      "signature": "6541608d219653f449ae2894ca16a82880b65431f60d2cfbb568d7c54625e204"
+    },
+    {
+      "string_id": "7037",
+      "expected_de_english": "Cannon Galleon",
+      "decision": "restore",
+      "proposed_jp": "キャノン ガリオン船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26287",
+        "28037"
+      ],
+      "signature": "b4378ff19ae348e6205f27d4c87e84346fa18c47bc0dbecca8268e20e63c92d5"
+    },
+    {
+      "string_id": "7055",
+      "expected_de_english": "Gold Mining",
+      "decision": "restore",
+      "proposed_jp": "金の採掘",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28055"
+      ],
+      "signature": "6d50fb5f8e58859d8a6c716a5b796b60958561ac80f38f61977ce596492b7a7a"
+    },
+    {
+      "string_id": "7068",
+      "expected_de_english": "Iron Casting",
+      "decision": "restore",
+      "proposed_jp": "鋳造",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28068"
+      ],
+      "signature": "fc828ce8870db1c824b8567c5de7134955f4d023be20c4f8d598c36b52413610"
+    },
+    {
+      "string_id": "7074",
+      "expected_de_english": "Scale Mail Armor",
+      "decision": "restore",
+      "proposed_jp": "歩兵用うろこの鎧",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28074"
+      ],
+      "signature": "3fcc64220821df77e2b12809952c0498984ac37e75731373b7c529937610959b"
+    },
+    {
+      "string_id": "7081",
+      "expected_de_english": "Scale Barding Armor",
+      "decision": "restore",
+      "proposed_jp": "騎馬用うろこの鎧",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28081"
+      ],
+      "signature": "8ea870b8bb14047cc82b44e532eefcb37e8fc5c46429196b982fef15b7cbb0b1"
+    },
+    {
+      "string_id": "7100",
+      "expected_de_english": "Crossbowman",
+      "decision": "restore",
+      "proposed_jp": "石弓射手",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26084",
+        "28100"
+      ],
+      "signature": "93ce6f0e06fa61c40ea5eecb5b9087317846055daac982358a4bd9b00d825de1"
+    },
+    {
+      "string_id": "7103",
+      "expected_de_english": "Imperial Age",
+      "decision": "restore",
+      "proposed_jp": "帝王の時代",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28103"
+      ],
+      "signature": "585ce94590d412f88dd92543b042927948b717c4b4600653c9bbf968082c0807"
+    },
+    {
+      "string_id": "7180",
+      "expected_de_english": "Gold Shaft Mining",
+      "decision": "restore",
+      "proposed_jp": "金の掘削",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28180"
+      ],
+      "signature": "55d0cc1b9758b05e0faec7c9357046bab1129b49f8d87d625ca167e59812c319"
+    },
+    {
+      "string_id": "7210",
+      "expected_de_english": "Squires",
+      "decision": "restore",
+      "proposed_jp": "武者修行",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28210"
+      ],
+      "signature": "d4434f0b404864d2a3e08a6891aa8181572e81a62defbabad51b79483e2cb8f4"
+    },
+    {
+      "string_id": "7244",
+      "expected_de_english": "Heavy Scorpion",
+      "decision": "restore",
+      "proposed_jp": "ヘビー スコーピオン",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26439",
+        "28244"
+      ],
+      "signature": "659e3aeba9aa7bca6be179870b1962a3b7583f73ffaa75869fb96d4fce01d72e"
+    },
+    {
+      "string_id": "7261",
+      "expected_de_english": "Light Cavalry",
+      "decision": "restore",
+      "proposed_jp": "騎兵",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26444",
+        "28261"
+      ],
+      "signature": "429590a0a14f1b05357a8c04efafb3f25febe723e0f4c88046f7589ea59f2afd"
+    },
+    {
+      "string_id": "7276",
+      "expected_de_english": "Stone Mining",
+      "decision": "restore",
+      "proposed_jp": "石の切り出し",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28276"
+      ],
+      "signature": "9501b2aa6d641a54ab5545308f2617d596d109a6ca5f24a0810b60dc0328514b"
+    },
+    {
+      "string_id": "7317",
+      "expected_de_english": "Elite Conquistador",
+      "decision": "restore",
+      "proposed_jp": "エリート コンキスタドール",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26689",
+        "28317"
+      ],
+      "signature": "f4d75c37c3062c4462a7963244ddf301f615505cbf74ed803be1b95e7d253366"
+    },
+    {
+      "string_id": "7374",
+      "expected_de_english": "Heated Shot",
+      "decision": "restore",
+      "proposed_jp": "火砲学",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28374"
+      ],
+      "signature": "18923a7dc6cf50b1311d00c8e1f55db04e9c4102445965ae5f90066b4748f3bb"
+    },
+    {
+      "string_id": "7375",
+      "expected_de_english": "Elite Cannon Galleon",
+      "decision": "restore",
+      "proposed_jp": "機動キャノン ガリオン船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26573",
+        "28375"
+      ],
+      "signature": "8cd69d8ee984a4aded9896ef271dd5d0af86f5c82f10a572cff24176eadac1b2"
+    },
+    {
+      "string_id": "7378",
+      "expected_de_english": "Siege Engineers",
+      "decision": "restore",
+      "proposed_jp": "包囲攻撃技術",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28378"
+      ],
+      "signature": "8d8cc4c3ee0b9b78f913fa4f8e84db8c1fd615d0042a98cd159617445401db9e"
+    },
+    {
+      "string_id": "7381",
+      "expected_de_english": "Elite Longbowman",
+      "decision": "restore",
+      "proposed_jp": "エリート ロングボウ",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26456",
+        "28381"
+      ],
+      "signature": "2c741dd159481de10c73f79f47d38884602b76dafad90f2799574f518ba05409"
+    },
+    {
+      "string_id": "7382",
+      "expected_de_english": "Elite Cataphract",
+      "decision": "restore",
+      "proposed_jp": "エリート カタフラクト",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26451",
+        "28382"
+      ],
+      "signature": "cf6c0f5e45f0348badac3f2e52354f93b0102ea9373639ea41e19a5d61b5ffe6"
+    },
+    {
+      "string_id": "7383",
+      "expected_de_english": "Elite Woad Raider",
+      "decision": "restore",
+      "proposed_jp": "エリート ウォード レイダー",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26463",
+        "28383"
+      ],
+      "signature": "596acb5bd3fe68104d4e7a87458409d6fdcb1461142f7ee65b1be91ebd8593cb"
+    },
+    {
+      "string_id": "7384",
+      "expected_de_english": "Elite Chu Ko Nu",
+      "decision": "restore",
+      "proposed_jp": "改良型連弩兵",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26452",
+        "28384"
+      ],
+      "signature": "982f59bb8e3af60131ab75b7af0011e90fc3bafbc814cbb70cbfb1b18b5d525a"
+    },
+    {
+      "string_id": "7386",
+      "expected_de_english": "Elite Huskarl",
+      "decision": "restore",
+      "proposed_jp": "エリート ハスカール",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26454",
+        "28386"
+      ],
+      "signature": "9fd0cf60f492b35519e7f7c6f65a6c39ee1cb7fd7561cf3b76b177bf870759ba"
+    },
+    {
+      "string_id": "7387",
+      "expected_de_english": "Elite Samurai",
+      "decision": "restore",
+      "proposed_jp": "剣豪",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26460",
+        "28387"
+      ],
+      "signature": "d424820d681b6a82fe2723384a0092b3f029edc986692a49836334b07401f137"
+    },
+    {
+      "string_id": "7388",
+      "expected_de_english": "Elite Mangudai",
+      "decision": "restore",
+      "proposed_jp": "エリート マングダイ",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26458",
+        "28388"
+      ],
+      "signature": "1fe4c3286bd3a0b1661de9e1b50298e4affa3cafed5ebb4421fc1d6bacd93c5b"
+    },
+    {
+      "string_id": "7389",
+      "expected_de_english": "Elite War Elephant",
+      "decision": "restore",
+      "proposed_jp": "エリート エレファント",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26459",
+        "28389"
+      ],
+      "signature": "6a4234d5e43baf07d229de5cc73b6167516d1c55c1404ed6aa645d1623b32836"
+    },
+    {
+      "string_id": "7390",
+      "expected_de_english": "Elite Mameluke",
+      "decision": "restore",
+      "proposed_jp": "エリート マムルーク",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26453",
+        "28390"
+      ],
+      "signature": "b1a4c29710359089a01ff44896d931dcc3d751ddfba7ed0b10a03a815dbd1d5f"
+    },
+    {
+      "string_id": "7391",
+      "expected_de_english": "Elite Teutonic Knight",
+      "decision": "restore",
+      "proposed_jp": "エリート チュートン ナイト",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26462",
+        "28391"
+      ],
+      "signature": "a629a9b1428e6f8e01a3ad7656e7e233eac974742f306bbda83b392cc0be74fe"
+    },
+    {
+      "string_id": "7393",
+      "expected_de_english": "Elite Longboat",
+      "decision": "restore",
+      "proposed_jp": "重装バイキング船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26457",
+        "28393"
+      ],
+      "signature": "3bce0850f8991a1ca2b903281c09cd8c6d772b064292db6e880b2a382cdfcf60"
+    },
+    {
+      "string_id": "7394",
+      "expected_de_english": "Elite Throwing Axeman",
+      "decision": "restore",
+      "proposed_jp": "エリート フランカ スロウ",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26461",
+        "28394"
+      ],
+      "signature": "2734125830d00c7bb7204b2439f7fd9110d3b1224d3f69c98c8042123d809737"
+    },
+    {
+      "string_id": "7401",
+      "expected_de_english": "Elite Berserk",
+      "decision": "restore",
+      "proposed_jp": "エリート ベルセルク",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26576",
+        "28401"
+      ],
+      "signature": "c0c1f52f8bfa344e0447606b3e61699b13594040b2379975a3bf99e45cca33a2"
+    },
+    {
+      "string_id": "7408",
+      "expected_de_english": "Spies/Treason",
+      "decision": "restore",
+      "proposed_jp": "諜報/反逆",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28408"
+      ],
+      "signature": "69d15942c37da66a6796fe9c0bc347ec44fa6b55ce495910d9ce682942bb8dbe"
+    },
+    {
+      "string_id": "7415",
+      "expected_de_english": "Parthian Tactics",
+      "decision": "restore",
+      "proposed_jp": "パルティアン戦術",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28415"
+      ],
+      "signature": "88aef7a3ba40edad153fce2b09ab4acf09e8322f43151f102275c5717f627514"
+    },
+    {
+      "string_id": "7417",
+      "expected_de_english": "Hussar",
+      "decision": "restore",
+      "proposed_jp": "ハサー",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26661",
+        "28417"
+      ],
+      "signature": "ab4df363f1e1a9237b122d3250c3c17f1c44eb2c50cfdc7c59ef83aa37744e33"
+    },
+    {
+      "string_id": "7418",
+      "expected_de_english": "Elite Tarkan",
+      "decision": "restore",
+      "proposed_jp": "エリート タルカン",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26677",
+        "28418"
+      ],
+      "signature": "99b7815136b5e4fb59571dbaa4262b0baf06586b6a9ed2b62bda9a7443951320"
+    },
+    {
+      "string_id": "7429",
+      "expected_de_english": "Garland Wars",
+      "decision": "restore",
+      "proposed_jp": "栄誉戦",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28429"
+      ],
+      "signature": "679024f284c288b5ecb8b318a2cd0c5787b7855b3811db5886bcd72cf8e4b4a1"
+    },
+    {
+      "string_id": "7432",
+      "expected_de_english": "Rocketry",
+      "decision": "restore",
+      "proposed_jp": "砲弾術",
+      "notes": "??????????????????????????????????? ?????keep_de???????????????",
+      "help_ids": [
+        "28432"
+      ],
+      "signature": "5fce559bc1dcdd0949238354c6845f073a88ea555d90229d77d09655bc119351"
+    },
+    {
+      "string_id": "7433",
+      "expected_de_english": "Elite Eagle Warrior",
+      "decision": "restore",
+      "proposed_jp": "エリート イーグル ウォリア",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26673",
+        "28433"
+      ],
+      "signature": "af352dbfd44327db2ea6e57d09302fd10607dad51d401c91d4a6c5a791991c66"
+    },
+    {
+      "string_id": "7434",
+      "expected_de_english": "Elite Jaguar Warrior",
+      "decision": "restore",
+      "proposed_jp": "エリート ジャガー ウォリア",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26669",
+        "28434"
+      ],
+      "signature": "5e0450125172178871b4970a773a0b16e7fc0645ffa7cdbef93cf38a4dd93e8f"
+    },
+    {
+      "string_id": "7436",
+      "expected_de_english": "Elite War Wagon",
+      "decision": "restore",
+      "proposed_jp": "強化戦車",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26729",
+        "28436"
+      ],
+      "signature": "cd9e28628d7f1b73b24722f31b586f5a7c1c20961102c644d1fd41c0cc4416f1"
+    },
+    {
+      "string_id": "7437",
+      "expected_de_english": "Elite Turtle Ship",
+      "decision": "restore",
+      "proposed_jp": "重装亀甲船",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "26732",
+        "28437"
+      ],
+      "signature": "231957922fb23029b82fda28af6f28dc44835cba4d52ce7d6ab1f2a50701882f"
+    },
+    {
+      "string_id": "7439",
+      "expected_de_english": "Perfusion",
+      "decision": "restore",
+      "proposed_jp": "パーフュージョン",
+      "notes": "???????????????????????????????????",
+      "help_ids": [
+        "28439"
+      ],
+      "signature": "5119158b84e94a774aff383431217b004c0e409d181ac4d299b0e6a9d29009fc"
+    },
+    {
+      "string_id": "5105",
+      "expected_de_english": "Janissary",
+      "decision": "keep_de",
+      "proposed_jp": "イェニチェリ",
+      "notes": "????????????????????????",
+      "help_ids": [
+        "26105"
+      ],
+      "signature": "c70077d6f102121e09cad4eff36ac5c97df7234436f3891f7d290452890c2509"
+    },
+    {
+      "string_id": "5115",
+      "expected_de_english": "Royal Janissary",
+      "decision": "keep_de",
+      "proposed_jp": "近衛イェニチェリ",
+      "notes": "????????????????????????",
+      "help_ids": [
+        "26115"
+      ],
+      "signature": "6e9774707152e0f263ffdb0de3750caa54f9d6114ac34ff6c2361995c3eb5da4"
+    },
+    {
+      "string_id": "5455",
+      "expected_de_english": "Elite Janissary",
+      "decision": "revise",
+      "proposed_jp": "エリート イェニチェリ",
+      "notes": "?????DE?????????????Elite??????????????",
+      "help_ids": [
+        "26455",
+        "28392"
+      ],
+      "signature": "3fef588d8d8f41d65a8b5be3920a28c427b0410af950f04bef54b343e96954aa"
+    },
+    {
+      "string_id": "7392",
+      "expected_de_english": "Elite Janissary",
+      "decision": "revise",
+      "proposed_jp": "エリート イェニチェリ",
+      "notes": "?????DE?????????????Elite??????????????",
+      "help_ids": [
+        "26455",
+        "28392"
+      ],
+      "signature": "fe1cf6e1684e7a333354cf1703346e540d1d1d60f4f5ae39158835a1ff7cbb7c"
+    }
+  ]
+}

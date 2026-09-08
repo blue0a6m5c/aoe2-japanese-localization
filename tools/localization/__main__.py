@@ -9,6 +9,14 @@ import sys
 from .analysis import (CATEGORIES, all_ids, classify, legacy_summary, load_datasets, row, summary)
 from .gameplay import (FAMILIES, FLAGS, NAME_CATEGORIES, build_inventory, filter_rows, inventory_stats, render_tsv)
 from . import restoration
+from . import adoption
+from . import scope
+from . import patch_plan
+from . import blocked_audit
+from . import layout_plan
+from . import mod_build
+from . import mod_package
+from .human_reviews import load_ledger, DEFAULT_LEDGER
 
 
 def positive(value: str) -> int:
@@ -29,6 +37,46 @@ def argument_parser() -> argparse.ArgumentParser:
     restore.add_argument('--classification', choices=restoration.CLASSES)
     restore.add_argument('--limit', type=positive, default=25)
     restore.add_argument('--output-dir', type=Path)
+    adopt = commands.add_parser('adoption', help='Unapproved Phase 1B editorial review sheet')
+    adopt.add_argument('--output-dir', type=Path, required=True)
+    scope_audit = commands.add_parser('scope-audit', help='Read-only Phase 1C application scope report')
+    scope_audit.add_argument('--output-dir', type=Path, default=Path('reports/phase1c'))
+    scope_review = commands.add_parser('scope-review', help='Inspect bounded scope candidates')
+    scope_review.add_argument('--class', dest='scope_class', choices=scope.CLASSES, default='review')
+    scope_review.add_argument('--limit', type=positive, default=10)
+    patch = commands.add_parser('patch-plan', help='Occurrence-bound dry-run only; no apply command')
+    patch.add_argument('--scope-dir', type=Path, default=Path('reports/phase1c-normalized'))
+    patch.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
+    patch.add_argument('--output-dir', type=Path, default=Path('reports/phase1d'))
+    blocked = commands.add_parser('blocked-audit', help='Dry-run layout proposals for blocked Phase 1D occurrences')
+    blocked.add_argument('--scope-dir', type=Path, default=Path('reports/phase1c-normalized'))
+    blocked.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
+    blocked.add_argument('--plan-dir', type=Path, default=Path('reports/phase1d'))
+    blocked.add_argument('--output-dir', type=Path, default=Path('reports/phase1d-blocked-audit'))
+    blocked_review = commands.add_parser('blocked-review', help='Read saved manual-review JSON as a human-readable table')
+    blocked_review.add_argument('--input', type=Path, default=Path('reports/phase1d-blocked-audit/manual-review.json'))
+    layout = commands.add_parser('layout-plan', help='Integrate automatic and human layout decisions; dry-run only')
+    layout.add_argument('--scope-dir', type=Path, default=Path('reports/phase1c-normalized'))
+    layout.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
+    layout.add_argument('--layout-ledger', type=Path, default=Path('reviews/phase1d-layout-decisions.json'))
+    layout.add_argument('--output-dir', type=Path, default=Path('reports/phase1d-layout'))
+    build = commands.add_parser('mod-build', help='Generate a verified independent Mod payload; never install')
+    build.add_argument('--plan', type=Path, default=Path('reports/phase1d-layout/patch-plan.json'))
+    build.add_argument('--scope-dir', type=Path, default=Path('reports/phase1c-normalized'))
+    build.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
+    build.add_argument('--layout-ledger', type=Path, default=Path('reviews/phase1d-layout-decisions.json'))
+    build.add_argument('--output-dir', type=Path, default=Path('dist/phase1e-mod'))
+    modes=build.add_mutually_exclusive_group()
+    modes.add_argument('--dry-run', action='store_true')
+    modes.add_argument('--verify-only', action='store_true')
+    package = commands.add_parser('mod-package', help='Create a local display-test package; no install or launch')
+    package.add_argument('--input-dir', type=Path, default=Path('dist/phase1e-mod'))
+    package.add_argument('--plan', type=Path, default=Path('reports/phase1d-layout/patch-plan.json'))
+    package.add_argument('--scope-dir', type=Path, default=Path('reports/phase1c-normalized'))
+    package.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
+    package.add_argument('--layout-ledger', type=Path, default=Path('reviews/phase1d-layout-decisions.json'))
+    package.add_argument('--output-dir', type=Path, default=Path('dist/phase1f-local-mod-delta'))
+    package.add_argument('--verify-only', action='store_true')
     names = commands.add_parser('names', help='Evidence-linked gameplay name inventory and audit')
     names.add_argument('--stats', action='store_true')
     names.add_argument('--category', choices=NAME_CATEGORIES)
@@ -112,7 +160,25 @@ def write_report(path: Path, content: str, source_root: Path) -> None:
 def main(argv=None) -> int:
     parser = argument_parser()
     args = parser.parse_args(argv)
+    plan_blocked = False
     try:
+        if args.command == 'mod-package':
+            if args.config:raise ValueError('Local package requires the audited default dataset layout')
+            bundle=mod_package.prepare(args.source_root,args.plan,args.ledger,args.layout_ledger,args.scope_dir,args.input_dir)
+            mode='verify-only' if args.verify_only else 'build'
+            manifest=mod_build.generate(bundle,args.output_dir,mode)
+            print(json.dumps({'mode':mode,'output_dir':args.output_dir.as_posix(),'manifest':manifest},ensure_ascii=True,indent=2))
+            return 0
+        if args.command == 'mod-build':
+            if args.config:raise ValueError('Mod build uses the audited default dataset layout; --config is unsupported')
+            bundle=mod_build.prepare(args.source_root,args.plan,args.ledger,args.layout_ledger,args.scope_dir)
+            mode='dry-run' if args.dry_run else 'verify-only' if args.verify_only else 'build'
+            manifest=mod_build.generate(bundle,args.output_dir,mode)
+            print(json.dumps({'mode':mode,'output_dir':args.output_dir.as_posix(),'manifest':manifest},ensure_ascii=True,indent=2))
+            return 0
+        if args.command == 'blocked-review':
+            print(blocked_audit.render_manual_review(blocked_audit.load_json(args.input)),end='')
+            return 0
         config = json.loads(args.config.read_text(encoding='utf-8-sig')) if args.config else None
         datasets = load_datasets(args.source_root, config)
         stats = summary(datasets)
@@ -132,7 +198,83 @@ def main(argv=None) -> int:
                   'diagnostic_count': len(diagnostics),
                   'duplicate_dataset_id_pairs': stats['duplicate_dataset_id_pairs'],
                   'incomplete': incomplete}
-        if args.command == 'restoration':
+        if args.command == 'layout-plan':
+            rows,metadata,hashes=patch_plan.read_audit(args.scope_dir)
+            plan=layout_plan.integrate(datasets,load_ledger(args.ledger),rows,metadata,hashes,blocked_audit.load_json(args.layout_ledger))
+            artifacts={'patch-plan.json':{k:v for k,v in plan.items() if k!='blocked'},'blocked.json':plan['blocked']}
+            reports={name:blocked_audit.serialize_json(obj) for name,obj in artifacts.items()}
+            reports.update({'patch-plan.tsv':layout_plan.render_table(plan),'patch-summary.md':patch_plan.render_summary(plan)})
+            if any((args.output_dir/name).exists() for name in reports):
+                raise ValueError('Layout plan already exists; choose a new output directory')
+            for name,content in reports.items():
+                write_report(args.output_dir/name,content.rstrip('\n'),args.source_root)
+                if name in artifacts: blocked_audit.verify_json(args.output_dir/name,artifacts[name])
+            plan_blocked=bool(plan['blocked'])
+            output={**common,**plan['statistics'],'reports':[(args.output_dir/name).as_posix() for name in reports]}
+        elif args.command == 'blocked-audit':
+            rows,metadata,hashes=patch_plan.read_audit(args.scope_dir)
+            result=blocked_audit.audit_blocked(datasets,load_ledger(args.ledger),rows,metadata,hashes,
+                json.loads((args.plan_dir/'patch-plan.json').read_text(encoding='utf8')),
+                json.loads((args.plan_dir/'blocked.json').read_text(encoding='utf8')))
+            reports={'blocked-audit.tsv':blocked_audit.render_table(result),
+                     'blocked-summary.md':blocked_audit.render_summary(result)}
+            artifacts=blocked_audit.json_artifacts(result)
+            reports.update({name:blocked_audit.serialize_json(value) for name,value in artifacts.items()})
+            if any((args.output_dir/name).exists() for name in reports):
+                raise ValueError('Blocked audit already exists; choose a new output directory')
+            for name,content in reports.items():
+                write_report(args.output_dir/name,content.rstrip('\n'),args.source_root)
+                if name in artifacts:
+                    blocked_audit.verify_json(args.output_dir/name,artifacts[name])
+            plan_blocked=bool(result['manual_review'])
+            output={**common,**result['statistics'],'reports':[(args.output_dir/name).as_posix() for name in reports]}
+        elif args.command == 'patch-plan':
+            rows,metadata,hashes=patch_plan.read_audit(args.scope_dir)
+            plan=patch_plan.build_plan(datasets,load_ledger(args.ledger),rows,metadata,hashes)
+            plan_blocked=bool(plan['blocked'])
+            reports={'patch-plan.json':json.dumps({k:v for k,v in plan.items() if k!='blocked'},ensure_ascii=False,indent=2),
+                     'patch-plan.tsv':patch_plan.render_tsv(plan),'patch-summary.md':patch_plan.render_summary(plan),
+                     'blocked.json':json.dumps(plan['blocked'],ensure_ascii=False,indent=2)}
+            if any((args.output_dir/name).exists() for name in reports):
+                raise ValueError('Patch plan already exists; choose a new output directory')
+            for name,content in reports.items():
+                write_report(args.output_dir/name,content.rstrip('\n'),args.source_root)
+            output={**common,**plan['statistics'],'reports':[(args.output_dir/name).as_posix() for name in reports]}
+        elif args.command in ('scope-audit','scope-review'):
+            if args.command=='scope-review' and args.limit>200:
+                raise ValueError('--limit must be <= 200')
+            audit=scope.build_scope(datasets)
+            if args.command=='scope-audit':
+                metadata={k:v for k,v in audit.items() if k!='rows'}
+                reports={'scope-audit.tsv':scope.render_audit(audit), 'scope-summary.md':scope.render_summary(audit),
+                         'scope-metadata.json':json.dumps(metadata,ensure_ascii=False,indent=2)}
+                reports['duplicate-audit.json']=json.dumps(audit['duplicate_audit'],ensure_ascii=False,indent=2)
+                if any((args.output_dir/name).exists() for name in reports):
+                    raise ValueError('Scope report already exists; choose a new output directory')
+                for name,content in reports.items():
+                    write_report(args.output_dir/name,content.rstrip('\n'),args.source_root)
+                output={**common,'decision_count':audit['decision_count'],'related_id_count':audit['related_id_count'],
+                        'scope_counts':audit['scope_counts'],'total':audit['total'],'conflict_count':audit['conflict_count'],
+                        'reports':[(args.output_dir/name).as_posix() for name in reports]}
+            else:
+                selected=[r for r in audit['rows'] if r['scope_class']==args.scope_class]
+                output={**common,'total':len(selected),'rows':selected[:args.limit],'scope_class':args.scope_class}
+        elif args.command == 'adoption':
+            review = adoption.build_adoption(datasets)
+            reports = {'review.tsv': adoption.render_review(review),
+                       'evidence.tsv': adoption.render_evidence(review),
+                       'review-summary.md': adoption.render_summary(review),
+                       'definite-bugs.json': json.dumps(review['bugs'],ensure_ascii=False,indent=2)}
+            reports['human-review-audit.json'] = json.dumps(review['human_review'],ensure_ascii=False,indent=2)
+            if any((args.output_dir / name).exists() for name in reports):
+                raise ValueError('Review already exists; choose a new output directory')
+            for name, content in reports.items():
+                write_report(args.output_dir / name, content.rstrip('\n'), args.source_root)
+            output = {**common, 'total':review['total'], 'counts':review['counts'],
+                      'upstream_counts':review['upstream_counts'], 'consistency_rows':review['consistency_rows'],
+                      'human_counts':review['human_counts'], 'baseline_human_counts':review['baseline_human_counts'],
+                      'reports':[(args.output_dir/name).as_posix() for name in reports]}
+        elif args.command == 'restoration':
             if args.limit > 200:
                 raise ValueError('--limit must be <= 200')
             output = restoration.build_restoration(datasets)
@@ -206,7 +348,7 @@ def main(argv=None) -> int:
         if issue_count:
             print(f'Input diagnostics: {len(diagnostics)}; duplicate dataset/ID pairs: '
                   f'{stats["duplicate_dataset_id_pairs"]}. Inspect issues; ambiguous values are not resolved.', file=sys.stderr)
-        return 1 if issue_count else 0
+        return 1 if issue_count or plan_blocked else 0
     except (OSError, ValueError) as exc:
         print(f'Error: {exc}', file=sys.stderr)
         return 2

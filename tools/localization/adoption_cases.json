@@ -1,0 +1,289 @@
+{
+  "5131": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DE Helpともユニットの攻撃・防御を改善する施設で、Siege Workshopの前提施設という用途も継続。鉄工所の復元を提案する。建物名だけでなく他施設Helpの参照も揃える。現物ゲーム表示とLegacy英語は未確認。",
+    "signature": "a60c450bda538c9eeadfd6dc93d305dfeb8f357336c83be5983890df6276aca4"
+  },
+  "5138": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DE Helpで聖職者の作成・強化、聖遺物による金収入という施設用途が継続。神殿の復元を提案する。語の一般的な直訳より継承訳を優先するが、Chroniclesや別文脈には波及させない。",
+    "signature": "c7b6beb2011fb7565ae4b93590d252f7bbd28da2349709e563cd6f8b048c9139"
+  },
+  "5176": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HDでは建物・射撃ユニットの改善、DEではユニット・建物の技術研究と記述され、研究施設の役割が継続。学問所の復元を提案する。個々の技術効果まで旧仕様へ戻すものではない。",
+    "signature": "a1e96d83ad10f882ff27b98deb818570ed56d0221c4f7b2bc3516a483248e394"
+  },
+  "5169": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "consistency_fix",
+    "reason": "HD/DEとも攻囲兵器を生産する施設。名称IDの攻囲兵器工房と建造Helpの攻城兵器工房が不一致。包囲攻撃訓練所の復元を提案するが、上流には表記不一致の事実と採用訳の選好を分けて提示する。",
+    "signature": "07105cb385dbcd8afefcd5715f9ece57473876923c6d4d9805f460b4af825170"
+  },
+  "5128": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HDの射手作成・強化とDEの射撃兵士育成・強化が同じ施設の用途を示す。射手育成所を提案する。DE内の弓兵育成所の参照を一覧の名称・Help単位で確認する。",
+    "signature": "4aa06bb4b05425fc570f26da1aedec57b04b8331cc4db1a1fc1403e0eb8a31aa"
+  },
+  "7103": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEとも城主の時代の次の発展段階へ進み、建物・軍事ユニット・技術を解禁する。DEのKrepost等の進化条件追加は時代名の概念変更とは区別し、帝王の時代を提案する。",
+    "signature": "585ce94590d412f88dd92543b042927948b717c4b4600653c9bbf968082c0807"
+  },
+  "5084": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "consistency_fix",
+    "reason": "HD/DEのアップグレードHelpは射手を強化してCrossbowmanを作成する同一用途。DE名称は石弓兵だが作成・アップグレードHelpは石弓射手。旧訳と現行Helpが一致する石弓射手を提案し、ユニット名と研究名を同時レビューする。",
+    "signature": "10fc4a0fa749f7bc52802ea01fd005d01a95b0025c6720dd1c737a633395bdbb"
+  },
+  "7100": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "consistency_fix",
+    "reason": "HD/DEのアップグレードHelpは射手を強化してCrossbowmanを作成する同一用途。DE名称は石弓兵だが作成・アップグレードHelpは石弓射手。旧訳と現行Helpが一致する石弓射手を提案し、ユニット名と研究名を同時レビューする。",
+    "signature": "93ce6f0e06fa61c40ea5eecb5b9087317846055daac982358a4bd9b00d825de1"
+  },
+  "5426": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEとも火を噴いて敵船を攻撃する軍艦。DEの相性・進化先追加を名称変更の根拠とはせず火炎船を提案する。Fast Fire Ship等の系列ラベルを関連証拠に含め、別艦種を一括置換しない。",
+    "signature": "1c914e1a6634b652bd4f4c04724bbb9b87ff360d85c4e49c7729fb194c61d9e2"
+  },
+  "5460": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEとも日本のSamuraiの上位ユニットおよびそのアップグレード。剣豪を提案する。基本Samuraiの武士は別項目として維持し、Eliteを機械的に精鋭へ統一することは採用理由にしない。",
+    "signature": "3ee760f2d1b1c6e3a1622df81d5b698db66b6ce468f10e68099cf747bbe9f170"
+  },
+  "7387": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEとも日本のSamuraiの上位ユニットおよびそのアップグレード。剣豪を提案する。基本Samuraiの武士は別項目として維持し、Eliteを機械的に精鋭へ統一することは採用理由にしない。",
+    "signature": "d424820d681b6a82fe2723384a0092b3f029edc986692a49836334b07401f137"
+  },
+  "5309": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HDのWar Galley上位艦とDEの遠隔攻撃軍艦という用途を確認。相性・強化施設の変更はあるが、Galleonという艦名の意味は継続する候補。ガリオン船を提案し、Cannon系との表記体系を併せてレビューする。",
+    "signature": "590715bdad3bc8605ee7b9361c9d306358e36aac7b230ad9898d59563fd133f4"
+  },
+  "5287": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "consistency_fix",
+    "reason": "HD/DEとも長距離から建物を攻撃する砲撃軍艦で、同名研究が艦の建造を解禁する。DEのキャノン ガレオン船と建造Helpの大砲ガレオン船が不一致。キャノン ガリオン船を提案するが、不一致修正とガリオン表記の復元は別の根拠として提示する。",
+    "signature": "36e192fcf66566570e06030ae78460954fcf2f08fef320619f58e50e465734ad"
+  },
+  "7037": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "consistency_fix",
+    "reason": "HD/DEとも長距離から建物を攻撃する砲撃軍艦で、同名研究が艦の建造を解禁する。DEのキャノン ガレオン船と建造Helpの大砲ガレオン船が不一致。キャノン ガリオン船を提案するが、不一致修正とガリオン表記の復元は別の根拠として提示する。",
+    "signature": "b4378ff19ae348e6205f27d4c87e84346fa18c47bc0dbecca8268e20e63c92d5"
+  },
+  "5573": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEのアップグレードHelpでCannon Galleonの強化型という同一関係を確認。機動キャノン ガリオン船を候補とするが、機動が現在の速度差を保証する語と誤読されないか個別確認が必要。基本型と研究名を一括してレビューする。",
+    "signature": "b98c001f2468fb6938bce94e0aa7dd67bad6f6010c17f7345198c4da5e7145ed"
+  },
+  "7375": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEのアップグレードHelpでCannon Galleonの強化型という同一関係を確認。機動キャノン ガリオン船を候補とするが、機動が現在の速度差を保証する語と誤読されないか個別確認が必要。基本型と研究名を一括してレビューする。",
+    "signature": "8cd69d8ee984a4aded9896ef271dd5d0af86f5c82f10a572cff24176eadac1b2"
+  },
+  "5732": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEとも朝鮮のTurtle Ship強化型で、防御力の高い軍艦という説明も維持。重装亀甲船を提案する。精鋭への一般的統一より、旧固有名称と系列の対応を優先する。",
+    "signature": "bf64a8d7219aa3074b51b920d960034397d6dcdef01f8c23e3ee1df3c6fdc365"
+  },
+  "7437": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEとも朝鮮のTurtle Ship強化型で、防御力の高い軍艦という説明も維持。重装亀甲船を提案する。精鋭への一般的統一より、旧固有名称と系列の対応を優先する。",
+    "signature": "231957922fb23029b82fda28af6f28dc44835cba4d52ce7d6ab1f2a50701882f"
+  },
+  "5452": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEのアップグレードHelpでChu Ko Nuの強化型という関係を確認。改良型連弩兵を提案する。通常型・作成・研究表示で上位型を指すことを確認してから採用する。",
+    "signature": "f4e56fd4932349ada2acf09671a5fdc588a42b66a4541c5da3d383108fdb4c76"
+  },
+  "7384": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEのアップグレードHelpでChu Ko Nuの強化型という関係を確認。改良型連弩兵を提案する。通常型・作成・研究表示で上位型を指すことを確認してから採用する。",
+    "signature": "982f59bb8e3af60131ab75b7af0011e90fc3bafbc814cbb70cbfb1b18b5d525a"
+  },
+  "5457": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEともLongboatの上位型で、アップグレード説明でも強化と防御改善を確認。重装バイキング船を提案する。現在の相性変更は説明文側の事実として保持する。",
+    "signature": "76545721d13e8cf4738c895e56328a430ffd6e343893620a5aa6458a5b553361"
+  },
+  "7393": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEともLongboatの上位型で、アップグレード説明でも強化と防御改善を確認。重装バイキング船を提案する。現在の相性変更は説明文側の事実として保持する。",
+    "signature": "3bce0850f8991a1ca2b903281c09cd8c6d772b064292db6e880b2a382cdfcf60"
+  },
+  "5729": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEとも朝鮮のWar Wagon上位型という関係を確認。強化戦車を提案する。現代の戦車を指すと誤認されないよう基本型・画像・ゲーム内表示で最終確認する。",
+    "signature": "9430ae96c2f54a2172e794dca483fde0197704aa4ce9fda0178b556e823ca413"
+  },
+  "7436": {
+    "decision": "restore",
+    "confidence": "medium",
+    "upstream_class": "legacy_restoration",
+    "reason": "HD/DEとも朝鮮のWar Wagon上位型という関係を確認。強化戦車を提案する。現代の戦車を指すと誤認されないよう基本型・画像・ゲーム内表示で最終確認する。",
+    "signature": "cd9e28628d7f1b73b24722f31b586f5a7c1c20961102c644d1fd41c0cc4416f1"
+  },
+  "7023": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "関連HD/DE英語Helpで研究対象と効果が継続していることを確認した。貢ぎ物の手数料20%、金/石の採集速度15%、または歩兵/騎兵の防御+1という当該IDの効果が証拠表で一致する。継承された旧名称を提案する。",
+    "signature": "6541608d219653f449ae2894ca16a82880b65431f60d2cfbb568d7c54625e204"
+  },
+  "7055": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "関連HD/DE英語Helpで研究対象と効果が継続していることを確認した。貢ぎ物の手数料20%、金/石の採集速度15%、または歩兵/騎兵の防御+1という当該IDの効果が証拠表で一致する。継承された旧名称を提案する。",
+    "signature": "6d50fb5f8e58859d8a6c716a5b796b60958561ac80f38f61977ce596492b7a7a"
+  },
+  "7074": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "関連HD/DE英語Helpで研究対象と効果が継続していることを確認した。貢ぎ物の手数料20%、金/石の採集速度15%、または歩兵/騎兵の防御+1という当該IDの効果が証拠表で一致する。継承された旧名称を提案する。",
+    "signature": "3fcc64220821df77e2b12809952c0498984ac37e75731373b7c529937610959b"
+  },
+  "7081": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "関連HD/DE英語Helpで研究対象と効果が継続していることを確認した。貢ぎ物の手数料20%、金/石の採集速度15%、または歩兵/騎兵の防御+1という当該IDの効果が証拠表で一致する。継承された旧名称を提案する。",
+    "signature": "8ea870b8bb14047cc82b44e532eefcb37e8fc5c46429196b982fef15b7cbb0b1"
+  },
+  "7180": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "関連HD/DE英語Helpで研究対象と効果が継続していることを確認した。貢ぎ物の手数料20%、金/石の採集速度15%、または歩兵/騎兵の防御+1という当該IDの効果が証拠表で一致する。継承された旧名称を提案する。",
+    "signature": "55d0cc1b9758b05e0faec7c9357046bab1129b49f8d87d625ca167e59812c319"
+  },
+  "7276": {
+    "decision": "restore",
+    "confidence": "high",
+    "upstream_class": "legacy_restoration",
+    "reason": "関連HD/DE英語Helpで研究対象と効果が継続していることを確認した。貢ぎ物の手数料20%、金/石の採集速度15%、または歩兵/騎兵の防御+1という当該IDの効果が証拠表で一致する。継承された旧名称を提案する。",
+    "signature": "9501b2aa6d641a54ab5545308f2617d596d109a6ca5f24a0810b60dc0328514b"
+  },
+  "7432": {
+    "decision": "keep_de",
+    "confidence": "medium",
+    "upstream_class": "subjective",
+    "reason": "名称は同一だが、HDの連弩兵・スコーピオン攻撃強化から、DEではロケット カート・楼船等の強化とロケット発射を含む効果に変更。砲弾術を機械的に戻さず、現在の効果を明示するロケット技術の維持を提案する。維持の最終判断は未承認。",
+    "signature": "5fce559bc1dcdd0949238354c6845f073a88ea555d90229d77d09655bc119351"
+  },
+  "5105": {
+    "decision": "manual_review",
+    "confidence": "low",
+    "upstream_class": "subjective",
+    "reason": "イュニチェリとイェニチェリの音写差。ユニット用途の継続だけでは旧音写の正確性を判定できない。歴史的名称の根拠を調べ、通常型・上位型・研究をまとめて判断する。旧表記を自動採用しない。",
+    "signature": "c70077d6f102121e09cad4eff36ac5c97df7234436f3891f7d290452890c2509"
+  },
+  "5455": {
+    "decision": "manual_review",
+    "confidence": "low",
+    "upstream_class": "subjective",
+    "reason": "イュニチェリとイェニチェリの音写差。ユニット用途の継続だけでは旧音写の正確性を判定できない。歴史的名称の根拠を調べ、通常型・上位型・研究をまとめて判断する。旧表記を自動採用しない。",
+    "signature": "3fef588d8d8f41d65a8b5be3920a28c427b0410af950f04bef54b343e96954aa"
+  },
+  "7392": {
+    "decision": "manual_review",
+    "confidence": "low",
+    "upstream_class": "subjective",
+    "reason": "イュニチェリとイェニチェリの音写差。ユニット用途の継続だけでは旧音写の正確性を判定できない。歴史的名称の根拠を調べ、通常型・上位型・研究をまとめて判断する。旧表記を自動採用しない。",
+    "signature": "fe1cf6e1684e7a333354cf1703346e540d1d1d60f4f5ae39158835a1ff7cbb7c"
+  },
+  "5444": {
+    "decision": "manual_review",
+    "confidence": "medium",
+    "upstream_class": "subjective",
+    "reason": "同じLight Cavalry系列だが、旧騎兵は一般カテゴリの騎兵と区別しにくい可能性がある。DE Helpは偵察・襲撃用途を明示し進化先も拡張している。騎兵カテゴリ、斥候、Hussar系列の表示を合わせて判断する。",
+    "signature": "eb307b3dea77b33a988ce5ef45f62eb4fb374bf0f067eec3f0bc12b68913c185"
+  },
+  "7261": {
+    "decision": "manual_review",
+    "confidence": "medium",
+    "upstream_class": "subjective",
+    "reason": "同じLight Cavalry系列だが、旧騎兵は一般カテゴリの騎兵と区別しにくい可能性がある。DE Helpは偵察・襲撃用途を明示し進化先も拡張している。騎兵カテゴリ、斥候、Hussar系列の表示を合わせて判断する。",
+    "signature": "429590a0a14f1b05357a8c04efafb3f25febe723e0f4c88046f7589ea59f2afd"
+  },
+  "7374": {
+    "decision": "manual_review",
+    "confidence": "medium",
+    "upstream_class": "subjective",
+    "reason": "旧火砲学と英語Heated Shotの対応を個別検討する。DEでは港も対象となり城の効果表記もHDと変わった。砲の一般研究と誤解させないか確認し、ヒート射撃の不自然さだけを旧訳採用の理由にしない。",
+    "signature": "18923a7dc6cf50b1311d00c8e1f55db04e9c4102445965ae5f90066b4748f3bb"
+  },
+  "7415": {
+    "decision": "manual_review",
+    "confidence": "medium",
+    "upstream_class": "subjective",
+    "reason": "パルティアン/パルティアの音写と修飾関係を調査する。DEの対槍兵攻撃効果と対象範囲はHD記述と異なる。名称の音写判断と数値・対象の仕様確認を分ける。",
+    "signature": "88aef7a3ba40edad153fce2b09ab4acf09e8322f43151f102275c5717f627514"
+  },
+  "7429": {
+    "decision": "manual_review",
+    "confidence": "low",
+    "upstream_class": "subjective",
+    "reason": "歩兵攻撃力+4という効果はHD/DEで継続。ただし栄誉戦と花戦争の歴史的概念への対応は効果だけでは判断できない。歴史用語の一次・専門資料確認が必要。",
+    "signature": "679024f284c288b5ecb8b318a2cd0c5787b7855b3811db5886bcd72cf8e4b4a1"
+  },
+  "7439": {
+    "decision": "manual_review",
+    "confidence": "medium",
+    "upstream_class": "subjective",
+    "reason": "HDは兵士の作成速度、DEは戦士育成所の作業速度と説明範囲が異なる。皆兵/パーフュージョンの意味と技術効果の対応を個別判断し、旧音写を自動復元しない。",
+    "signature": "5119158b84e94a774aff383431217b004c0e409d181ac4d299b0e6a9d29009fc"
+  },
+  "7210": {
+    "decision": "manual_review",
+    "confidence": "medium",
+    "upstream_class": "subjective",
+    "reason": "歩兵移動速度10%の効果は継続するが、Squiresの語義と武者修行/従士の対応は別途判断が必要。旧訳が技術効果を表す意訳として適切かをレビューする。",
+    "signature": "d4434f0b404864d2a3e08a6891aa8181572e81a62defbabad51b79483e2cb8f4"
+  }
+}
