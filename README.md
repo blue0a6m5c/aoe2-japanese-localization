@@ -56,6 +56,14 @@ Users and contributors must obtain original game data from their own legitimate 
 
 ## Project Status
 
+Phase 2A-1 adds a [structural concept terminology audit](docs/phase2a-1.md):
+`python -B -m tools.localization term-audit --output-dir reports/phase2a/<new-run>`.
+Names, compact labels, linked action displays, and Help headings are grouped by evidence-bound concepts for human review. It creates no adjudications, patches, or Mods.
+Inventory-external exact or inflected labels remain visible as unresolved candidates. Reviewed structural seeds can admit non-production gameplay objects, and conservative historical findings expose Japanese-only changes without selecting a preferred translation.
+Phase 2A-1 is formally adopted against baseline `bbd939d`. The accepted local reference run is
+`reports/phase2a/phase2a-1-bbd939d-r4`: 866 concepts, 3,377 occurrences, 651 findings,
+731 unresolved records, and 33 `not_classified` candidates.
+
 The current 131-decision / 385-operation build is ready for adoption. The project owner reported successful in-game display checks for the ten names listed in the [runtime validation record](docs/game-validation.md). The confirmation is bound to the exact translation hash; it does not imply exhaustive testing of every UI occurrence. Final artifacts are generated in `dist/final-mod/` and `dist/final-local-mod/`. No automatic installation or publishing is performed.
 
 Phase 0 parsing and comparison tools are available (Python 3.10+, no external dependencies).

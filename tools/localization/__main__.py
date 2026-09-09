@@ -18,6 +18,7 @@ from . import mod_build
 from . import mod_package
 from .human_reviews import load_ledger, DEFAULT_LEDGER
 from . import context_overrides
+from . import term_audit
 
 
 def positive(value: str) -> int:
@@ -34,6 +35,8 @@ def argument_parser() -> argparse.ArgumentParser:
     commands = parser.add_subparsers(dest='command', required=True)
     commands.add_parser('stats', help='Counts, categories, and source SHA-256 inventory')
     commands.add_parser('legacy-stats', help='Legacy DLL counts, ranges, overlaps, and generation ID intersections')
+    terms = commands.add_parser('term-audit', help='Phase 2A-1 structural concept review; no decisions or patches')
+    terms.add_argument('--output-dir', type=Path, required=True, help='New reports/phase2a/<run>/ directory')
     restore = commands.add_parser('restoration', help='Legacy policy review proposals; never translation overrides')
     restore.add_argument('--classification', choices=restoration.CLASSES)
     restore.add_argument('--limit', type=positive, default=25)
@@ -185,6 +188,16 @@ def main(argv=None) -> int:
             print(blocked_audit.render_manual_review(blocked_audit.load_json(args.input)),end='')
             return 0
         config = json.loads(args.config.read_text(encoding='utf-8-sig')) if args.config else None
+        if args.command == 'term-audit':
+            protected_roots = [args.source_root, Path('source'), Path('reviews'), Path('translations'), Path('dist')]
+            if isinstance(config, dict):
+                for spec in config.values():
+                    source_path = spec if isinstance(spec, str) else spec.get('path') if isinstance(spec, dict) else None
+                    if isinstance(source_path, str):
+                        protected_roots.append(args.source_root / source_path)
+            if any(args.output_dir.resolve().is_relative_to(p.resolve()) for p in protected_roots):
+                raise ValueError('Output overlaps a protected input directory')
+            protected_before = mod_build.snapshot(protected_roots)
         datasets = load_datasets(args.source_root, config)
         stats = summary(datasets)
         inventory = [dict(dataset=n, path=f.path, sha256=f.sha256, size_bytes=f.size_bytes,
@@ -203,7 +216,39 @@ def main(argv=None) -> int:
                   'diagnostic_count': len(diagnostics),
                   'duplicate_dataset_id_pairs': stats['duplicate_dataset_id_pairs'],
                   'incomplete': incomplete}
-        if args.command == 'layout-plan':
+        if args.command == 'term-audit':
+            audit = term_audit.build_audit(datasets)
+            audit['review_references'] = []
+            for p in sorted(Path('reviews').glob('*.json')):
+                ledger = json.loads(p.read_text(encoding='utf8'))
+                for r in ledger.get('records', []):
+                    proposed = r.get('proposed_jp', r.get('replacement'))
+                    notes = r.get('notes')
+                    en = datasets['de_en'].resolved(r['string_id'])
+                    bound = (en is not None and r.get('expected_de_english') == en.value
+                             and r.get('signature') is not None and r.get('help_ids') is not None
+                             and adoption.signature(datasets, r['string_id'], r['help_ids']) == r['signature'])
+                    audit['review_references'].append(dict(ledger=p.as_posix(), string_id=r['string_id'],
+                        signature=r.get('signature'), binding_signature=r.get('binding_signature'),
+                        adopted_value_sha256=restoration.digest(proposed or ''),
+                        decision=r.get('decision'), proposed_jp=proposed,
+                        authority=r.get('authority', ledger.get('authority')),
+                        notes_summary=notes[:160] if isinstance(notes, str) else None,
+                        notes_reference=dict(ledger=p.as_posix(), string_id=r['string_id']),
+                        evidence_status='matches' if bound else 'unverified_or_stale',
+                        reference_only=True))
+            audit['provenance'] = {
+                'project_baseline_commit': 'bbd939d',
+                'implementation_sha256': {p.name: mod_build.sha(p.read_bytes())
+                                        for p in sorted(Path(__file__).parent.glob('*.py'))},
+                'review_file_sha256': {p.as_posix(): mod_build.sha(p.read_bytes())
+                                      for p in sorted(Path('reviews').glob('*')) if p.is_file()},
+                'review_reference_policy': 'Read-only fingerprints; no adjudication applied or revalidated by this audit'}
+            mod_build.unchanged(protected_roots, protected_before)
+            paths = term_audit.write_artifacts(audit, args.output_dir, args.source_root)
+            mod_build.unchanged(protected_roots, protected_before)
+            output = {**common, **audit['statistics'], 'reports': paths}
+        elif args.command == 'layout-plan':
             rows,metadata,hashes=patch_plan.read_audit(args.scope_dir)
             plan=layout_plan.integrate(datasets,load_ledger(args.ledger),rows,metadata,hashes,blocked_audit.load_json(args.layout_ledger))
             artifacts={'patch-plan.json':{k:v for k,v in plan.items() if k!='blocked'},'blocked.json':plan['blocked']}

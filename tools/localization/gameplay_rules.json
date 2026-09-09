@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "description": "Reviewed extraction metadata only; no adopted translations. See docs/phase1a.md.",
   "name_to_help_offsets": [21000, 12000, 11000],
   "heading_aliases": {"Blackwood Archers": "Blackwood Archer", "Elite Blackwood Archers": "Elite Blackwood Archer", "Champions": "Champion"},
@@ -17,5 +17,22 @@
     "ram": ["5094", "5289", "5446"],
     "champi": ["5526", "5506", "5507", "5508"]
   },
-  "review_links": [{"name_id": "17490", "help_id": "28490", "basis": "Inspected adjacent compact technology labels; correspondence requires review"}]
+  "review_links": [{"name_id": "17490", "help_id": "28490", "basis": "Inspected adjacent compact technology labels; correspondence requires review"}],
+  "concept_seeds": [
+    {
+      "seed_id": "core_relic_game_object",
+      "name_id": "5350",
+      "source_path": "key-value-strings-utf8.txt",
+      "content_family": "core",
+      "category": "game_object",
+      "role": "full_name",
+      "relation_kind": "reviewed_structural_name_seed",
+      "confidence": "reviewed_structural",
+      "provenance": {
+        "kind": "reviewed_string_role",
+        "reference": "reports/term-research/relic.json",
+        "basis": "Standalone core gameplay object name; seed records concept identity only and does not select a Japanese translation"
+      }
+    }
+  ]
 }
