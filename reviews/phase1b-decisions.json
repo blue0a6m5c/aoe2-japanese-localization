@@ -116,7 +116,7 @@
       "expected_de_english": "Crossbowman",
       "decision": "restore",
       "proposed_jp": "石弓射手",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26084",
         "28100"
@@ -128,7 +128,7 @@
       "expected_de_english": "Janissary",
       "decision": "keep_de",
       "proposed_jp": "イェニチェリ",
-      "notes": "????????????????????????",
+      "notes": "Explicit human adjudication to retain the current DE Japanese terminology.",
       "help_ids": [
         "26105"
       ],
@@ -139,7 +139,7 @@
       "expected_de_english": "Longbowman",
       "decision": "restore",
       "proposed_jp": "ロングボウ",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26107"
       ],
@@ -150,7 +150,7 @@
       "expected_de_english": "Teutonic Knight",
       "decision": "restore",
       "proposed_jp": "チュートン ナイト",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26112"
       ],
@@ -161,7 +161,7 @@
       "expected_de_english": "Royal Janissary",
       "decision": "keep_de",
       "proposed_jp": "近衛イェニチェリ",
-      "notes": "????????????????????????",
+      "notes": "Explicit human adjudication to retain the current DE Japanese terminology.",
       "help_ids": [
         "26115"
       ],
@@ -172,7 +172,7 @@
       "expected_de_english": "Flamethrower",
       "decision": "restore",
       "proposed_jp": "火炎放射器",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26118"
       ],
@@ -183,7 +183,7 @@
       "expected_de_english": "Archery Range",
       "decision": "restore",
       "proposed_jp": "射手育成所",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26128"
       ],
@@ -194,7 +194,7 @@
       "expected_de_english": "Elite Organ Gun",
       "decision": "restore",
       "proposed_jp": "改良型オルガン砲",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26130",
         "28237"
@@ -206,7 +206,7 @@
       "expected_de_english": "Blacksmith",
       "decision": "restore",
       "proposed_jp": "鉄工所",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26131"
       ],
@@ -217,7 +217,7 @@
       "expected_de_english": "Monastery",
       "decision": "restore",
       "proposed_jp": "神殿",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26138"
       ],
@@ -228,7 +228,7 @@
       "expected_de_english": "Siege Workshop",
       "decision": "restore",
       "proposed_jp": "包囲攻撃訓練所",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26169"
       ],
@@ -239,7 +239,7 @@
       "expected_de_english": "University",
       "decision": "restore",
       "proposed_jp": "学問所",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26176"
       ],
@@ -250,7 +250,7 @@
       "expected_de_english": "Palisade Gate",
       "decision": "restore",
       "proposed_jp": "柵の門",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26186"
       ],
@@ -261,7 +261,7 @@
       "expected_de_english": "Palisade Wall",
       "decision": "restore",
       "proposed_jp": "柵",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26202"
       ],
@@ -272,7 +272,7 @@
       "expected_de_english": "Fortified Palisade Wall",
       "decision": "restore",
       "proposed_jp": "強化柵",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26205"
       ],
@@ -283,7 +283,7 @@
       "expected_de_english": "Cannon Galleon",
       "decision": "restore",
       "proposed_jp": "キャノン ガリオン船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26287",
         "28037"
@@ -295,7 +295,7 @@
       "expected_de_english": "Galleon",
       "decision": "restore",
       "proposed_jp": "ガリオン船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26309"
       ],
@@ -315,7 +315,7 @@
       "expected_de_english": "Fire Ship",
       "decision": "restore",
       "proposed_jp": "火炎船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26426"
       ],
@@ -326,7 +326,7 @@
       "expected_de_english": "Heavy Scorpion",
       "decision": "restore",
       "proposed_jp": "ヘビー スコーピオン",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26439",
         "28244"
@@ -338,7 +338,7 @@
       "expected_de_english": "Light Cavalry",
       "decision": "restore",
       "proposed_jp": "騎兵",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26444",
         "28261"
@@ -350,7 +350,7 @@
       "expected_de_english": "Elite Cataphract",
       "decision": "restore",
       "proposed_jp": "エリート カタフラクト",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26451",
         "28382"
@@ -362,7 +362,7 @@
       "expected_de_english": "Elite Chu Ko Nu",
       "decision": "restore",
       "proposed_jp": "改良型連弩兵",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26452",
         "28384"
@@ -374,7 +374,7 @@
       "expected_de_english": "Elite Mameluke",
       "decision": "restore",
       "proposed_jp": "エリート マムルーク",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26453",
         "28390"
@@ -386,7 +386,7 @@
       "expected_de_english": "Elite Huskarl",
       "decision": "restore",
       "proposed_jp": "エリート ハスカール",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26454",
         "28386"
@@ -398,7 +398,7 @@
       "expected_de_english": "Elite Janissary",
       "decision": "revise",
       "proposed_jp": "エリート イェニチェリ",
-      "notes": "?????DE?????????????Elite??????????????",
+      "notes": "Explicit human terminology adjudication: retain イェニチェリ for Janissary and use エリート イェニチェリ for Elite Janissary.",
       "help_ids": [
         "26455",
         "28392"
@@ -410,7 +410,7 @@
       "expected_de_english": "Elite Longbowman",
       "decision": "restore",
       "proposed_jp": "エリート ロングボウ",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26456",
         "28381"
@@ -422,7 +422,7 @@
       "expected_de_english": "Elite Longboat",
       "decision": "restore",
       "proposed_jp": "重装バイキング船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26457",
         "28393"
@@ -434,7 +434,7 @@
       "expected_de_english": "Elite Mangudai",
       "decision": "restore",
       "proposed_jp": "エリート マングダイ",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26458",
         "28388"
@@ -446,7 +446,7 @@
       "expected_de_english": "Elite War Elephant",
       "decision": "restore",
       "proposed_jp": "エリート エレファント",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26459",
         "28389"
@@ -458,7 +458,7 @@
       "expected_de_english": "Elite Samurai",
       "decision": "restore",
       "proposed_jp": "剣豪",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26460",
         "28387"
@@ -470,7 +470,7 @@
       "expected_de_english": "Elite Throwing Axeman",
       "decision": "restore",
       "proposed_jp": "エリート フランカ スロウ",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26461",
         "28394"
@@ -482,7 +482,7 @@
       "expected_de_english": "Elite Teutonic Knight",
       "decision": "restore",
       "proposed_jp": "エリート チュートン ナイト",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26462",
         "28391"
@@ -494,7 +494,7 @@
       "expected_de_english": "Elite Woad Raider",
       "decision": "restore",
       "proposed_jp": "エリート ウォード レイダー",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26463",
         "28383"
@@ -506,7 +506,7 @@
       "expected_de_english": "Outpost",
       "decision": "restore",
       "proposed_jp": "前哨",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26504"
       ],
@@ -517,7 +517,7 @@
       "expected_de_english": "Elite Cannon Galleon",
       "decision": "restore",
       "proposed_jp": "機動キャノン ガリオン船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26573",
         "28375"
@@ -529,7 +529,7 @@
       "expected_de_english": "Elite Berserk",
       "decision": "restore",
       "proposed_jp": "エリート ベルセルク",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26576",
         "28401"
@@ -541,7 +541,7 @@
       "expected_de_english": "Hussar",
       "decision": "restore",
       "proposed_jp": "ハサー",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26661",
         "28417"
@@ -553,7 +553,7 @@
       "expected_de_english": "Elite Jaguar Warrior",
       "decision": "restore",
       "proposed_jp": "エリート ジャガー ウォリア",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26669",
         "28434"
@@ -565,7 +565,7 @@
       "expected_de_english": "Elite Eagle Warrior",
       "decision": "restore",
       "proposed_jp": "エリート イーグル ウォリア",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26673",
         "28433"
@@ -577,7 +577,7 @@
       "expected_de_english": "Elite Tarkan",
       "decision": "restore",
       "proposed_jp": "エリート タルカン",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26677",
         "28418"
@@ -589,7 +589,7 @@
       "expected_de_english": "Elite Conquistador",
       "decision": "restore",
       "proposed_jp": "エリート コンキスタドール",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26689",
         "28317"
@@ -601,7 +601,7 @@
       "expected_de_english": "Elite War Wagon",
       "decision": "restore",
       "proposed_jp": "強化戦車",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26729",
         "28436"
@@ -613,7 +613,7 @@
       "expected_de_english": "Elite Turtle Ship",
       "decision": "restore",
       "proposed_jp": "重装亀甲船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26732",
         "28437"
@@ -625,7 +625,7 @@
       "expected_de_english": "Coinage",
       "decision": "restore",
       "proposed_jp": "貨幣制度",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28023"
       ],
@@ -636,7 +636,7 @@
       "expected_de_english": "Cannon Galleon",
       "decision": "restore",
       "proposed_jp": "キャノン ガリオン船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26287",
         "28037"
@@ -648,7 +648,7 @@
       "expected_de_english": "Gold Mining",
       "decision": "restore",
       "proposed_jp": "金の採掘",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28055"
       ],
@@ -659,7 +659,7 @@
       "expected_de_english": "Iron Casting",
       "decision": "restore",
       "proposed_jp": "鋳造",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28068"
       ],
@@ -670,7 +670,7 @@
       "expected_de_english": "Scale Mail Armor",
       "decision": "restore",
       "proposed_jp": "歩兵用うろこの鎧",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28074"
       ],
@@ -681,7 +681,7 @@
       "expected_de_english": "Scale Barding Armor",
       "decision": "restore",
       "proposed_jp": "騎馬用うろこの鎧",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28081"
       ],
@@ -692,7 +692,7 @@
       "expected_de_english": "Crossbowman",
       "decision": "restore",
       "proposed_jp": "石弓射手",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26084",
         "28100"
@@ -704,7 +704,7 @@
       "expected_de_english": "Imperial Age",
       "decision": "restore",
       "proposed_jp": "帝王の時代",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28103"
       ],
@@ -715,7 +715,7 @@
       "expected_de_english": "Gold Shaft Mining",
       "decision": "restore",
       "proposed_jp": "金の掘削",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28180"
       ],
@@ -726,7 +726,7 @@
       "expected_de_english": "Squires",
       "decision": "restore",
       "proposed_jp": "武者修行",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28210"
       ],
@@ -737,7 +737,7 @@
       "expected_de_english": "Heavy Scorpion",
       "decision": "restore",
       "proposed_jp": "ヘビー スコーピオン",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26439",
         "28244"
@@ -749,7 +749,7 @@
       "expected_de_english": "Light Cavalry",
       "decision": "restore",
       "proposed_jp": "騎兵",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26444",
         "28261"
@@ -761,7 +761,7 @@
       "expected_de_english": "Stone Mining",
       "decision": "restore",
       "proposed_jp": "石の切り出し",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28276"
       ],
@@ -772,7 +772,7 @@
       "expected_de_english": "Elite Conquistador",
       "decision": "restore",
       "proposed_jp": "エリート コンキスタドール",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26689",
         "28317"
@@ -784,7 +784,7 @@
       "expected_de_english": "Heated Shot",
       "decision": "restore",
       "proposed_jp": "火砲学",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28374"
       ],
@@ -795,7 +795,7 @@
       "expected_de_english": "Elite Cannon Galleon",
       "decision": "restore",
       "proposed_jp": "機動キャノン ガリオン船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26573",
         "28375"
@@ -807,7 +807,7 @@
       "expected_de_english": "Siege Engineers",
       "decision": "restore",
       "proposed_jp": "包囲攻撃技術",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28378"
       ],
@@ -818,7 +818,7 @@
       "expected_de_english": "Elite Longbowman",
       "decision": "restore",
       "proposed_jp": "エリート ロングボウ",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26456",
         "28381"
@@ -830,7 +830,7 @@
       "expected_de_english": "Elite Cataphract",
       "decision": "restore",
       "proposed_jp": "エリート カタフラクト",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26451",
         "28382"
@@ -842,7 +842,7 @@
       "expected_de_english": "Elite Woad Raider",
       "decision": "restore",
       "proposed_jp": "エリート ウォード レイダー",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26463",
         "28383"
@@ -854,7 +854,7 @@
       "expected_de_english": "Elite Chu Ko Nu",
       "decision": "restore",
       "proposed_jp": "改良型連弩兵",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26452",
         "28384"
@@ -866,7 +866,7 @@
       "expected_de_english": "Elite Huskarl",
       "decision": "restore",
       "proposed_jp": "エリート ハスカール",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26454",
         "28386"
@@ -878,7 +878,7 @@
       "expected_de_english": "Elite Samurai",
       "decision": "restore",
       "proposed_jp": "剣豪",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26460",
         "28387"
@@ -890,7 +890,7 @@
       "expected_de_english": "Elite Mangudai",
       "decision": "restore",
       "proposed_jp": "エリート マングダイ",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26458",
         "28388"
@@ -902,7 +902,7 @@
       "expected_de_english": "Elite War Elephant",
       "decision": "restore",
       "proposed_jp": "エリート エレファント",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26459",
         "28389"
@@ -914,7 +914,7 @@
       "expected_de_english": "Elite Mameluke",
       "decision": "restore",
       "proposed_jp": "エリート マムルーク",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26453",
         "28390"
@@ -926,7 +926,7 @@
       "expected_de_english": "Elite Teutonic Knight",
       "decision": "restore",
       "proposed_jp": "エリート チュートン ナイト",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26462",
         "28391"
@@ -938,7 +938,7 @@
       "expected_de_english": "Elite Janissary",
       "decision": "revise",
       "proposed_jp": "エリート イェニチェリ",
-      "notes": "?????DE?????????????Elite??????????????",
+      "notes": "Explicit human terminology adjudication: retain イェニチェリ for Janissary and use エリート イェニチェリ for Elite Janissary.",
       "help_ids": [
         "26455",
         "28392"
@@ -950,7 +950,7 @@
       "expected_de_english": "Elite Longboat",
       "decision": "restore",
       "proposed_jp": "重装バイキング船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26457",
         "28393"
@@ -962,7 +962,7 @@
       "expected_de_english": "Elite Throwing Axeman",
       "decision": "restore",
       "proposed_jp": "エリート フランカ スロウ",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26461",
         "28394"
@@ -974,7 +974,7 @@
       "expected_de_english": "Elite Berserk",
       "decision": "restore",
       "proposed_jp": "エリート ベルセルク",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26576",
         "28401"
@@ -986,7 +986,7 @@
       "expected_de_english": "Spies/Treason",
       "decision": "restore",
       "proposed_jp": "諜報/反逆",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28408"
       ],
@@ -997,7 +997,7 @@
       "expected_de_english": "Parthian Tactics",
       "decision": "restore",
       "proposed_jp": "パルティアン戦術",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28415"
       ],
@@ -1008,7 +1008,7 @@
       "expected_de_english": "Hussar",
       "decision": "restore",
       "proposed_jp": "ハサー",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26661",
         "28417"
@@ -1020,7 +1020,7 @@
       "expected_de_english": "Elite Tarkan",
       "decision": "restore",
       "proposed_jp": "エリート タルカン",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26677",
         "28418"
@@ -1032,7 +1032,7 @@
       "expected_de_english": "Garland Wars",
       "decision": "restore",
       "proposed_jp": "栄誉戦",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28429"
       ],
@@ -1054,7 +1054,7 @@
       "expected_de_english": "Elite Eagle Warrior",
       "decision": "restore",
       "proposed_jp": "エリート イーグル ウォリア",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26673",
         "28433"
@@ -1066,7 +1066,7 @@
       "expected_de_english": "Elite Jaguar Warrior",
       "decision": "restore",
       "proposed_jp": "エリート ジャガー ウォリア",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26669",
         "28434"
@@ -1078,7 +1078,7 @@
       "expected_de_english": "Elite War Wagon",
       "decision": "restore",
       "proposed_jp": "強化戦車",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26729",
         "28436"
@@ -1090,7 +1090,7 @@
       "expected_de_english": "Elite Turtle Ship",
       "decision": "restore",
       "proposed_jp": "重装亀甲船",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "26732",
         "28437"
@@ -1113,7 +1113,7 @@
       "expected_de_english": "Perfusion",
       "decision": "restore",
       "proposed_jp": "パーフュージョン",
-      "notes": "???????????????????????????????????",
+      "notes": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
       "help_ids": [
         "28439"
       ],
