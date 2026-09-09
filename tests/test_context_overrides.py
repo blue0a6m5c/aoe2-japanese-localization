@@ -115,12 +115,12 @@ class ContextOverrideTests(unittest.TestCase):
         self.path.unlink()
         with self.assertRaises(FileNotFoundError):self.audit()
 
-    def test_current_27_targets_and_no_global_rocket_substitution(self):
+    def test_current_28_targets_and_no_global_rocket_substitution(self):
         from tests.local_pipeline import inputs,payload
         item=inputs();audit=item['audit'];plan=item['plan']
-        self.assertEqual((audit['name_decision_count'],audit['context_decision_count'],audit['decision_count']),(103,28,131))
+        self.assertEqual((audit['name_decision_count'],audit['context_decision_count'],audit['decision_count']),(104,29,133))
         self.assertEqual((audit['conflict_count'],plan['statistics']['conflicts'],plan['statistics']['blocked_locations']),(0,0,0))
-        expected_ids=set('5064 5065 6064 6065 7432 7470 8432 8438 8467 8470 14064 14065 17432 17470 19285 19476 26064 26065 28432 28438 28467 28470 46709 120155 120167 120201 IDS_CIVTIPS_52_3'.split())
+        expected_ids=set('5064 5065 6064 6065 7432 7470 8432 8438 8467 8470 14064 14065 17432 17470 19285 19476 26064 26065 28432 28438 28467 28470 46709 120155 120167 120201 170300 IDS_CIVTIPS_52_3'.split())
         records={r['string_id']:r for r in item['ledger']['records']+contexts.load()['records']}
         operations={o['string_id']:o for o in plan['operations']}
         self.assertTrue(expected_ids<=set(records))
@@ -176,7 +176,7 @@ class ContextOverrideTests(unittest.TestCase):
         values={e.string_id:e.value for e in output.entries}
         for sid in ('7438','17438','8438','28438','120167'):
             self.assertEqual(values[sid],ops[sid]['after'])
-        # Removing only the two new authorities reproduces the prior 383 plan.
+        # Removing only the two Shinkichon authorities leaves the current remaining 385 operations.
         old_names=copy.deepcopy(item['ledger'])
         old_names['records']=[r for r in old_names['records'] if r['string_id'] not in ('7438','17438')]
         old_audit=scope.build_scope(item['data'],old_names,context_path=contexts.DEFAULT_PATH)
@@ -184,5 +184,5 @@ class ContextOverrideTests(unittest.TestCase):
         old_plan=integrate(item['data'],old_names,old_audit['rows'],old_audit,{},item['human'])
         old_ops={o['string_id']:o for o in old_plan['operations']}
         self.assertEqual(set(ops)-set(old_ops),{'7438','17438'})
-        self.assertEqual(len(old_ops),383)
+        self.assertEqual(len(old_ops),385)
         self.assertEqual({sid:ops[sid] for sid in old_ops},old_ops)

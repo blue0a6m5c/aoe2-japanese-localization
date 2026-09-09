@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "explicit_context_decisions",
-  "review_id": "context-overrides-fire-arrow-and-civ-labels",
+  "review_id": "context-overrides-fire-arrow-civ-labels-ui-170300",
   "reviewer": "project owner (user)",
   "migration_source_sha256": "4a59aca820ffc36f6172f3b5650304a9ff3060573b1821e1d8b6bba6f9d568e6",
   "records": [
@@ -660,6 +660,30 @@
         "english_sha256": "fa8bc9c0c90cd17e0cfce85db0b9a75c8a6cc67ab580932e86dbaad41df9ae4e"
       },
       "binding_signature": "c8c20cded401a643b33edaecf95796119f7cd20a1daa80307c78636184c84111"
+    },
+    {
+      "string_id": "170300",
+      "expected_de_english": "Return to Main Menu",
+      "decision": "revise",
+      "proposed_jp": "\u30e1\u30a4\u30f3 \u30e1\u30cb\u30e5\u30fc\u306b\u623b\u308b",
+      "notes": "Explicit human UI-style adjudication. The user verified with a manual local Mod that String ID 170300 owns the displayed UI text and that the adopted concise form appears in game. This exact occurrence only; no propagation.",
+      "help_ids": [],
+      "signature": "1dc1137651b77793992be9090acc637c683dea6be116683ef20a0c1eb9620928",
+      "kind": "context_full_value",
+      "context": "Explicit reviewed UI text at this occurrence only; no terminology or sentence-style propagation.",
+      "target": {
+        "source_path": "de_jp/key-value-strings-utf8.txt",
+        "source_line": 15270,
+        "source_sha256": "22773fbc61dda6098e025a7da9e8a69f76fafa796e1a8f041abe312b67badcea",
+        "current_value_sha256": "46a56f14f7d682e4fcf4bb8dd5914ca15ff693fbee42d1ab924ae3275b7c9691",
+        "english_source": {
+          "path": "de_en/key-value-strings-utf8.txt",
+          "line": 15270,
+          "value_format": "key_value_raw"
+        },
+        "english_sha256": "fa8bc9c0c90cd17e0cfce85db0b9a75c8a6cc67ab580932e86dbaad41df9ae4e"
+      },
+      "binding_signature": "6da31d839ea5e2b43dd12389fc584436632ca1b16f171ac5c4397533a489facf"
     },
     {
       "string_id": "IDS_CIVTIPS_52_3",

@@ -64,7 +64,7 @@ Phase 2A-1 is formally adopted against baseline `bbd939d`. The accepted local re
 `reports/phase2a/phase2a-1-bbd939d-r4`: 866 concepts, 3,377 occurrences, 651 findings,
 731 unresolved records, and 33 `not_classified` candidates.
 
-The current 131-decision / 385-operation build is ready for adoption. The project owner reported successful in-game display checks for the ten names listed in the [runtime validation record](docs/game-validation.md). The confirmation is bound to the exact translation hash; it does not imply exhaustive testing of every UI occurrence. Final artifacts are generated in `dist/final-mod/` and `dist/final-local-mod/`. No automatic installation or publishing is performed.
+The current 133-decision build adds the reviewed Relic restoration and the explicit String ID 170300 UI-style revision while preserving the later explicit Janissary and Rocketry decisions. A `historical_jp_variation` finding never overrides a later explicit human decision. The current 387-entry translation is bound to the project owner's [runtime validation record](docs/game-validation.md). No automatic installation or publishing is performed.
 
 Phase 0 parsing and comparison tools are available (Python 3.10+, no external dependencies).
 See [Phase 0 documentation](docs/phase0.md) for source-format findings, CLI usage, comparison definitions, and tests.
@@ -91,9 +91,9 @@ The [blocked audit](docs/phase1d-blocked-audit.md) proposes conservative layout-
 
 The [verified Mod payload generator](docs/phase1e-mod-build.md) builds an independent local artifact via `python -m tools.localization mod-build`, with `--dry-run` and `--verify-only` modes. It never modifies source or installs into the game.
 
-The current [context-bound pipeline](docs/context-overrides.md) separates 103 name decisions from 28 explicit full-text overrides. All 131 decisions retain their adopted text and evidence signatures. It generates 385 operations (227 full-value / 158 span), with scope and patch conflicts 0 and final blocked 0. General rocket references are not globally replaced.
+The current [context-bound pipeline](docs/context-overrides.md) separates 104 name decisions from 29 explicit full-text overrides. It generates 387 operations (229 full-value / 158 span), with scope and patch conflicts 0 and final blocked 0. General terminology references are not globally replaced.
 
-Phase 1F creates a [local display-test delta package](docs/phase1f-local-mod.md) containing only the current 385 changed IDs via `python -m tools.localization mod-package`, with a [game verification checklist](docs/phase1f-checklist.md). Use the matching scope/plan/output paths in the current pipeline guide; older 346-ID artifacts are historical. Installation and in-game checks remain manual.
+Phase 1F creates a [local display-test delta package](docs/phase1f-local-mod.md) containing only the current 387 changed IDs via `python -m tools.localization mod-package`, with a [game verification checklist](docs/phase1f-checklist.md). Use matching scope/plan/output paths; older 346/385/386/390-ID artifacts are historical. Installation and in-game checks remain manual.
 
 ```powershell
 python -m tools.localization stats

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "review_id": "phase1b-human-2026-09-08",
+  "review_id": "phase2a-historical-restoration-corrected-2026-09-09",
   "reviewer": "project owner (user)",
-  "reviewed_on": "2026-09-08",
-  "authority": "explicit user adjudication; supersedes automated proposals",
+  "reviewed_on": "2026-09-09",
+  "authority": "explicit user adjudication; later explicit decisions override historical_jp_variation restoration policy; Relic 5350 remains the new legacy restoration and prior Janissary/Rocketry decisions are preserved",
   "baseline_ids": [
     "5084",
     "5105",
@@ -300,6 +300,15 @@
         "26309"
       ],
       "signature": "590715bdad3bc8605ee7b9361c9d306358e36aac7b230ad9898d59563fd133f4"
+    },
+    {
+      "string_id": "5350",
+      "expected_de_english": "Relic",
+      "decision": "restore",
+      "proposed_jp": "聖なる箱",
+      "notes": "Explicit human legacy-restoration adjudication for Relic. This reviewed structural non-production concept adopts the legacy Japanese name without extending the decision into prose or other concepts.",
+      "help_ids": [],
+      "signature": "034e972162ebe9e2c14975e65c0e026c17a8f973ab059f451832e7986f67ab61"
     },
     {
       "string_id": "5426",

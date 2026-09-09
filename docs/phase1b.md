@@ -1,7 +1,7 @@
 # Phase 1B 採用候補レビュー
 
-現行正本は名称103件＋文脈付き全文28件＝131裁定。restore 80 / keep_de 2 / revise 49。
-385 operationsへ統合し、ユーザーによる[実機確認](game-validation.md)を記録した。
+現行正本は名称104件＋文脈付き全文29件＝133裁定。restore 81 / keep_de 2 / revise 50。
+387 operationsへ統合した。現行387-entry翻訳は[実機確認](game-validation.md)のhashに拘束される。
 最新仕様と再生成手順は [context overrides](context-overrides.md) を参照。以下の80/85件は初回レビューの履歴。
 
 ## 2026-09-08 人間裁定の反映

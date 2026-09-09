@@ -100,17 +100,26 @@ class HumanReviewTests(unittest.TestCase):
     def test_recorded_user_coverage_and_counts(self):
         human=load_ledger()
         records=human['records']; ids=[r['string_id'] for r in records]
-        self.assertEqual(len(ids),103)
-        self.assertEqual(len(set(ids)),103)
+        self.assertEqual(len(ids),104)
+        self.assertEqual(len(set(ids)),104)
         self.assertEqual(len(human['baseline_ids']),80)
         self.assertTrue(set(human['baseline_ids']).issubset(ids))
         from tools.localization.context_overrides import load
         direct=load()['records']
-        self.assertEqual(len(direct),28)
+        self.assertEqual(len(direct),29)
         self.assertFalse(set(ids)&{r['string_id'] for r in direct})
-        self.assertEqual(len(ids)+len(direct),131)
+        self.assertEqual(len(ids)+len(direct),133)
         combined=records+direct
-        self.assertEqual([sum(r['decision']==d for r in combined) for d in ('restore','keep_de','revise')],[80,2,49])
+        self.assertEqual([sum(r['decision']==d for r in combined) for d in ('restore','keep_de','revise')],[81,2,50])
+        relic=next(r for r in records if r['string_id']=='5350')
+        self.assertEqual((relic['expected_de_english'],relic['decision'],relic['proposed_jp'],relic['help_ids']),
+                         ('Relic','restore','聖なる箱',[]))
+        by_id={r['string_id']:r for r in records}
+        self.assertEqual((by_id['5105']['decision'],by_id['5105']['proposed_jp']),('keep_de','イェニチェリ'))
+        for sid in ('5455','7392'):
+            self.assertEqual((by_id[sid]['decision'],by_id[sid]['proposed_jp']),('revise','エリート イェニチェリ'))
+        for sid in ('7432','17432'):
+            self.assertEqual((by_id[sid]['decision'],by_id[sid]['proposed_jp']),('revise','火箭術'))
 
 
 

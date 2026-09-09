@@ -1,7 +1,7 @@
 # Phase 1F ローカルMod：手動導入と削除
 
 ゲーム内表示検証用。自動インストール・ゲーム起動・公開は行わない。
-構造・ファイル整合性に加え、ユーザーが10名称の実機表示を確認済み。[確認記録](game-validation.md)を参照。
+構造・ファイル整合性に加え、ユーザーが7名称とString ID 170300のUI表示を実機確認済み。[確認記録](game-validation.md)を参照。
 CHECKLIST.mdで結果を記録する。
 
 ## 調査した構造と根拠
@@ -18,7 +18,7 @@ CHECKLIST.mdで結果を記録する。
   上記UGC Guideの例に従う。Workshop ID、サムネイル、datファイルは不要なため作らない。
 
 ゲーム付属ファイルのヘッダは、既存文字列の変更では対象の文字列だけをmoddedファイルへ置き、
-元ファイルから削除しないよう案内している。この明示的な指示に従い、**変更済み385 IDだけの差分方式**を採用する。
+元ファイルから削除しないよう案内している。この明示的な指示に従い、**変更済み387 IDだけの差分方式**を採用する。
 作者向け資料は同じmoddedファイル名・言語別ディレクトリを案内しており、この構造とも整合する。
 以前の全文方式はファイル全体hash一致という当時の要件を満たしたが、未変更IDと既存重複IDまでoverride側へ持ち込んでいた。
 今後は差分方式を使用し、旧 `dist/phase1f-local-mod` は過去の成果物として残す。両方式を同時に導入しない。
@@ -27,10 +27,10 @@ CHECKLIST.mdで結果を記録する。
 
 ## 現行の入力と生成
 
-名称103件 + 直接全文28件から385 operationsを生成する。
+名称104件 + 直接全文29件から387 operationsを生成する。
 現在の入力は `dist/final-mod`、対応scopeは `reports/final/scope`、planは `reports/final/layout/patch-plan.json`。
 完全な再生成順序は [文脈付きoverride](context-overrides.md) を参照。
-最新ledgerと過去の346件成果物を混用しない。
+最新ledgerと過去の346/385/386/390件成果物を混用しない。
 
 ```powershell
 python -m tools.localization mod-package --input-dir dist/final-mod --plan reports/final/layout/patch-plan.json --scope-dir reports/final/scope --output-dir dist/final-local-mod
@@ -40,11 +40,11 @@ python -m tools.localization mod-package --input-dir dist/final-mod --plan repor
 ```
 
 入力は `dist/final-mod`。Phase 1Eの検証処理を再実行してから、そのディスク上のファイルを読む。
-Phase 1E自体のファイルhashを検証した上で、再検証済みplanの385 IDを選ぶ。
+Phase 1E自体のファイルhashを検証した上で、再検証済みplanの387 IDを選ぶ。
 各IDはPhase 1Eの全翻訳ファイルを通して一意であることを要求し、同値の重複でも勝手に解決しない。
 source occurrence（ファイル・行）とplanのafterも照合して最終valueを取得する。
-UTF-8、LF、ID順で385行を生成し、保存値のescape・markup・改行を再エスケープ/正規化しない。
-ID集合一致、missing=0、extra=0、duplicate=0、value mismatch=0、385件の完全一致を検証する。
+UTF-8、LF、ID順で387行を生成し、保存値のescape・markup・改行を再エスケープ/正規化しない。
+ID集合一致、missing=0、extra=0、duplicate=0、value mismatch=0、387件の完全一致を検証する。
 manifest schema 2は差分ファイルSHA-256、Phase 1E manifest・plan・入力ファイルhash、
 IDごとの元ファイル/行・operation ID・value hashと検証件数を記録する。
 差分ファイル全体とPhase 1E全文ファイルのhash一致は要求しない。

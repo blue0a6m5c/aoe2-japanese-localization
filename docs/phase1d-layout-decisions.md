@@ -1,6 +1,6 @@
 # Phase 1D human layout decisions and integrated dry-run plan
 
-現行は131裁定、339 baseline operations＋自動layout 33＋人間layout 13＝385 operations（全文227 / span158）。
+現行は133裁定、341 baseline operations＋自動layout 33＋人間layout 13＝387 operations（全文229 / span158）。
 blocked / conflictsは0。以下の300/346件は初回統合の履歴であり、最新の入力パスは [再生成手順](context-overrides.md) を使用する。
 
 `reviews/phase1d-layout-decisions.json` はユーザーが指定した13個の改行位置の正本。

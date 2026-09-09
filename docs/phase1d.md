@@ -1,6 +1,6 @@
 # Phase 1D dry-run patch plan
 
-> Current pipeline: [context-bound overrides](context-overrides.md). 103 name + 28 direct decisions; 385 operations, conflicts 0, final blocked 0. Counts and default paths below document the original phase baseline. Use matching current scope/plan paths.
+> Current pipeline: [context-bound overrides](context-overrides.md). 104 name + 29 direct decisions; 387 operations, conflicts 0, final blocked 0. Counts and default paths below document the original phase baseline. Use matching current scope/plan paths.
 
 Phase 1B正本とPhase 1C normalized監査から変更計画を作る。source・正本・Mod用翻訳は変更しない。
 適用API、applyコマンド、Modビルド機能は実装していない。

@@ -118,12 +118,29 @@ def attach_game_validation(bundle,path):
     if (record.get('schema_version')!=1 or record.get('authority')!='explicit_user_runtime_report'
             or record.get('result')!='pass' or not record.get('confirmed_names')):
         raise ValueError('Invalid human runtime validation record')
+    confirmed_ui=record.get('confirmed_ui',[])
+    if not isinstance(confirmed_ui,list):raise ValueError('Invalid confirmed UI records')
+    ui_ids=[]
+    for item in confirmed_ui:
+        if (not isinstance(item,dict) or not isinstance(item.get('string_id'),str) or not item['string_id']
+                or not isinstance(item.get('adopted_jp'),str) or not item['adopted_jp']
+                or item.get('result')!='pass' or item.get('ownership_verified') is not True):
+            raise ValueError('Invalid confirmed UI record')
+        ui_ids.append(item['string_id'])
+    if len(ui_ids)!=len(set(ui_ids)):raise ValueError('Duplicate confirmed UI String ID')
     matched=record.get('translation_sha256')==bundle['manifest']['delta_sha256']
+    if matched:
+        provenance={p['string_id']:p for p in bundle['manifest'].get('value_provenance',[])}
+        for item in confirmed_ui:
+            proof=provenance.get(item['string_id'])
+            if proof is None or proof.get('value_sha256')!=mod_build.sha(item['adopted_jp'].encode('utf8')):
+                raise ValueError('Confirmed UI value does not match current translation: '+item['string_id'])
     record_hash=mod_build.sha(path.read_bytes())
     bundle['manifest'].update(runtime_verified=matched,runtime_validation=dict(
         status='matching_user_report' if matched else 'report_for_different_translation',
         record_sha256=record_hash,record_id=record['record_id'],
-        authority=record['authority'],coverage='user_reported_named_displays',
+        authority=record['authority'],coverage='user_reported_displays',
         confirmed_names=record['confirmed_names'] if matched else [],
+        confirmed_ui=confirmed_ui if matched else [],
         installed_bytes_independently_verified=False))
     bundle['input_hashes'][str(path)]=record_hash

@@ -1,18 +1,18 @@
 # 人間裁定の永続記録
 
-実機確認は [game-validation.json](game-validation.json) に別記録する。ユーザーが報告した10名称のPASSを翻訳ファイルhashへ結び付け、名称・全文・layout裁定のsignatureは変更しない。確認範囲と未提供情報は [実機確認記録](../docs/game-validation.md) を参照。
+実機確認は [game-validation.json](game-validation.json) に別記録する。ユーザーが報告した7名称とString ID 170300 UI表示のPASSを現行387-entry翻訳hashへ結び付け、名称・全文・layout裁定のsignatureは変更しない。確認範囲と未提供情報は [実機確認記録](../docs/game-validation.md) を参照。
 
 `phase1b-decisions.json` は2026-09-08にユーザーが明示した裁定を記録する正本。
 自動生成レポートやMod用翻訳ファイルではない。採用訳はユーザー指定をそのまま保存し、新たな翻訳判断を追加していない。
 
-現在は名称103件を保持する。文脈付き全文裁定28件は `context-overrides.json` に分離し、合計131裁定を保持する。
+現在は名称104件を保持する。文脈付き全文裁定29件は `context-overrides.json` に分離し、合計133裁定を保持する。170300はUI文体の明示的人間裁定として、伝播しない `context_full_value` に記録する。
 元の80候補と最初の追加5 IDは履歴上の基準。現在の仕様・件数・再生成手順は [文脈付きoverride](../docs/context-overrides.md) を参照。
 一覧形式の records にすることで重複IDを読み込み時に検出できる。
 review_id / reviewer / reviewed_on / authority に裁定の主体・日付を記録し、各項目はdecision、proposed_jp、notesを持つ。
 expected_de_english と signature / help_ids でレビュー時の資料へ結び付ける。
 baseline_ids と baseline_report_sha256 は元の80件との照合根拠であり、生成物が消えても裁定を復元できる。
 
-人間裁定は自動提案より優先する。特に5455/7392はreviseの「エリート イェニチェリ」、7432の現在の採用訳は「火箭術」。以前の「砲弾術」や自動案へ戻さない。
+後発の明示的人間裁定は `historical_jp_variation` による旧訳復元方針より優先する。5105はkeep_de「イェニチェリ」、5455/7392はrevise「エリート イェニチェリ」、7432/17432はrevise「火箭術」を維持する。Rocketryのcontext全文裁定も「火箭術」を維持する。5350 Relicは今回追加したrestore「聖なる箱」。
 未指定の関連IDへ裁定をコピーしない。
 
 `context-overrides.json` は全文を確定したHelp・文明説明・シナリオ文章・改行付き表示の専用正本。

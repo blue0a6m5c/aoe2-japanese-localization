@@ -114,7 +114,7 @@ class LocalModIntegrationTests(unittest.TestCase):
     def test_real_current_output_and_unchanged_records(self):
         b=self.b;m=b['manifest']
         self.assertEqual((m['applied_operation_count'],m['full_value_replacements'],m['span_replacements'],m['changed_output_files']),
-                         (385,227,158,1))
+                         (387,229,158,1))
         self.assertEqual(len(b['files']),12)
         Path('dist').mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir='dist') as temp:

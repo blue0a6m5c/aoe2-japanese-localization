@@ -1,6 +1,6 @@
 # 名称裁定と文脈付き直接override
 
-2026-09-08の火箭系追加を含む現行pipeline。既存129裁定を用途別に分離し、その後ユーザーが明示したShinkichonの名称裁定2件を追加した。合計131裁定。
+現行pipelineはPhase 2A-1の旧訳復元裁定と、その後の明示的訂正を反映する。名称104件と文脈付き全文29件、合計133裁定。後発の明示的人間裁定はhistorical findingより優先する。
 
 ## 衝突の原因と正本
 
@@ -10,11 +10,11 @@
 これはsourceの重複IDを解決すれば直る問題ではない。
 分離前のscopeは39衝突、patchは10衝突だった。
 
-- `reviews/phase1b-decisions.json`: 名称103件。既存schemaと署名の意味を維持する。
-- `reviews/context-overrides.json`: 文脈付き全文裁定28件。関連箇所へ伝播しない。
-- `reviews/phase1d-layout-decisions.json`: 従来の人間layout裁定13件。変更なし。
+- `reviews/phase1b-decisions.json`: 名称104件。既存schemaと署名の意味を維持する。
+- `reviews/context-overrides.json`: 文脈付き全文裁定29件。関連箇所へ伝播しない。170300のUI文体修正も、この正本へ出現位置限定で記録する。
+- `reviews/phase1d-layout-decisions.json`: 従来の人間layout裁定13件。誤ったJanissary旧訳復元にのみ起因した2件は訂正時に除外した。
 
-対象27 IDのうち、5064 / 5065 / 7432 / 7470 / 17432は名称、残り22件は直接override。
+対象28 IDのうち、5064 / 5065 / 7432 / 7470 / 17432は名称、残り23件は直接override。
 以前の103件中にも全文の文明選択説明が6件（90280 / 90313 / 90319 / 90327 / 90328 / 90329）あったため、同じ直接override側へ移した。
 103→129は26件追加と既存7432の更新。分離の前後で129件のdecision、proposed_jp、notes、expected_de_english、help_ids、既存signatureは一致する。
 過去のledgerコピーは履歴資料であり、実行時の入力にはしない。
@@ -65,25 +65,25 @@ scope-reviewにも`--names-only`がある。下流はscope metadataに記録さ�
 
 | 段階 | 件数・結果 |
 |---|---:|
-| 名称 / 文脈付き全文 / 合計裁定 | 103 / 28 / 131 |
-| scope required変更候補 | 596 |
+| 名称 / 文脈付き全文 / 合計裁定 | 104 / 29 / 133 |
+| scope required変更候補 | 598 |
 | scope conflict_count | 0 |
-| 初期patch operations / layout待ち位置 | 339 / 46 |
+| 初期patch operations / layout待ち位置 | 341 / 46 |
 | patch conflicts | 0 |
 | 自動layout / 人間layout | 33 / 13 |
-| 最終operations / unique String IDs | 385 / 385 |
-| 全文 / span置換 | 227 / 158 |
+| 最終operations / unique String IDs | 387 / 387 |
+| 全文 / span置換 | 229 / 158 |
 | 最終blocked / conflicts / 重複ID適用 | 0 / 0 / 0 |
-| 直接overrideの変更あり / 既に一致 | 26 / 2 |
+| 直接overrideの変更あり / 既に一致 | 27 / 2 |
 | 変更された出力ファイル | 1 |
 
 Phase 1Eの未対象文字列はバイト単位で保持し、期待値・token列も検証する。
-Phase 1Fは最終385 IDのみを抽出し、ID集合・保存値の一致とmissing/extra/duplicate/value mismatch=0を検証する。
-以前の346件は最初の85裁定版の履歴値。旧85裁定版を再生成して346件になる回帰テストも維持する。
+Phase 1Fは最終387 IDのみを抽出し、ID集合・保存値の一致とmissing/extra/duplicate/value mismatch=0を検証する。
+以前の346件、385件、訂正前390件は履歴値。旧85裁定版をメモリ内で再構成して346件になる回帰テストも維持する。
 
-検証: pytest **162 passed / 70 subtests passed**。ユーザーによる10名称の[ゲーム実機確認](game-validation.md)も記録した。
+検証: 全pytestを実行する。ユーザーによる7名称と170300 UI表示の[ゲーム実機確認](game-validation.md)も現行翻訳hashへ記録した。
 新規テストは全文と名称spanの重複、正本間のID重複、sourceの重複出現、署名・行・hash・英語・tokenの不一致、
-scope抑制情報の改変、直接正本の欠損、無関係なロケット文脈、指定27 IDの最終値を保護する。
+scope抑制情報の改変、直接正本の欠損、無関係なロケット文脈、指定28 IDの最終値を保護する。
 実データの統合テストはscopeとplanを同じ入力から一緒に生成し、過去の生成物を最新ledgerと混用しない。
 source全30ファイルの作業前後SHA-256一致と、既存129裁定の全recordフィールドの保存を確認した。
 新しい7438 / 17438の署名、名称と全文overrideの分離、5 IDの最終値の整合性をテストする。
@@ -92,14 +92,14 @@ source全30ファイルの作業前後SHA-256一致と、既存129裁定の全re
 
 ## 適用範囲と未裁定事項
 
-Rocket Cartは火箭車、Heavy Rocket Cartは重装火箭車、Rocketryは火箭術。
+Rocket Cartは火箭車、Heavy Rocket Cartは重装火箭車、Rocketryは火箭術。Phase 2Aの広すぎた一括復元は、後発の明示的人間裁定によりJanissary・Rocketry系列について取り消した。
 中国系rocketの全文修正とShinkichonの神機箭は、指定された文脈・IDだけに適用する。
 一般の「ロケット」は全文検索置換しない。シナリオ・文明説明も直接裁定がある出現だけが対象。
 
 Shinkichonの名称ID 7438 / 17438は、追加の人間裁定により「神機箭」を正式採用した。
 両IDのDE ENはShinkichonで、研究Help 28438を共有する。名称正本にreviseとして記録し、現在のsource evidenceへ署名で拘束する。
 8438 / 28438 / 120167の既採用「神機箭」は全文overrideをそのまま維持する。これらからの逆伝播ではなく、今回の明示的な名称裁定を根拠とする。
-新たな変更は名称2 IDのみで、従来383 operationsは変更せず385 operationsとなった。公式sourceの「新機箭」は書き換えない。
+Shinkichon追加時の385-operation版、Relic追加時の386-operation版、訂正前390-operation版は履歴成果物として保持する。現行は170300の明示UI裁定だけを追加した387 operations。公式sourceは書き換えない。
 
 ゲームへのコピー・起動・公開は行わない。sourceと既存layout裁定は変更せず、生成操作は既存成果物を上書きしない。
 
