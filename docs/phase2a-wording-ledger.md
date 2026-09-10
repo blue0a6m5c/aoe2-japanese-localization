@@ -39,3 +39,9 @@ python -m unittest discover -v
 
 この取り込みは正式裁定ledgerと検証コードだけを更新する。patchおよびModは生成しない。
 既存の名称scope plannerはPhase 2A recordを実装対象から明示的に除外し、`deferred_adjudication_ids` に64主IDを報告する。これにより旧式の英語名・Help推論で249 targetへ波及することを防ぐ。将来patch対応を行う場合は `target_bindings` を直接消費し、別途承認された実装段階で `implementation_status` を更新する。
+
+patch enable前の検証では `tools.localization.phase2a_patch_plan` が64 recordsの249 target bindingsを
+直接消費する。compact nameのうち人間layout判断が必要な17 IDは
+`reviews/phase1d-layout-decisions.json` のPhase 2A scoped recordsを照合し、残りへ類似名や
+English名から伝播しない。これは仮想dry-run専用であり、`implementation_status` は
+`adjudicated_not_patch_enabled` のまま、sourceへのapply APIも持たない。

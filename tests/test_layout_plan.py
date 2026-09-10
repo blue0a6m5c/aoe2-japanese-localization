@@ -6,7 +6,8 @@ import unittest
 
 from tests.test_patch_plan import fixture
 from tools.localization.blocked_audit import audit_blocked,serialize_json,verify_json
-from tools.localization.layout_plan import integrate,binding,record_signature,render_table
+from tools.localization.layout_plan import (integrate,binding,record_signature,render_table,
+                                             explicit_human_layout_safe)
 from tools.localization.patch_plan import tokens
 
 
@@ -27,6 +28,14 @@ def run(f,h):
 
 
 class LayoutPlanTests(unittest.TestCase):
+    def test_explicit_human_layout_may_remove_only_newline(self):
+        canonical='Iron Pagoda'
+        before=r'Iron\nPagoda'
+        self.assertTrue(explicit_human_layout_safe(before,canonical,canonical,canonical))
+        for changed in ('Iron Pagoda %s','<b>Iron Pagoda','Iron-Pagoda','Steel Pagoda'):
+            self.assertFalse(explicit_human_layout_safe(before,changed,changed,canonical))
+        self.assertNotEqual(tokens(before),tokens(canonical))
+
     def test_human_layout_and_distinct_provenance(self):
         f=fixture('Synthetic Runner',r'旧甲\n走者','新甲走者')
         h=human_for(f,r'新甲\n走者')
@@ -46,10 +55,13 @@ class LayoutPlanTests(unittest.TestCase):
 
     def test_reject_noncanonical_or_changed_tokens(self):
         f=fixture('Synthetic Runner',r'旧甲\n走者','新甲走者')
-        for replacement in [r'別訳\n走者','新甲走者',r'<b>新甲\n走者',r'新甲\n%s走者']:
+        for replacement in [r'別訳\n走者',r'<b>新甲\n走者',r'新甲\n%s走者']:
             result=run(f,human_for(f,replacement))
             self.assertEqual(result['statistics']['human_layout_locations'],0)
             self.assertTrue(result['blocked'])
+        allowed=run(f,human_for(f,'新甲走者'))
+        self.assertEqual(allowed['statistics']['human_layout_locations'],2)
+        self.assertFalse(allowed['blocked'])
 
     def test_stale_binding_and_signature(self):
         f=fixture('Synthetic Runner',r'旧甲\n走者','新甲走者')

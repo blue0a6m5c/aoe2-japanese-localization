@@ -3,7 +3,8 @@
 現行は133裁定、341 baseline operations＋自動layout 33＋人間layout 13＝387 operations（全文229 / span158）。
 blocked / conflictsは0。以下の300/346件は初回統合の履歴であり、最新の入力パスは [再生成手順](context-overrides.md) を使用する。
 
-`reviews/phase1d-layout-decisions.json` はユーザーが指定した13個の改行位置の正本。
+`reviews/phase1d-layout-decisions.json` は既存13件に加え、Phase 2A compact nameの
+明示的人間裁定17件を保持する。既存13件の内容・順序・signatureは維持している。
 Phase 1Bの名称裁定とは別管理し、その採用語句を変更しない。
 レコードはString IDだけでなくsource path / line、現在値、名称span、ファイルhash、
 英語provenance、関連するPhase 1B裁定signature・canonicalを束ねたbindingを持つ。
@@ -28,7 +29,9 @@ Phase 1Dの全検証とblocked auditを再実行し、次の3種類を区別し�
 - `human_layout`: 正本の13位置。review ID、reviewer、record signature、layout ledger hashを保持。
 
 人間指定の改行位置は自動規則を満たす必要はないが、canonicalとのnormalized一致、
-文字列全体の技術token列の完全一致、出現位置と証拠の一致は必須。
+出現位置と証拠の一致は必須。通常処理と自動layoutでは従来どおり技術token列の完全一致を
+要求する。明示的人間layout裁定だけは、改行以外のtechnical token列が完全一致し、
+replacementとwording canonicalがlayout差を除いて一致する場合に限り、改行の追加・削除・移動を許可する。
 人間指定でも別の訳語、タグ・placeholderの追加削除、無関係な出現への適用は許可しない。
 同じ出現を二重指定した正本や未確認の出現はerror、資料の不一致や構造変更はblocked。
 未裁定箇所を推測で補わない。同じspan・同じreplacementの候補を統合し、異値・overlapはconflict。
@@ -37,3 +40,10 @@ Phase 1Dの全検証とblocked auditを再実行し、次の3種類を区別し�
 元のblocked 46位置は自動33＋人間13で解決し、blocked/conflict/duplicate IDを含むpatchは0。
 source、人間裁定の既存ファイル、Mod用翻訳、従来のレポートは変更していない。
 この処理はdry-run計画だけを出力し、apply機能は持たない。実適用前のゲーム内表示検証は別工程。
+
+Phase 2Aの17件は `binding_mode: phase2a_wording_compact_layout_v1` を持ち、対応する
+wording decision signature、concept identity、compact target binding signature、source位置、
+wording適用後のlayout候補、canonicalを拘束する。14594は `鉄\n浮屠` から `鉄浮屠`、
+17481は `虎蹲\n砲` から `虎蹲砲` への改行削除として記録し、翻訳裁定はwording ledgerを参照する。
+Phase 2A wordingがdeferredの間、従来のlayout-planはこの17件を適用せず、専用の
+occurrence-bound dry-run plannerだけが検証・合成する。

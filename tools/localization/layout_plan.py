@@ -11,6 +11,21 @@ from .adoption import tsv
 from .analysis import id_sort
 
 
+PHASE2A_LAYOUT_BINDING_MODE = 'phase2a_wording_compact_layout_v1'
+
+
+def tokens_without_newlines(value):
+    """Technical tokens with display newlines omitted for explicit human layout review."""
+    return [token for token in tokens(value) if token not in (r'\n', '\r', '\n')]
+
+
+def explicit_human_layout_safe(before, after, replacement, canonical):
+    """Allow only layout whitespace/newline changes around an adjudicated wording value."""
+    return (layout_key(replacement) == layout_key(canonical)
+            and tokens_without_newlines(before) == tokens_without_newlines(after)
+            and tokens_without_newlines(replacement) == tokens_without_newlines(canonical))
+
+
 def binding(item):
     return dict(source_path=item['source_path'],source_line=item['source_line'],string_id=item['string_id'],
                 current=item['current'],requests=[{k:r[k] for k in
@@ -33,15 +48,25 @@ def integrate(data,ledger,rows,metadata,hashes,human):
         raise ValueError('Invalid human layout ledger authority/schema')
     records={}
     for r in human['records']:
-        if key(r) in records: raise ValueError('Duplicate human layout occurrence')
         if r.get('signature')!=record_signature(r): raise ValueError('Invalid human layout record signature')
+        mode=r.get('binding',{}).get('binding_mode')
+        if mode is not None:
+            if mode != PHASE2A_LAYOUT_BINDING_MODE:
+                raise ValueError('Unknown human layout binding mode')
+            # Phase 2A records are validated and consumed by phase2a_patch_plan.
+            # They must not enter the legacy inferred-scope planner while wording is deferred.
+            continue
+        if key(r) in records: raise ValueError('Duplicate human layout occurrence')
         records[key(r)]=r
     unresolved={key(x):x for x in audit['manual_review']}
     if set(records)-set(unresolved):
         raise ValueError('Human layout records do not match current manual review occurrences')
     result=copy.deepcopy(baseline)
     added=[]; added_locations=[]; resolved=set(); failed={}
-    ledger_hash=digest(json.dumps(human,ensure_ascii=False,sort_keys=True))
+    # Keep the legacy plan's provenance stable while Phase 2A scoped decisions are deferred.
+    legacy_human={**human,'records':[r for r in human['records']
+                                     if r.get('binding',{}).get('binding_mode') is None]}
+    ledger_hash=digest(json.dumps(legacy_human,ensure_ascii=False,sort_keys=True))
     for item in audit['auto_resolvable']+audit['manual_review']:
         loc=key(item); h=records.get(loc)
         if item in audit['manual_review']:
@@ -59,7 +84,10 @@ def integrate(data,ledger,rows,metadata,hashes,human):
             if layout_key(replacement)!=layout_key(request['canonical']):
                 error='layout_canonical_mismatch'; break
             after=before[:a]+replacement+before[b:]
-            if tokens(before)!=tokens(after): error='layout_technical_structure_changed'; break
+            if h:
+                if not explicit_human_layout_safe(before,after,replacement,request['canonical']):
+                    error='layout_technical_structure_changed'; break
+            elif tokens(before)!=tokens(after): error='layout_technical_structure_changed'; break
             if after==before or layout_key(before[a:b])==layout_key(replacement):
                 error='layout_normalized_equivalent'; break
             if (a,b) in candidates and candidates[(a,b)][0]!=replacement:
@@ -70,7 +98,13 @@ def integrate(data,ledger,rows,metadata,hashes,human):
         if error: failed[loc]=error; continue
         full_after=item['current']
         for a,b in reversed(spans): full_after=full_after[:a]+candidates[(a,b)][0]+full_after[b:]
-        if tokens(full_after)!=tokens(item['current']):
+        if h:
+            safe=(tokens_without_newlines(full_after)==tokens_without_newlines(item['current'])
+                  and all(layout_key(candidates[span][0]) == layout_key(r['canonical'])
+                          for span in spans for r in candidates[span][1]))
+        else:
+            safe=tokens(full_after)==tokens(item['current'])
+        if not safe:
             failed[loc]='layout_combined_tokens_changed'; continue
         opids=[]
         for a,b in spans:

@@ -79,8 +79,10 @@ class ModPackageTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.package()
         text=mod_package.DOCS['CHECKLIST.md'].read_text(encoding='utf8')
         records=json.loads(Path('reviews/phase1d-layout-decisions.json').read_text(encoding='utf8'))['records']
-        self.assertEqual(len(records),13)
-        for r in records:
+        legacy=[r for r in records if 'binding_mode' not in r.get('binding',{})]
+        phase2a=[r for r in records if r.get('binding',{}).get('binding_mode')]
+        self.assertEqual((len(legacy),len(phase2a)),(13,17))
+        for r in legacy:
             self.assertIn(r['string_id'],text)
             self.assertIn(r['replacement'],text)
 

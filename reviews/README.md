@@ -15,6 +15,11 @@ baseline_ids と baseline_report_sha256 は元の80件との照合根拠であ�
 Phase 2Aの追加64件は `binding_mode: phase2a_concept_occurrences_v1` を持つ。各recordは一つのfull name IDを主IDとし、`target_bindings` で同一gameplay conceptに属するfull name / compact name / action display / Help headingをrole単位に拘束する。249 target IDは全record間で一意で、141 IDが変更必要、108 IDが採用訳と既一致。actionとHelpは名称spanだけを拘束し、周辺全文をledgerへ複製しない。
 64件は正式裁定だが、今回patch / Mod実装は行わないため `implementation_status: adjudicated_not_patch_enabled` とする。既存scope plannerはこれらを推論伝播せず、deferred adjudicationとして報告する。
 
+`phase1d-layout-decisions.json` は既存13件を先頭で完全保持し、その後ろにPhase 2A compact nameの
+明示的人間layout裁定17件を持つ。後者は `phase2a_wording_compact_layout_v1` bindingでwording
+decisionとtarget occurrenceを参照し、採用語自体を所有しない。合計30件で、Phase 2Aの17件は
+wordingがdeferredの間は従来plannerへ混入せず、専用dry-run検証だけで使用する。
+
 同じ英語名を持つunitとupgrade technologyは別recordとし、各conceptで検証済みのHelp IDだけを `help_ids` に保持する。従来のinventoryが英語名から列挙するHelp集合を新規recordのconcept membershipには使用しない。各targetは日英sourceのpath・line・value hash、日本語名称span、role、採用訳を `binding_signature` で拘束し、concept全体を `target_scope_signature` で拘束する。source drift時は従来どおりfail closedとする。
 
 元の52件は `reviews/human/wording-review_reviewed.tsv` のhash・行番号・人間裁定3列をprovenanceに保持する。family派生11件の明示承認と、Savar unitを「サヴァール」に統一する独立の明示裁定は異なるprovenance kindで記録する。取り込み根拠と検証結果は [Phase 2A wording ledger](../docs/phase2a-wording-ledger.md) を参照。
