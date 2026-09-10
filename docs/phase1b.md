@@ -1,8 +1,10 @@
 # Phase 1B 採用候補レビュー
 
-現行正本は名称104件＋文脈付き全文29件＝133裁定。restore 81 / keep_de 2 / revise 50。
+現行正本は従来の名称104件＋Phase 2A wording 64 concept＋文脈付き全文29件＝197裁定。restore 90 / keep_de 32 / revise 75。
 387 operationsへ統合した。現行387-entry翻訳は[実機確認](game-validation.md)のhashに拘束される。
 最新仕様と再生成手順は [context overrides](context-overrides.md) を参照。以下の80/85件は初回レビューの履歴。
+
+Phase 2Aで追加した64 conceptと249 target IDのrole別bindingは [Phase 2A wording ledger](phase2a-wording-ledger.md) に記録する。従来104 recordsは変更せず、Phase 2A recordだけにconcept-scoped bindingを追加した。
 
 ## 2026-09-08 人間裁定の反映
 

@@ -1,4 +1,5 @@
 """Synthetic sources, explicit project-owned human decisions."""
+import json
 import unittest
 from pathlib import Path
 
@@ -7,6 +8,7 @@ from tools.localization.analysis import Dataset
 from tools.localization.gameplay import build_inventory
 from tools.localization.adoption import build_adoption, signature, render_review
 from tools.localization.human_reviews import validate, load_ledger
+from tools.localization.restoration import digest
 
 
 def ledger(data, ids, decision='revise', jp='人間の指定訳', baseline=None):
@@ -100,17 +102,20 @@ class HumanReviewTests(unittest.TestCase):
     def test_recorded_user_coverage_and_counts(self):
         human=load_ledger()
         records=human['records']; ids=[r['string_id'] for r in records]
-        self.assertEqual(len(ids),104)
-        self.assertEqual(len(set(ids)),104)
+        self.assertEqual(len(ids),168)
+        self.assertEqual(len(set(ids)),168)
+        preserved=records[:104]
+        self.assertEqual(digest(json.dumps(preserved,sort_keys=True,ensure_ascii=False,separators=(',',':'))),
+                         'b3902acf9a7c8dafee30ec8ffe3b4147f791e8477613c42063c9a880aaffe4dd')
         self.assertEqual(len(human['baseline_ids']),80)
         self.assertTrue(set(human['baseline_ids']).issubset(ids))
         from tools.localization.context_overrides import load
         direct=load()['records']
         self.assertEqual(len(direct),29)
         self.assertFalse(set(ids)&{r['string_id'] for r in direct})
-        self.assertEqual(len(ids)+len(direct),133)
+        self.assertEqual(len(ids)+len(direct),197)
         combined=records+direct
-        self.assertEqual([sum(r['decision']==d for r in combined) for d in ('restore','keep_de','revise')],[81,2,50])
+        self.assertEqual([sum(r['decision']==d for r in combined) for d in ('restore','keep_de','revise')],[90,32,75])
         relic=next(r for r in records if r['string_id']=='5350')
         self.assertEqual((relic['expected_de_english'],relic['decision'],relic['proposed_jp'],relic['help_ids']),
                          ('Relic','restore','聖なる箱',[]))

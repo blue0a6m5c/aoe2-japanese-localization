@@ -8,6 +8,52 @@ from .gameplay import ACTION, ORDER, cell, normalized
 from .restoration import digest
 
 DEFAULT_LEDGER = Path(__file__).resolve().parents[2] / 'reviews/phase1b-decisions.json'
+PHASE2A_BINDING_MODE = 'phase2a_concept_occurrences_v1'
+PHASE2A_ROLES = frozenset(('full_name', 'compact_name', 'action_display', 'help_heading'))
+
+
+def target_binding_signature(binding):
+    """Fingerprint one explicitly adjudicated concept occurrence."""
+    payload = {k:binding[k] for k in (
+        'string_id', 'role', 'en_source', 'jp_source', 'en_value_sha256', 'jp_value_sha256',
+        'current_japanese_term', 'jp_span', 'adopted_japanese', 'change_required')}
+    return digest(json.dumps(payload, sort_keys=True, ensure_ascii=False))
+
+
+def target_scope_signature(record):
+    """Bind a concept decision to its exact, ordered occurrence set."""
+    payload = dict(binding_mode=record['binding_mode'], concept_id=record['concept_id'],
+                   category=record['category'], proposed_jp=record['proposed_jp'],
+                   target_binding_signatures=[b['binding_signature'] for b in record['target_bindings']])
+    return digest(json.dumps(payload, sort_keys=True, ensure_ascii=False))
+
+
+def source_bindings_match(record, data):
+    """Fail closed when any Phase 2A role, source value, location, span, or hash drifts."""
+    from .adoption import signature, value
+    if value(data, 'de_en', record['string_id']) != record['expected_de_english']:
+        return False
+    if signature(data, record['string_id'], record['help_ids']) != record['signature']:
+        return False
+    if target_scope_signature(record) != record['target_scope_signature']:
+        return False
+    for binding in record['target_bindings']:
+        if target_binding_signature(binding) != binding['binding_signature']:
+            return False
+        en = data.get('de_en').resolved(binding['string_id']) if data.get('de_en') else None
+        jp = data.get('de_jp').resolved(binding['string_id']) if data.get('de_jp') else None
+        if not en or not jp:
+            return False
+        if {'path':en.path, 'line':en.line} != binding['en_source']:
+            return False
+        if {'path':jp.path, 'line':jp.line} != binding['jp_source']:
+            return False
+        if digest(en.value) != binding['en_value_sha256'] or digest(jp.value) != binding['jp_value_sha256']:
+            return False
+        start, end = binding['jp_span']
+        if jp.value[start:end] != binding['current_japanese_term']:
+            return False
+    return True
 
 
 def load_ledger(path=DEFAULT_LEDGER):
@@ -16,11 +62,19 @@ def load_ledger(path=DEFAULT_LEDGER):
     return ledger
 
 
+def implementation_ledger(ledger):
+    """Return only adjudications whose patch implementation has been separately enabled."""
+    validate(ledger)
+    return {**ledger, 'records':[r for r in ledger.get('records', [])
+                                 if r.get('implementation_status') != 'adjudicated_not_patch_enabled']}
+
+
 def validate(ledger):
     baseline = ledger.get('baseline_ids', [])
     if len(baseline) != len(set(baseline)):
         raise ValueError('Duplicate baseline candidate ID')
     ids = set()
+    target_owners = {}
     for r in ledger.get('records', []):
         sid = r['string_id']
         if sid in ids:
@@ -32,6 +86,48 @@ def validate(ledger):
             raise ValueError(f'Explicit adopted Japanese required: {sid}')
         if not r.get('expected_de_english') or not r.get('signature'):
             raise ValueError(f'Human decision requires evidence binding: {sid}')
+        if r.get('binding_mode') != PHASE2A_BINDING_MODE:
+            if sid in target_owners:
+                raise ValueError(f'Duplicate adjudication target: {sid}')
+            target_owners[sid] = sid
+            continue
+        if not r.get('concept_id') or r.get('category') not in ('unit', 'technology', 'building'):
+            raise ValueError(f'Phase 2A concept identity required: {sid}')
+        if r.get('implementation_status') != 'adjudicated_not_patch_enabled':
+            raise ValueError(f'Phase 2A implementation status required: {sid}')
+        bindings = r.get('target_bindings')
+        if not isinstance(bindings, list) or not bindings:
+            raise ValueError(f'Phase 2A target bindings required: {sid}')
+        target_ids = [b.get('string_id') for b in bindings]
+        if len(target_ids) != len(set(target_ids)):
+            raise ValueError(f'Duplicate target within Phase 2A concept: {sid}')
+        full_names = [b for b in bindings if b.get('role') == 'full_name']
+        if len(full_names) != 1 or full_names[0].get('string_id') != sid:
+            raise ValueError(f'Phase 2A primary full name mismatch: {sid}')
+        bound_helps = sorted((b['string_id'] for b in bindings if b.get('role') == 'help_heading'), key=id_sort)
+        if sorted(set(r.get('help_ids', [])), key=id_sort) != bound_helps:
+            raise ValueError(f'Phase 2A concept Help binding mismatch: {sid}')
+        for b in bindings:
+            target = b.get('string_id')
+            if b.get('role') not in PHASE2A_ROLES or not target:
+                raise ValueError(f'Invalid Phase 2A occurrence role: {sid}')
+            if b.get('adopted_japanese') != r['proposed_jp']:
+                raise ValueError(f'Phase 2A adopted value mismatch: {sid}/{target}')
+            if not isinstance(b.get('change_required'), bool):
+                raise ValueError(f'Phase 2A change flag required: {sid}/{target}')
+            span = b.get('jp_span')
+            if not (isinstance(span, list) and len(span) == 2 and all(isinstance(x, int) for x in span)
+                    and 0 <= span[0] <= span[1]
+                    and span[1] - span[0] == len(b.get('current_japanese_term') or '')):
+                raise ValueError(f'Phase 2A Japanese span mismatch: {sid}/{target}')
+            if target_binding_signature(b) != b.get('binding_signature'):
+                raise ValueError(f'Phase 2A occurrence signature mismatch: {sid}/{target}')
+            previous = target_owners.get(target)
+            if previous is not None and previous != sid:
+                raise ValueError(f'Duplicate adjudication target: {target} ({previous}, {sid})')
+            target_owners[target] = sid
+        if target_scope_signature(r) != r.get('target_scope_signature'):
+            raise ValueError(f'Phase 2A scope signature mismatch: {sid}')
 
 
 def apply_ledger(report, data, inventory, ledger):
@@ -69,9 +165,10 @@ def apply_ledger(report, data, inventory, ledger):
         if not r:
             continue
         live_helps = sorted({e['help_id'] for e in audit_rows.get(sid,{}).get('evidence',[])},key=id_sort)
-        bound = (value(data,'de_en',sid)==r['expected_de_english']
-                 and signature(data,sid,r['help_ids'])==r['signature']
-                 and live_helps==sorted(set(r['help_ids']),key=id_sort))
+        bound = (source_bindings_match(r, data) if r.get('binding_mode') == PHASE2A_BINDING_MODE else
+                 (value(data,'de_en',sid)==r['expected_de_english']
+                  and signature(data,sid,r['help_ids'])==r['signature']
+                  and live_helps==sorted(set(r['help_ids']),key=id_sort)))
         row.update(reviewer=ledger['reviewer'], reviewer_decision=r['decision'],
                    reviewer_proposed_jp=r['proposed_jp'], reviewer_notes=r['notes'],
                    human_review_id=ledger['review_id'], human_signature=r['signature'],

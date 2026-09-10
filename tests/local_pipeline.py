@@ -7,7 +7,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from tools.localization.analysis import load_datasets
-from tools.localization.human_reviews import load_ledger
+from tools.localization.human_reviews import implementation_ledger, load_ledger
 from tools.localization import scope, context_overrides, patch_plan, layout_plan, mod_build
 from tools.localization.blocked_audit import serialize_json
 
@@ -17,7 +17,10 @@ def inputs(historical=False):
     if not Path('source/de/jp/key-value/key-value-strings-utf8.txt').exists():
         raise unittest.SkipTest('Optional local official data unavailable')
     data=load_datasets(Path('source'))
-    ledger=load_ledger()
+    formal_ledger=load_ledger()
+    phase2a_deferred=any(r.get('implementation_status')=='adjudicated_not_patch_enabled'
+                         for r in formal_ledger['records'])
+    ledger=implementation_ledger(formal_ledger)
     if historical:
         ids=set(ledger['baseline_ids'])|{'5115','5118','5130','5186','5205'}
         ledger['records']=[r for r in ledger['records'] if r['string_id'] in ids]
@@ -36,13 +39,17 @@ def inputs(historical=False):
     hp=Path('reviews/phase1d-layout-decisions.json');human=json.loads(hp.read_text(encoding='utf8'))
     plan=layout_plan.integrate(data,ledger,rows,meta,hashes,human)
     pp=root/'patch-plan.json';pp.write_text(serialize_json({k:v for k,v in plan.items() if k!='blocked'}),encoding='utf8')
-    return dict(data=data,ledger=ledger,rows=rows,meta=meta,hashes=hashes,human=human,plan=plan,
+    return dict(data=data,ledger=ledger,formal_ledger=formal_ledger,phase2a_deferred=phase2a_deferred,
+                rows=rows,meta=meta,hashes=hashes,human=human,plan=plan,
                 args=(Path('source'),pp,lp,hp,sd),audit=audit)
 
 
 @lru_cache(None)
 def payload():
-    item=inputs();bundle=mod_build.prepare(*item['args'])
+    item=inputs()
+    if item['phase2a_deferred']:
+        raise unittest.SkipTest('Phase 2A adjudications are recorded but patch/Mod implementation is not authorized')
+    bundle=mod_build.prepare(*item['args'])
     Path('dist').mkdir(exist_ok=True)
     temp=tempfile.TemporaryDirectory(dir='dist');atexit.register(temp.cleanup)
     path=Path(temp.name)/'payload';mod_build.generate(bundle,path)

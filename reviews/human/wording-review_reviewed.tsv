@@ -1,0 +1,53 @@
+English	種別	AoK	AoC	HD	DE正式名	DEその他の名称出現	問題点・差分概要	採用する日本語	裁定	判断理由
+Eagle Scout	ユニット	?	?	イーグル ウォリア	イーグル ウォリアー	help_heading[26672]: イーグル ウォリア	gameplay identityに基づく世代比較可。 Eagle第1段階をHD 5671からDE unit 751 / 5672へ対応。 DE内のrole間に名称差あり。	イーグル ウォリア	restore	DE移行時の表記ブレ。旧版へ戻す。
+Bagains	テクノロジー	?	?	?	バガイン	help_heading[28308]: バゲイン	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	バガイン	keep_de	DE内での表記ブレ。統一。
+Elite Elephant Archer	ユニット	?	?	精鋭象弓騎兵	精鋭象弓騎兵	help_heading[26684]: 精鋭象乗り射手	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	精鋭象弓騎兵	restore	DE内での表記ブレ。HDと統一。
+Elite Hussite Wagon	ユニット	?	?	?	精鋭戦闘馬車	help_heading[26563]: 精鋭フス派の馬車	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	精鋭戦闘馬車	keep_de	DE内での表記ブレ。統一。
+First Crusade	テクノロジー	?	?	?	第 1 回十字軍	help_heading[28344]: 第一次十字軍	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	第一次十字軍	revise	DE内での表記ブレ。統一。
+Hill Forts	テクノロジー	?	?	?	丘の砦	help_heading[28399]: 丘陵砦	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	ヒルフォート	revise	"実質的な関連性は薄いが、AoMの""ヒルフォート""と統一する。"
+Hussite Wagon	ユニット	?	?	?	戦闘馬車	help_heading[26561]: フス派の馬車	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	戦闘馬車	keep_de	DE内での表記ブレ。統一。
+Orthodoxy	テクノロジー	?	?	正統主義	正統教義	help_heading[28268]: 正統主義	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	正統主義	restore	DE内での表記ブレ。HDと統一。
+Steppe Husbandry	テクノロジー	?	?	?	草原馬の繁殖	help_heading[28311]: 草原の農業	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	ステップ牧畜	revise	単なる草原ではなく、ステップ地帯の民族の固有のテクノロジーであることを強調。
+Stirrups	テクノロジー	?	?	?	あぶみ	help_heading[28307]: 鐙	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	あぶみ	keep_de	DE内での表記ブレ。統一。
+Timurid Siegecraft	テクノロジー	?	?	?	ティムールの攻囲戦術	help_heading[28310]: ティムールの攻城術	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	ティムール式攻城術	revise	ティムール個人の戦術というよりも、それを踏襲した技術であることを強調。
+Caravanserai	建物	?	?	?	キャラバンサライ	help_heading[26440]: 隊商宿	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	キャラバンサライ	keep_de	DE内での表記ブレ。統一。
+Composite Bowman	ユニット	?	?	?	戦闘弓兵	help_heading[26033]・action_display[6033]・compact_name[14033]: 戦闘弓射手	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	戦闘弓射手	revise	DE内での表記ブレ。統一。
+Elephant Archer	ユニット	?	?	象弓騎兵	象弓騎兵	help_heading[26682]: 象乗り射手	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	象弓騎兵	keep_de	DE内での表記ブレ。統一。
+Elite Iron Pagoda	テクノロジー	?	?	?	精鋭アイアンパゴダ	help_heading[28464]: 精鋭鉄パゴダ	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	精鋭鉄浮屠	revise	より歴史的名称かつ、中華圏ユニットらしく漢語に。
+Elite Magyar Huszar	ユニット	?	?	エリート マジャール ハサー	精鋭マジャール ハサー	help_heading[26730]: 精鋭マジャール フサール	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	エリート マジャール ハサー	restore	旧版の名前に統一。
+Elite Serjeant	ユニット	?	?	?	精鋭セルジェアント	help_heading[26540]: 精鋭セルジャント	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	エリート セルジェアント	revise	旧版の方式の名前に統一。
+Elite Steppe Lancer	ユニット	?	?	?	精鋭ステップ ランサー	help_heading[26010]: 精鋭草原槍騎兵	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	エリート ステップ ランサー	revise	旧版の方式の名前に統一。
+Elite Urumi Swordsman	ユニット	?	?	?	精鋭ウルミ剣士	help_heading[26413]: 精鋭ウルミン剣士	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	精鋭ウルミ剣士	keep_de	DE内での表記ブレ。統一。
+Heavy Hei Guang Cavalry	テクノロジー	?	?	?	重黒光鎧騎兵	compact_name[17471]: 黒光鎧 重騎兵 / help_heading[28471]: 重装黒光騎兵	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	重黒光鎧騎兵	keep_de	DE内での表記ブレ。統一。
+Magyar Huszar	ユニット	?	?	マジャール ハサー	マジャール ハサー	help_heading[26728]: マジャール フサール	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	マジャール ハサー	restore	旧版の名前に統一。
+Mounted Samurai	ユニット	?	?	?	騎馬武士	compact_name[14039]: 騎馬武者 / help_heading[26039]: 騎乗武士	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	騎馬武者	revise	より一般的で自然な名称に
+Steppe Lancer	ユニット	?	?	?	ステップ ランサー	help_heading[26009]: 草原槍騎兵	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	ステップ ランサー	keep_de	DE内での表記ブレ。統一。
+Throwing Axeman	ユニット	フランカ スロウ	?	フランカ スロウ	フランカ スロウ	help_heading[26111]: 投擲斧戦士	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	フランカ スロウ	keep_de	DE内での表記ブレ。統一。
+Urumi Swordsman	ユニット	?	?	?	ウルミ剣士	help_heading[26403]: ウルミン剣士	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	ウルミ剣士	keep_de	DE内での表記ブレ。統一。
+Winged Hussar	ユニット	?	?	?	ウィングド ハサー	compact_name[14577]: ウイングド ハサー / help_heading[26577]: 翼付きユサール	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	ウイングド ハサー	keep_de	DE内での表記ブレ。統一。
+Bimaristan	テクノロジー	?	?	?	ビマリスタン	help_heading[28451]・action_display[8451]: ビマリンスタン	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	ビマリスタン	keep_de	DE内での表記ブレ。統一。
+Camel Scout	ユニット	?	?	?	らくだ斥候兵	help_heading[26441]: らくだ斥候	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	らくだ斥候	revise	DE内での表記ブレ。統一。
+Demolition Raft	ユニット	?	?	爆破工作ボート	爆破工作ボート	compact_name[14162]: 爆破工作 艇	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	爆破工作いかだ	revise	Raft の意味とユニットの外観を踏まえ、「ボート」ではなく「いかだ」を採用。
+Elite Composite Bowman	テクノロジー	?	?	?	精鋭戦闘弓射手	help_heading[28404]: 精鋭戦闘弓兵	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	精鋭戦闘弓射手	keep_de	DE内での表記ブレ。統一。
+Elite Fire Lancer	テクノロジー	?	?	?	精鋭火槍騎兵	compact_name[17463]: 精鋭 火槍兵	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	精鋭火槍兵	revise	騎兵ではない。
+Elite Obuch	ユニット	?	?	?	精鋭オブヒ兵	help_heading[26559]: 精鋭オブシュ	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	精鋭オブフ兵	revise	ポーランド語 obuch/ˈɔ.bux/の語末 ch は /x/。現行の「オブヒ」「オブシュ」の揺れを整理し、原語発音に近い「オブフ」に統一。
+Fire Lancer	ユニット	?	?	?	火槍騎兵	help_heading[26066]・action_display[6066]: 火槍兵	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	火槍兵	revise	騎兵ではない。
+Iroquois Warrior	ユニット	?	?	?	イロコイ ウォリア	help_heading[26011]: イロコイ・ウォリア	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	イロコイ ウォリア	keep_de	DE内での表記ブレ。統一。
+Nomads	テクノロジー	?	?	遊牧民	遊牧民	action_display[8280]・help_heading[28280]: 遊牧	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	遊牧民	keep_de	DE内での表記ブレ。統一。
+Obuch	ユニット	?	?	?	オブヒ兵	help_heading[26558]: オブシュ	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	オブフ兵	revise	ポーランド語 obuch /ˈɔ.bux/ の語末 ch は /x/。現行の「オブヒ」「オブシュ」の揺れを整理し、原語発音に近い「オブフ」に統一。
+Qizilbash Warrior	ユニット	?	?	?	クズルバシュ ウォリア	compact_name[14048]: クズルバシュ 戦士	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	クズルバシュ ウォリア	keep_de	DE内での表記ブレ。統一。
+Serjeant	ユニット	?	?	?	セルジェアント	help_heading[26538]: セルジャント	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	セルジェアント	keep_de	DE内での表記ブレ。統一。
+Silk Armor	テクノロジー	?	?	?	絹鎧	help_heading[28309]・action_display[8309]: 絹の鎧	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	絹の鎧	revise	DE内での表記ブレ。統一。
+Sipahi	テクノロジー	?	?	スィパーヒー	スィパーヒー	help_heading[28285]・action_display[8285]: シパーヒー	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	スィパーヒー	keep_de	DE内での表記ブレ。統一。
+Sitting Tiger	テクノロジー	?	?	?	伏虎	compact_name[17481]: 座っている トラ	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	虎蹲砲	revise	より一般的で自然な名称に
+Stone Shaft Mining	テクノロジー	石の掘削	?	石の掘削	石の掘削	compact_name[17277]: 石材の掘削	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	石の掘削	restore	旧版の名前に統一。
+Thalassocracy	テクノロジー	?	?	制海権	海洋強国	action_display[8293]・help_heading[28293]: 制海権	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	海洋覇権	revise	原語の意味を踏まえた意訳
+War Galley	ユニット	大型ガレー船	?	大型ガレー船	大型ガレー船	help_heading[26091]: 兵船	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	大型ガレー船	restore	旧版の名前に統一。
+Dromon	ユニット	?	?	?	ドロモス船	compact_name[14055]: デュロモイ	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	ドロモン	revise	より一般的で自然な名称に
+Elite Plumed Archer	ユニット	?	精鋭羽飾射手	精鋭羽飾射手	精鋭羽飾射手	action_display[6685]: 精鋭羽飾戦士	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	精鋭羽飾射手	keep_de	DE内での表記ブレ。統一。
+Caravan	テクノロジー	?	隊商	隊商	隊商	action_display[8410]: 商隊	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	隊商	keep_de	DE内での表記ブレ。統一。
+Devotion	テクノロジー	?	?	?	帰依	action_display[8462]: 忠誠	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	帰依	keep_de	DE内での表記ブレ。統一。
+Ironclad	テクノロジー	?	?	装甲板	装甲板	action_display[8283]: アイアンクラッド	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	装甲板	restore	旧版の名前に統一。
+Plumed Archer	ユニット	?	羽飾射手	羽飾射手	羽飾射手	action_display[6683]: 羽飾戦士	gameplay identityに基づく世代比較可。 DE内のrole間に名称差あり。	羽飾射手	keep_de	DE内での表記ブレ。統一。
+Savar	テクノロジー	?	?	?	サヴァール	action_display[8442]: サバール	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	サヴァール	keep_de	DE内での表記ブレ。統一。
+Transhumance	テクノロジー	?	?	?	移動牧畜	action_display[8486]: 移動牧場	旧世代のgameplay identityを確認できないためDE内のみ比較。 DE内のrole間に名称差あり。	移動牧畜	keep_de	DE内での表記ブレ。統一。

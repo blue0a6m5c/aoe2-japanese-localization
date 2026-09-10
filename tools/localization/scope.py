@@ -7,7 +7,7 @@ import re
 from .adoption import build_adoption, tsv
 from .analysis import id_sort, occurrence
 from .gameplay import ACTION, build_inventory, normalized
-from .human_reviews import load_ledger
+from .human_reviews import implementation_ledger, load_ledger
 from .restoration import digest
 from .duplicate_audit import audit_duplicates
 from . import context_overrides
@@ -106,6 +106,13 @@ def build_scope(data, ledger=None, inventory=None, adoption=None, context_path=N
     if ledger is None and context_path is None:
         context_path=context_overrides.DEFAULT_PATH
     ledger=load_ledger() if ledger is None else ledger
+    deferred_adjudications=[r['string_id'] for r in ledger['records']
+                            if r.get('implementation_status')=='adjudicated_not_patch_enabled']
+    if deferred_adjudications:
+        # Phase 2A concept records are authoritative adjudications, but the existing
+        # name-scope planner cannot consume their explicit role/span bindings yet.
+        # Exclude them from implementation planning until that separate work is authorized.
+        ledger=implementation_ledger(ledger)
     inventory=build_inventory(data) if inventory is None else inventory
     adoption=build_adoption(data,inventory,human_ledger=ledger) if adoption is None else adoption
     records={r['string_id']:r for r in ledger['records']}
@@ -281,6 +288,7 @@ def build_scope(data, ledger=None, inventory=None, adoption=None, context_path=N
         stale_decisions=adoption['human_review']['stale_ids'],absent_source_decisions=adoption['human_review']['absent_source_ids'],
         ledger_sha256=digest(json.dumps(ledger,ensure_ascii=False,sort_keys=True)),
         aliases={s:sorted(a for a,ids in aliases.items() if s in ids) for s in sorted(records,key=id_sort)},
+        deferred_adjudication_ids=sorted(deferred_adjudications,key=id_sort),
         inputs=adoption['inputs'],rows=rows)
     if direct:
         all_ids=set(records)|{r['string_id'] for r in direct['records']}
