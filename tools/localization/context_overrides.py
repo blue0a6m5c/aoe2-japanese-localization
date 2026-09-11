@@ -41,10 +41,15 @@ def binding(data,record):
 
 def validate_source(data,ledger):
     from .patch_plan import tokens
+    from .source_states import evidence_data
+    live = data
+    data, states = evidence_data(data)
     validate_decisions(ledger)
     locations=set()
     for r in ledger['records']:
         sid=r['string_id']
+        if sid in states and live['de_jp'].resolved(sid).value != r['proposed_jp']:
+            raise ValueError('Context expected after value mismatch: '+sid)
         if r.get('binding_signature')!=record_signature(r):raise ValueError('Context record signature mismatch: '+sid)
         if r.get('kind')!='context_full_value' or r.get('target')!=binding(data,r):
             raise ValueError('Context source occurrence/hash mismatch: '+sid)

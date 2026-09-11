@@ -22,6 +22,8 @@ def _layout_records(layout_ledger):
 
 def validate_layout_records(data, wording_ledger, layout_ledger):
     """Validate Phase 2A compact layouts against the wording ledger and live source."""
+    from .source_states import evidence_data
+    data, _ = evidence_data(data)
     validate(wording_ledger)
     if (layout_ledger.get('schema_version') != 1
             or layout_ledger.get('authority') != 'explicit_user_layout_decisions'):
@@ -85,6 +87,10 @@ def validate_layout_records(data, wording_ledger, layout_ledger):
 
 def build_plan(data, wording_ledger, layout_ledger):
     """Build all 249 Phase 2A targets and 141 virtual operations from explicit bindings."""
+    from .source_states import evidence_data, filter_plan
+    original, states = evidence_data(data)
+    if states:
+        return filter_plan(build_plan(original, wording_ledger, layout_ledger), states, phase2a=True)
     layouts = validate_layout_records(data, wording_ledger, layout_ledger)
     source_hashes = {source.path:source.sha256 for dataset in data.values() for source in dataset.files}
     targets = []

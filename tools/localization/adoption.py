@@ -20,7 +20,8 @@ def value(data, name, sid):
 
 
 def signature(data, sid, help_ids):
-    return digest(json.dumps({s: {n: cell(data.get(n), s) for n in ORDER}
+    from .source_states import signature_cell
+    return digest(json.dumps({s: {n: signature_cell(data.get(n), s) for n in ORDER}
                               for s in sorted({sid, *help_ids}, key=id_sort)}, sort_keys=True, ensure_ascii=False))
 
 

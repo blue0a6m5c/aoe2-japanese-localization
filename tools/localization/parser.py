@@ -45,6 +45,7 @@ class ParsedFile:
     format: str = 'key_value'
     metadata: dict = field(default_factory=dict)
     empty_slots: list[Entry] = field(default_factory=list)
+    raw_bytes: bytes | None = field(default=None, repr=False, compare=False)
 
 
 def parse_text(text: str, path: str = '<memory>') -> ParsedFile:
@@ -103,6 +104,7 @@ def parse_file(path: Path, label: str | None = None) -> ParsedFile:
     else:
         result = parse_text(text, name)
     result.sha256 = hashlib.sha256(data).hexdigest()
+    result.raw_bytes = data
     result.size_bytes = len(data)
     result.bom = data.startswith(b'\xef\xbb\xbf')
     return result

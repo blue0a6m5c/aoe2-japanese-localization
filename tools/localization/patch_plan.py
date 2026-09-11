@@ -56,6 +56,11 @@ def relation_valid(row,rec,en,inventory):
 
 
 def build_plan(data,ledger,rows,metadata,artifact_hashes=None):
+    from .source_states import restore_scope, filter_plan
+    original, before_rows, before_meta, states = restore_scope(data, ledger, rows, metadata)
+    if states:
+        return filter_plan(build_plan(original, ledger, before_rows, before_meta, artifact_hashes),
+                           states, base_only=True)
     validate(ledger)
     direct=context_overrides.validate_scope(data,rows,metadata)
     direct_records={r['string_id']:r for r in direct['records']} if direct else {}

@@ -31,6 +31,17 @@ def target_scope_signature(record):
 def source_bindings_match(record, data):
     """Fail closed when any Phase 2A role, source value, location, span, or hash drifts."""
     from .adoption import signature, value
+    from .source_states import evidence_data
+    try:
+        data, states = evidence_data(data)
+    except ValueError:
+        return False
+    if states and any(b['string_id'] in states for b in record['target_bindings']):
+        # The after certificate authorizes one reviewed concept/scope, not a newly
+        # re-signed assignment of those same values to another concept.
+        approved = json.loads(DEFAULT_LEDGER.read_text(encoding='utf8'))['records']
+        if record not in approved:
+            return False
     if value(data, 'de_en', record['string_id']) != record['expected_de_english']:
         return False
     if signature(data, record['string_id'], record['help_ids']) != record['signature']:

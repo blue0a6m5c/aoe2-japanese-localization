@@ -103,6 +103,12 @@ def conflicts(rows):
 
 
 def build_scope(data, ledger=None, inventory=None, adoption=None, context_path=None):
+    from .source_states import evidence_data, project_scope
+    original, states = evidence_data(data)
+    if states:
+        if inventory is not None or adoption is not None:
+            raise ValueError('After-state scope requires freshly generated inventory/adoption')
+        return project_scope(build_scope(original, ledger, context_path=context_path), states)
     if ledger is None and context_path is None:
         context_path=context_overrides.DEFAULT_PATH
     ledger=load_ledger() if ledger is None else ledger

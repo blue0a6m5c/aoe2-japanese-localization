@@ -42,6 +42,10 @@ def key(item):
 
 
 def integrate(data,ledger,rows,metadata,hashes,human):
+    from .source_states import restore_scope, filter_plan
+    original, before_rows, before_meta, states = restore_scope(data, ledger, rows, metadata)
+    if states:
+        return filter_plan(integrate(original, ledger, before_rows, before_meta, hashes, human), states)
     baseline=build_plan(data,ledger,rows,metadata,hashes)
     audit=audit_blocked(data,ledger,rows,metadata,hashes)
     if human.get('schema_version')!=1 or human.get('authority')!='explicit_user_layout_decisions':
