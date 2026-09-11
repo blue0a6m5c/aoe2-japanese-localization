@@ -1,167 +1,158 @@
 # AGENTS.md
 
-## Project Purpose
+## Project Rules
 
-This repository develops a refined Japanese localization for Age of Empires II: Definitive Edition.
+This repository develops a Japanese localization Mod for **Age of
+Empires II: Definitive Edition**.
 
-The project is not a generic machine-translation project.
+For project goals and translation policy, see `README.md`. For
+architecture details and rationale, see `docs/architecture.md`.
 
-Its objective is to construct a coherent Japanese localization based on:
+Follow explicit user instructions first, then this file.
 
-- the terminology established by the Japanese releases of Age of Empires II: The Age of Kings (1999) and The Conquerors (2000);
-- the historical evolution of the localization through HD Edition;
-- the meaning and current gameplay represented by the English Definitive Edition strings;
-- deliberate editorial review.
+## Architecture
 
-## Core Principles
+Keep these responsibilities separate:
 
-### 1. Legacy terminology is an important baseline
-
-Terminology established by the original Japanese AoE II releases should generally be preferred when the underlying concept has not changed.
-
-Do not assume that newer terminology is automatically preferable.
-
-However, do not mechanically restore old translations when they are demonstrably incorrect or unsuitable for the current game.
-
-### 2. English DE strings are the semantic reference
-
-When determining the current meaning of a string, use the current English Definitive Edition localization as the primary semantic reference.
-
-Older Japanese strings are references for terminology and localization style, not authoritative descriptions of current gameplay.
-
-### 3. HD Edition is a historical reference
-
-HD localization data is primarily used to trace changes between classic AoE II and Definitive Edition.
-
-Do not treat HD Japanese terminology as automatically authoritative.
-
-### 4. New content should fit the established localization system
-
-Units, buildings, technologies, civilizations, and other concepts introduced after the classic releases should be reviewed for consistency with established Japanese AoE II terminology.
-
-Do not simply transliterate or directly translate new terminology without considering existing naming conventions.
-
-### 5. Chronicles is a separate localization context
-
-Chronicles content intentionally uses concepts and terminology that may differ from standard AoE II.
-
-Do not mechanically normalize Chronicles terminology to standard AoE II terminology.
-
-For example, intentionally distinct religious, military, political, or cultural terminology may need to remain distinct.
-
-Context-specific glossaries and rules may be introduced for Chronicles.
-
-### 6. Preserve technical syntax
-
-Never alter placeholders, markup, formatting tokens, escape sequences, or other technical syntax unless the task specifically requires it and the change has been validated.
-
-Examples include:
-
-- `%s`
-- `%d`
-- formatting tags
-- escaped characters
-- String IDs
-
-Validation tools should detect accidental changes to these elements.
-
-## Source Data Policy
-
-The `source/` directory contains copyrighted localization data copied from locally installed versions of Age of Empires II.
-
-Treat everything under `source/` as **read-only reference data**.
-
-Agents MUST NOT:
-
-- modify source files;
-- reformat source files;
-- rename source files unless explicitly instructed;
-- commit source files;
-- copy substantial portions of source localization into tracked files;
-- generate commits that include original game localization files.
-
-Analysis tools may read files under `source/`.
-
-Generated comparison data must be designed to avoid unnecessarily reproducing the complete original localization.
-
-## Translation Changes
-
-Do not make large-scale translation changes automatically.
-
-Translation proposals should be reviewable and traceable.
-
-Where practical, record:
-
-- String ID
-- current English
-- current Japanese
-- proposed Japanese
-- category of change
-- source/basis
-- notes or rationale
-- review status
-
-Useful change categories may include:
-
-- `legacy_restoration`
-- `terminology_consistency`
-- `translation_fix`
-- `qa_fix`
-- `style_refinement`
-- `new_localization`
-- `chronicles_specific`
-
-The schema may evolve as the project develops.
-
-## Historical Terminology
-
-Do not invent historical Japanese terminology merely because a literal translation sounds plausible.
-
-When a name depends on historical terminology, flag uncertain cases for research or human review.
-
-Prefer established Japanese historical terminology where appropriate.
-
-## Automation Philosophy
-
-Automation should assist editorial work, not replace it.
-
-Good uses of automation include:
-
-- parsing String IDs;
-- comparing versions;
-- detecting changed strings;
-- detecting suspiciously short or malformed translations;
-- detecting untranslated English;
-- identifying terminology inconsistencies;
-- checking placeholders and formatting;
-- generating review reports;
-- building mod output.
-
-Automated tools should not silently decide contested translation questions.
-
-## Repository Structure
-
-Expected high-level structure:
-
-```text
-docs/           Project documentation and translation policies
-glossary/       Terminology and context-specific glossaries
-source/         Local read-only source data; excluded from Git
-tools/          Parsing, analysis, validation, and build tools
-translations/   Project-owned translation overrides and review data
-dist/           Generated mod output; normally excluded from Git
+``` text
+Research
+   ↓
+Human decision
+   ↓
+decisions/
+   ↓
+validate
+   ↓
+build
+   ├── Mod
+   └── generated documentation
 ```
+
+-   `decisions/` is the authoritative source for approved translation
+    decisions.
+-   `source/` is upstream reference data and is **read-only**.
+-   `glossary/`, `reports/`, and `dist/` are generated or derived data,
+    not translation sources of truth.
+-   `reviews/` and the old Phase pipeline are legacy/migration material
+    unless explicitly needed.
+
+Do not modify, patch, reformat, or normalize files under `source/`.
+Production output must be generated separately as a Mod.
+
+## Translation Decisions
+
+Human-approved decisions in `decisions/` are authoritative.
+
+Research and automation may provide evidence but must not silently
+override an approved decision.
+
+If new evidence conflicts with an existing decision, report the conflict
+for human adjudication.
+
+Preserve required technical elements such as String IDs, placeholders,
+formatting tokens, markup, escapes, and meaningful line breaks.
 
 ## Development Rules
 
-Before implementing a tool:
+Routine translation work should be:
 
-1. Inspect the actual source format.
-2. Avoid assumptions about String ID ranges or file layout.
-3. Preserve source files exactly.
-4. Prefer deterministic output.
-5. Report malformed or duplicate input rather than silently discarding it.
-6. Keep parsing, analysis, translation data, and mod generation logically separate.
-7. Add documentation when introducing a new data format or workflow.
+``` text
+decision data change → validate → build
+```
 
-When requirements are ambiguous, prefer producing analysis or a report rather than modifying translation data.
+Adding or revising a normal translation must not require new Python
+code.
+
+Do not create:
+
+-   ad-hoc validation scripts for routine checks;
+-   new ledgers, certificates, authorization layers, or intermediate
+    formats without a genuine architectural need;
+-   new legacy-pipeline machinery merely because similar machinery
+    already exists.
+
+Reusable checks belong in the standard validator or permanent test
+suite.
+
+Research tools may be complex when necessary. Production should remain
+small, deterministic, and independent from unnecessary research
+machinery.
+
+Do not make the future build depend on legacy ledgers, certificates,
+hashes, or Phase state solely to reproduce historical verification.
+
+## Efficient Agent Work
+
+Prefer the smallest relevant context and change set.
+
+-   Read only the files needed for the current task first.
+-   Do not load historical Phase documentation unless the task requires
+    it.
+-   Do not regenerate large reports unless required.
+-   Do not recompute research already captured in an approved decision
+    unless that decision is being reconsidered.
+-   Prefer existing stable commands over bespoke Python snippets.
+-   Do not rewrite unrelated files or decisions.
+-   Do not commit, push, publish, or modify an external game
+    installation unless explicitly instructed.
+
+Repository-wide analysis is appropriate for architecture work,
+migrations, and broad audits, but should not be the default for ordinary
+translation changes.
+
+## Legacy Pipeline
+
+Historical Phase code and documentation remain useful for research and
+migration verification.
+
+Do not extend the legacy production chain---review ledgers, occurrence
+bindings, patch plans, certificates, authorization gates, source-state
+reconstruction, or source application---unless the user explicitly
+requests legacy maintenance or an approved migration step requires it.
+
+One-time migration verification must not become a permanent production
+dependency.
+
+## Stop Conditions
+
+Stop and report the issue instead of inventing additional pipeline
+machinery if:
+
+-   the task would require modifying `source/`;
+-   approved decisions conflict and the intended resolution is unclear;
+-   the decision schema cannot represent the requested translation;
+-   validation would need to be weakened or bypassed;
+-   a translation requires unsupported historical or linguistic
+    judgment;
+-   generated data would become a second manually maintained source of
+    truth;
+-   substantial unrelated architecture work becomes necessary.
+
+## Default Workflow
+
+For ordinary translation work:
+
+``` text
+Research only what is needed
+        ↓
+Human adjudication
+        ↓
+Update decisions/
+        ↓
+Standard validation
+        ↓
+Build
+        ↓
+Review generated diff
+        ↓
+Game verification when needed
+```
+
+The desired steady state is:
+
+**new translation decision → data change → validate → build**
+
+not:
+
+**new translation decision → new Python → new ledger → new certificate →
+new pipeline**
