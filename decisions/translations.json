@@ -1,0 +1,4194 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "rocket_cart_unit",
+      "english": "Rocket Cart",
+      "category": "unit",
+      "translation": "火箭車",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5064",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "heavy_rocket_cart_unit",
+      "english": "Heavy Rocket Cart",
+      "category": "unit",
+      "translation": "重装火箭車",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5065",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "crossbowman_unit",
+      "english": "Crossbowman",
+      "category": "unit",
+      "translation": "石弓射手",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5084",
+          "role": "name"
+        },
+        {
+          "string_id": "26084",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "janissary_unit",
+      "english": "Janissary",
+      "category": "unit",
+      "translation": "イェニチェリ",
+      "decision": "keep_de",
+      "reason": "Explicit human adjudication to retain the current DE Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5105",
+          "role": "name"
+        },
+        {
+          "string_id": "26105",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "longbowman_unit",
+      "english": "Longbowman",
+      "category": "unit",
+      "translation": "ロングボウ",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5107",
+          "role": "name"
+        },
+        {
+          "string_id": "26107",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "teutonic_knight_unit",
+      "english": "Teutonic Knight",
+      "category": "unit",
+      "translation": "チュートン ナイト",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5112",
+          "role": "name"
+        },
+        {
+          "string_id": "26112",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "royal_janissary_unit",
+      "english": "Royal Janissary",
+      "category": "unit",
+      "translation": "近衛イェニチェリ",
+      "decision": "keep_de",
+      "reason": "Explicit human adjudication to retain the current DE Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5115",
+          "role": "name"
+        },
+        {
+          "string_id": "26115",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "flamethrower_unit",
+      "english": "Flamethrower",
+      "category": "unit",
+      "translation": "火炎放射器",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5118",
+          "role": "name"
+        },
+        {
+          "string_id": "26118",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "archery_range_building",
+      "english": "Archery Range",
+      "category": "building",
+      "translation": "射手育成所",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5128",
+          "role": "name"
+        },
+        {
+          "string_id": "26128",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_organ_gun_unit",
+      "english": "Elite Organ Gun",
+      "category": "unit",
+      "translation": "改良型オルガン砲",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5130",
+          "role": "name"
+        },
+        {
+          "string_id": "26130",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "28237",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "14130",
+          "role": "compact_name",
+          "text": "改良型\\nオルガン砲"
+        }
+      ]
+    },
+    {
+      "id": "blacksmith_building",
+      "english": "Blacksmith",
+      "category": "building",
+      "translation": "鉄工所",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5131",
+          "role": "name"
+        },
+        {
+          "string_id": "26131",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "monastery_building",
+      "english": "Monastery",
+      "category": "building",
+      "translation": "神殿",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5138",
+          "role": "name"
+        },
+        {
+          "string_id": "26138",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "siege_workshop_building",
+      "english": "Siege Workshop",
+      "category": "building",
+      "translation": "包囲攻撃訓練所",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5169",
+          "role": "name"
+        },
+        {
+          "string_id": "26169",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "14169",
+          "role": "compact_name",
+          "text": "包囲攻撃\\n訓練所"
+        }
+      ]
+    },
+    {
+      "id": "university_building",
+      "english": "University",
+      "category": "building",
+      "translation": "学問所",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5176",
+          "role": "name"
+        },
+        {
+          "string_id": "26176",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "palisade_gate_building",
+      "english": "Palisade Gate",
+      "category": "building",
+      "translation": "柵の門",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5186",
+          "role": "name"
+        },
+        {
+          "string_id": "26186",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "palisade_wall_building",
+      "english": "Palisade Wall",
+      "category": "building",
+      "translation": "柵",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5202",
+          "role": "name"
+        },
+        {
+          "string_id": "26202",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "fortified_palisade_wall_building",
+      "english": "Fortified Palisade Wall",
+      "category": "building",
+      "translation": "強化柵",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5205",
+          "role": "name"
+        },
+        {
+          "string_id": "26205",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "cannon_galleon_unit",
+      "english": "Cannon Galleon",
+      "category": "unit",
+      "translation": "キャノン ガリオン船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5287",
+          "role": "name"
+        },
+        {
+          "string_id": "26287",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "galleon_unit",
+      "english": "Galleon",
+      "category": "unit",
+      "translation": "ガリオン船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5309",
+          "role": "name"
+        },
+        {
+          "string_id": "26309",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "relic_other",
+      "english": "Relic",
+      "category": "other",
+      "translation": "聖なる箱",
+      "decision": "restore",
+      "reason": "Explicit human legacy-restoration adjudication for Relic. This reviewed structural non-production concept adopts the legacy Japanese name without extending the decision into prose or other concepts.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5350",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "fire_ship_unit",
+      "english": "Fire Ship",
+      "category": "unit",
+      "translation": "火炎船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5426",
+          "role": "name"
+        },
+        {
+          "string_id": "26426",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "heavy_scorpion_unit",
+      "english": "Heavy Scorpion",
+      "category": "unit",
+      "translation": "ヘビー スコーピオン",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5439",
+          "role": "name"
+        },
+        {
+          "string_id": "26439",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "light_cavalry_unit",
+      "english": "Light Cavalry",
+      "category": "unit",
+      "translation": "騎兵",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5444",
+          "role": "name"
+        },
+        {
+          "string_id": "26444",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_cataphract_unit",
+      "english": "Elite Cataphract",
+      "category": "unit",
+      "translation": "エリート カタフラクト",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5451",
+          "role": "name"
+        },
+        {
+          "string_id": "26451",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_chu_ko_nu_unit",
+      "english": "Elite Chu Ko Nu",
+      "category": "unit",
+      "translation": "改良型連弩兵",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5452",
+          "role": "name"
+        },
+        {
+          "string_id": "26452",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "14452",
+          "role": "compact_name",
+          "text": "改良型\\n連弩兵"
+        }
+      ]
+    },
+    {
+      "id": "elite_mameluke_unit",
+      "english": "Elite Mameluke",
+      "category": "unit",
+      "translation": "エリート マムルーク",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5453",
+          "role": "name"
+        },
+        {
+          "string_id": "26453",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_huskarl_unit",
+      "english": "Elite Huskarl",
+      "category": "unit",
+      "translation": "エリート ハスカール",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5454",
+          "role": "name"
+        },
+        {
+          "string_id": "26454",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_janissary_unit",
+      "english": "Elite Janissary",
+      "category": "unit",
+      "translation": "エリート イェニチェリ",
+      "decision": "revise",
+      "reason": "Explicit human terminology adjudication: retain イェニチェリ for Janissary and use エリート イェニチェリ for Elite Janissary.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5455",
+          "role": "name"
+        },
+        {
+          "string_id": "26455",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_longbowman_unit",
+      "english": "Elite Longbowman",
+      "category": "unit",
+      "translation": "エリート ロングボウ",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5456",
+          "role": "name"
+        },
+        {
+          "string_id": "26456",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "14456",
+          "role": "compact_name",
+          "text": "エリート\\nロングボウ"
+        }
+      ]
+    },
+    {
+      "id": "elite_longboat_unit",
+      "english": "Elite Longboat",
+      "category": "unit",
+      "translation": "重装バイキング船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5457",
+          "role": "name"
+        },
+        {
+          "string_id": "26457",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "14457",
+          "role": "compact_name",
+          "text": "重装\\nバイキング船"
+        }
+      ]
+    },
+    {
+      "id": "elite_mangudai_unit",
+      "english": "Elite Mangudai",
+      "category": "unit",
+      "translation": "エリート マングダイ",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5458",
+          "role": "name"
+        },
+        {
+          "string_id": "26458",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_war_elephant_unit",
+      "english": "Elite War Elephant",
+      "category": "unit",
+      "translation": "エリート エレファント",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5459",
+          "role": "name"
+        },
+        {
+          "string_id": "26459",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_samurai_unit",
+      "english": "Elite Samurai",
+      "category": "unit",
+      "translation": "剣豪",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5460",
+          "role": "name"
+        },
+        {
+          "string_id": "26460",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_throwing_axeman_unit",
+      "english": "Elite Throwing Axeman",
+      "category": "unit",
+      "translation": "エリート フランカ スロウ",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5461",
+          "role": "name"
+        },
+        {
+          "string_id": "26461",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_teutonic_knight_unit",
+      "english": "Elite Teutonic Knight",
+      "category": "unit",
+      "translation": "エリート チュートン ナイト",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5462",
+          "role": "name"
+        },
+        {
+          "string_id": "26462",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_woad_raider_unit",
+      "english": "Elite Woad Raider",
+      "category": "unit",
+      "translation": "エリート ウォード レイダー",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5463",
+          "role": "name"
+        },
+        {
+          "string_id": "26463",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "outpost_building",
+      "english": "Outpost",
+      "category": "building",
+      "translation": "前哨",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5504",
+          "role": "name"
+        },
+        {
+          "string_id": "26504",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_cannon_galleon_unit",
+      "english": "Elite Cannon Galleon",
+      "category": "unit",
+      "translation": "機動キャノン ガリオン船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5573",
+          "role": "name"
+        },
+        {
+          "string_id": "26573",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "14573",
+          "role": "compact_name",
+          "text": "機動\\nキャノン ガリオン船"
+        }
+      ]
+    },
+    {
+      "id": "elite_berserk_unit",
+      "english": "Elite Berserk",
+      "category": "unit",
+      "translation": "エリート ベルセルク",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5576",
+          "role": "name"
+        },
+        {
+          "string_id": "26576",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "hussar_unit",
+      "english": "Hussar",
+      "category": "unit",
+      "translation": "ハサー",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5661",
+          "role": "name"
+        },
+        {
+          "string_id": "26661",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_jaguar_warrior_unit",
+      "english": "Elite Jaguar Warrior",
+      "category": "unit",
+      "translation": "エリート ジャガー ウォリア",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5669",
+          "role": "name"
+        },
+        {
+          "string_id": "26669",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_eagle_warrior_unit",
+      "english": "Elite Eagle Warrior",
+      "category": "unit",
+      "translation": "エリート イーグル ウォリア",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5673",
+          "role": "name"
+        },
+        {
+          "string_id": "26673",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_tarkan_unit",
+      "english": "Elite Tarkan",
+      "category": "unit",
+      "translation": "エリート タルカン",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5677",
+          "role": "name"
+        },
+        {
+          "string_id": "26677",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_conquistador_unit",
+      "english": "Elite Conquistador",
+      "category": "unit",
+      "translation": "エリート コンキスタドール",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5689",
+          "role": "name"
+        },
+        {
+          "string_id": "26689",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_war_wagon_unit",
+      "english": "Elite War Wagon",
+      "category": "unit",
+      "translation": "強化戦車",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5729",
+          "role": "name"
+        },
+        {
+          "string_id": "26729",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_turtle_ship_unit",
+      "english": "Elite Turtle Ship",
+      "category": "unit",
+      "translation": "重装亀甲船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5732",
+          "role": "name"
+        },
+        {
+          "string_id": "26732",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "coinage_technology",
+      "english": "Coinage",
+      "category": "technology",
+      "translation": "貨幣制度",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7023",
+          "role": "name"
+        },
+        {
+          "string_id": "28023",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "cannon_galleon_technology",
+      "english": "Cannon Galleon",
+      "category": "technology",
+      "translation": "キャノン ガリオン船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7037",
+          "role": "name"
+        },
+        {
+          "string_id": "28037",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "gold_mining_technology",
+      "english": "Gold Mining",
+      "category": "technology",
+      "translation": "金の採掘",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7055",
+          "role": "name"
+        },
+        {
+          "string_id": "28055",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "iron_casting_technology",
+      "english": "Iron Casting",
+      "category": "technology",
+      "translation": "鋳造",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7068",
+          "role": "name"
+        },
+        {
+          "string_id": "28068",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "scale_mail_armor_technology",
+      "english": "Scale Mail Armor",
+      "category": "technology",
+      "translation": "歩兵用うろこの鎧",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7074",
+          "role": "name"
+        },
+        {
+          "string_id": "28074",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "17074",
+          "role": "compact_name",
+          "text": "歩兵用\\nうろこの鎧"
+        }
+      ]
+    },
+    {
+      "id": "scale_barding_armor_technology",
+      "english": "Scale Barding Armor",
+      "category": "technology",
+      "translation": "騎馬用うろこの鎧",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7081",
+          "role": "name"
+        },
+        {
+          "string_id": "28081",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "17081",
+          "role": "compact_name",
+          "text": "騎馬用\\nうろこの鎧"
+        }
+      ]
+    },
+    {
+      "id": "crossbowman_technology",
+      "english": "Crossbowman",
+      "category": "technology",
+      "translation": "石弓射手",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7100",
+          "role": "name"
+        },
+        {
+          "string_id": "28100",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "imperial_age_other",
+      "english": "Imperial Age",
+      "category": "other",
+      "translation": "帝王の時代",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7103",
+          "role": "name"
+        },
+        {
+          "string_id": "28103",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "gold_shaft_mining_technology",
+      "english": "Gold Shaft Mining",
+      "category": "technology",
+      "translation": "金の掘削",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7180",
+          "role": "name"
+        },
+        {
+          "string_id": "28180",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "squires_technology",
+      "english": "Squires",
+      "category": "technology",
+      "translation": "武者修行",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7210",
+          "role": "name"
+        },
+        {
+          "string_id": "28210",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "heavy_scorpion_technology",
+      "english": "Heavy Scorpion",
+      "category": "technology",
+      "translation": "ヘビー スコーピオン",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7244",
+          "role": "name"
+        },
+        {
+          "string_id": "28244",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "light_cavalry_technology",
+      "english": "Light Cavalry",
+      "category": "technology",
+      "translation": "騎兵",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7261",
+          "role": "name"
+        },
+        {
+          "string_id": "28261",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "stone_mining_technology",
+      "english": "Stone Mining",
+      "category": "technology",
+      "translation": "石の切り出し",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7276",
+          "role": "name"
+        },
+        {
+          "string_id": "28276",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_conquistador_technology",
+      "english": "Elite Conquistador",
+      "category": "technology",
+      "translation": "エリート コンキスタドール",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7317",
+          "role": "name"
+        },
+        {
+          "string_id": "28317",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "heated_shot_technology",
+      "english": "Heated Shot",
+      "category": "technology",
+      "translation": "火砲学",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7374",
+          "role": "name"
+        },
+        {
+          "string_id": "28374",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_cannon_galleon_technology",
+      "english": "Elite Cannon Galleon",
+      "category": "technology",
+      "translation": "機動キャノン ガリオン船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7375",
+          "role": "name"
+        },
+        {
+          "string_id": "28375",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "17375",
+          "role": "compact_name",
+          "text": "機動\\nキャノン ガリオン船"
+        }
+      ]
+    },
+    {
+      "id": "siege_engineers_technology",
+      "english": "Siege Engineers",
+      "category": "technology",
+      "translation": "包囲攻撃技術",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7378",
+          "role": "name"
+        },
+        {
+          "string_id": "28378",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_longbowman_technology",
+      "english": "Elite Longbowman",
+      "category": "technology",
+      "translation": "エリート ロングボウ",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7381",
+          "role": "name"
+        },
+        {
+          "string_id": "28381",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "17381",
+          "role": "compact_name",
+          "text": "エリート\\nロングボウ"
+        }
+      ]
+    },
+    {
+      "id": "elite_cataphract_technology",
+      "english": "Elite Cataphract",
+      "category": "technology",
+      "translation": "エリート カタフラクト",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7382",
+          "role": "name"
+        },
+        {
+          "string_id": "28382",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_woad_raider_technology",
+      "english": "Elite Woad Raider",
+      "category": "technology",
+      "translation": "エリート ウォード レイダー",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7383",
+          "role": "name"
+        },
+        {
+          "string_id": "28383",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_chu_ko_nu_technology",
+      "english": "Elite Chu Ko Nu",
+      "category": "technology",
+      "translation": "改良型連弩兵",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7384",
+          "role": "name"
+        },
+        {
+          "string_id": "28384",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "17384",
+          "role": "compact_name",
+          "text": "改良型\\n連弩兵"
+        }
+      ]
+    },
+    {
+      "id": "elite_huskarl_technology",
+      "english": "Elite Huskarl",
+      "category": "technology",
+      "translation": "エリート ハスカール",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7386",
+          "role": "name"
+        },
+        {
+          "string_id": "28386",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_samurai_technology",
+      "english": "Elite Samurai",
+      "category": "technology",
+      "translation": "剣豪",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7387",
+          "role": "name"
+        },
+        {
+          "string_id": "28387",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_mangudai_technology",
+      "english": "Elite Mangudai",
+      "category": "technology",
+      "translation": "エリート マングダイ",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7388",
+          "role": "name"
+        },
+        {
+          "string_id": "28388",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_war_elephant_technology",
+      "english": "Elite War Elephant",
+      "category": "technology",
+      "translation": "エリート エレファント",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7389",
+          "role": "name"
+        },
+        {
+          "string_id": "28389",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_mameluke_technology",
+      "english": "Elite Mameluke",
+      "category": "technology",
+      "translation": "エリート マムルーク",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7390",
+          "role": "name"
+        },
+        {
+          "string_id": "28390",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_teutonic_knight_technology",
+      "english": "Elite Teutonic Knight",
+      "category": "technology",
+      "translation": "エリート チュートン ナイト",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7391",
+          "role": "name"
+        },
+        {
+          "string_id": "28391",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_janissary_technology",
+      "english": "Elite Janissary",
+      "category": "technology",
+      "translation": "エリート イェニチェリ",
+      "decision": "revise",
+      "reason": "Explicit human terminology adjudication: retain イェニチェリ for Janissary and use エリート イェニチェリ for Elite Janissary.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7392",
+          "role": "name"
+        },
+        {
+          "string_id": "28392",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_longboat_technology",
+      "english": "Elite Longboat",
+      "category": "technology",
+      "translation": "重装バイキング船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7393",
+          "role": "name"
+        },
+        {
+          "string_id": "28393",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "17393",
+          "role": "compact_name",
+          "text": "重装\\nバイキング船"
+        }
+      ]
+    },
+    {
+      "id": "elite_throwing_axeman_technology",
+      "english": "Elite Throwing Axeman",
+      "category": "technology",
+      "translation": "エリート フランカ スロウ",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7394",
+          "role": "name"
+        },
+        {
+          "string_id": "28394",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_berserk_technology",
+      "english": "Elite Berserk",
+      "category": "technology",
+      "translation": "エリート ベルセルク",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7401",
+          "role": "name"
+        },
+        {
+          "string_id": "28401",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "spies_treason_technology",
+      "english": "Spies/Treason",
+      "category": "technology",
+      "translation": "諜報/反逆",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7408",
+          "role": "name"
+        },
+        {
+          "string_id": "28408",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "parthian_tactics_technology",
+      "english": "Parthian Tactics",
+      "category": "technology",
+      "translation": "パルティアン戦術",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7415",
+          "role": "name"
+        },
+        {
+          "string_id": "28415",
+          "role": "help_heading"
+        },
+        {
+          "string_id": "17415",
+          "role": "compact_name",
+          "text": "パルティアン\\n戦術"
+        }
+      ]
+    },
+    {
+      "id": "hussar_technology",
+      "english": "Hussar",
+      "category": "technology",
+      "translation": "ハサー",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7417",
+          "role": "name"
+        },
+        {
+          "string_id": "28417",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_tarkan_technology",
+      "english": "Elite Tarkan",
+      "category": "technology",
+      "translation": "エリート タルカン",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7418",
+          "role": "name"
+        },
+        {
+          "string_id": "28418",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "garland_wars_technology",
+      "english": "Garland Wars",
+      "category": "technology",
+      "translation": "栄誉戦",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7429",
+          "role": "name"
+        },
+        {
+          "string_id": "28429",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "rocketry_technology",
+      "english": "Rocketry",
+      "category": "technology",
+      "translation": "火箭術",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7432",
+          "role": "name"
+        },
+        {
+          "string_id": "17432",
+          "role": "compact_name"
+        }
+      ]
+    },
+    {
+      "id": "elite_eagle_warrior_technology",
+      "english": "Elite Eagle Warrior",
+      "category": "technology",
+      "translation": "エリート イーグル ウォリア",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7433",
+          "role": "name"
+        },
+        {
+          "string_id": "28433",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_jaguar_warrior_technology",
+      "english": "Elite Jaguar Warrior",
+      "category": "technology",
+      "translation": "エリート ジャガー ウォリア",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7434",
+          "role": "name"
+        },
+        {
+          "string_id": "28434",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_war_wagon_technology",
+      "english": "Elite War Wagon",
+      "category": "technology",
+      "translation": "強化戦車",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7436",
+          "role": "name"
+        },
+        {
+          "string_id": "28436",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_turtle_ship_technology",
+      "english": "Elite Turtle Ship",
+      "category": "technology",
+      "translation": "重装亀甲船",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7437",
+          "role": "name"
+        },
+        {
+          "string_id": "28437",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "shinkichon_technology",
+      "english": "Shinkichon",
+      "category": "technology",
+      "translation": "神機箭",
+      "decision": "revise",
+      "reason": "Explicit user follow-up adjudication: adopt Shinkichon as 神機箭 for name IDs 7438 and 17438; consistent with approved contextual overrides 8438, 28438 and 120167. Name authority only; existing full-text decisions remain unchanged.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7438",
+          "role": "name"
+        },
+        {
+          "string_id": "17438",
+          "role": "compact_name"
+        }
+      ]
+    },
+    {
+      "id": "perfusion_technology",
+      "english": "Perfusion",
+      "category": "technology",
+      "translation": "パーフュージョン",
+      "decision": "restore",
+      "reason": "Restored by explicit human adjudication based on established legacy Japanese terminology.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7439",
+          "role": "name"
+        },
+        {
+          "string_id": "28439",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "heavy_rocket_cart_technology",
+      "english": "Heavy Rocket Cart",
+      "category": "technology",
+      "translation": "重装火箭車",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7470",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "turks_ui",
+      "english": "Turks",
+      "category": "ui",
+      "translation": "トルコ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "10280",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "romans_ui",
+      "english": "Romans",
+      "category": "ui",
+      "translation": "ローマ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "10313",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "shu_ui",
+      "english": "Shu",
+      "category": "ui",
+      "translation": "蜀",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "10319",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "muisca_ui",
+      "english": "Muisca",
+      "category": "ui",
+      "translation": "ムイスカ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "10327",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "mapuche_ui",
+      "english": "Mapuche",
+      "category": "ui",
+      "translation": "マプチェ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "10328",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "tupi_ui",
+      "english": "Tupi",
+      "category": "ui",
+      "translation": "トゥピ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "10329",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "the_muisca_ui",
+      "english": "The Muisca",
+      "category": "ui",
+      "translation": "ムイスカ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "20310",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "the_romans_ui",
+      "english": "The Romans",
+      "category": "ui",
+      "translation": "ローマ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "20348",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "the_shu_ui",
+      "english": "The Shu",
+      "category": "ui",
+      "translation": "蜀",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "20350",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "the_turks_ui",
+      "english": "The Turks",
+      "category": "ui",
+      "translation": "トルコ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "20356",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "the_mapuche_ui",
+      "english": "The Mapuche",
+      "category": "ui",
+      "translation": "マプチェ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "20361",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "the_tupi_ui",
+      "english": "The Tupi",
+      "category": "ui",
+      "translation": "トゥピ",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "20380",
+          "role": "name"
+        }
+      ]
+    },
+    {
+      "id": "eagle_scout_unit",
+      "english": "Eagle Scout",
+      "category": "unit",
+      "gameplay_object": "unit 751",
+      "translation": "イーグル ウォリア",
+      "decision": "restore",
+      "reason": "DE移行時の表記ブレ。旧版へ戻す。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5672",
+          "role": "name"
+        },
+        {
+          "string_id": "14672",
+          "role": "compact_name",
+          "text": "イーグル\\nウォリア"
+        },
+        {
+          "string_id": "6672",
+          "role": "action"
+        },
+        {
+          "string_id": "26672",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "bagains_technology",
+      "english": "Bagains",
+      "category": "technology",
+      "gameplay_object": "technology 686",
+      "translation": "バガイン",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7308",
+          "role": "name"
+        },
+        {
+          "string_id": "17308",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8308",
+          "role": "action"
+        },
+        {
+          "string_id": "28308",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_elephant_archer_unit",
+      "english": "Elite Elephant Archer",
+      "category": "unit",
+      "gameplay_object": "unit 875",
+      "translation": "精鋭象弓騎兵",
+      "decision": "restore",
+      "reason": "DE内での表記ブレ。HDと統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5684",
+          "role": "name"
+        },
+        {
+          "string_id": "14684",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6684",
+          "role": "action"
+        },
+        {
+          "string_id": "26684",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_hussite_wagon_unit",
+      "english": "Elite Hussite Wagon",
+      "category": "unit",
+      "gameplay_object": "unit 1706",
+      "translation": "精鋭戦闘馬車",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5563",
+          "role": "name"
+        },
+        {
+          "string_id": "14563",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6563",
+          "role": "action"
+        },
+        {
+          "string_id": "26563",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "first_crusade_technology",
+      "english": "First Crusade",
+      "category": "technology",
+      "gameplay_object": "technology 756",
+      "translation": "第一次十字軍",
+      "decision": "revise",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7344",
+          "role": "name"
+        },
+        {
+          "string_id": "17344",
+          "role": "compact_name",
+          "text": "第一次\\n十字軍"
+        },
+        {
+          "string_id": "8344",
+          "role": "action"
+        },
+        {
+          "string_id": "28344",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "hill_forts_technology",
+      "english": "Hill Forts",
+      "category": "technology",
+      "gameplay_object": "technology 691",
+      "translation": "ヒルフォート",
+      "decision": "revise",
+      "reason": "実質的な関連性は薄いが、AoMの\"ヒルフォート\"と統一する。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7399",
+          "role": "name"
+        },
+        {
+          "string_id": "17399",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8399",
+          "role": "action"
+        },
+        {
+          "string_id": "28399",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "hussite_wagon_unit",
+      "english": "Hussite Wagon",
+      "category": "unit",
+      "gameplay_object": "unit 1704",
+      "translation": "戦闘馬車",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5561",
+          "role": "name"
+        },
+        {
+          "string_id": "14561",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6561",
+          "role": "action"
+        },
+        {
+          "string_id": "26561",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "orthodoxy_technology",
+      "english": "Orthodoxy",
+      "category": "technology",
+      "gameplay_object": "technology 512",
+      "translation": "正統主義",
+      "decision": "restore",
+      "reason": "DE内での表記ブレ。HDと統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7268",
+          "role": "name"
+        },
+        {
+          "string_id": "17268",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8268",
+          "role": "action"
+        },
+        {
+          "string_id": "28268",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "steppe_husbandry_technology",
+      "english": "Steppe Husbandry",
+      "category": "technology",
+      "gameplay_object": "technology 689",
+      "translation": "ステップ牧畜",
+      "decision": "revise",
+      "reason": "単なる草原ではなく、ステップ地帯の民族の固有のテクノロジーであることを強調。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7311",
+          "role": "name"
+        },
+        {
+          "string_id": "17311",
+          "role": "compact_name",
+          "text": "ステップ\\n牧畜"
+        },
+        {
+          "string_id": "8311",
+          "role": "action"
+        },
+        {
+          "string_id": "28311",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "stirrups_technology",
+      "english": "Stirrups",
+      "category": "technology",
+      "gameplay_object": "technology 685",
+      "translation": "あぶみ",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7307",
+          "role": "name"
+        },
+        {
+          "string_id": "17307",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8307",
+          "role": "action"
+        },
+        {
+          "string_id": "28307",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "timurid_siegecraft_technology",
+      "english": "Timurid Siegecraft",
+      "category": "technology",
+      "gameplay_object": "technology 688",
+      "translation": "ティムール式攻城術",
+      "decision": "revise",
+      "reason": "ティムール個人の戦術というよりも、それを踏襲した技術であることを強調。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7310",
+          "role": "name"
+        },
+        {
+          "string_id": "17310",
+          "role": "compact_name",
+          "text": "ティムール式\\n攻城術"
+        },
+        {
+          "string_id": "8310",
+          "role": "action"
+        },
+        {
+          "string_id": "28310",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "caravanserai_building",
+      "english": "Caravanserai",
+      "category": "building",
+      "gameplay_object": "building 1754",
+      "translation": "キャラバンサライ",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5440",
+          "role": "name"
+        },
+        {
+          "string_id": "14440",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6440",
+          "role": "action"
+        },
+        {
+          "string_id": "26440",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "composite_bowman_unit",
+      "english": "Composite Bowman",
+      "category": "unit",
+      "gameplay_object": "unit 1800",
+      "translation": "戦闘弓射手",
+      "decision": "revise",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5033",
+          "role": "name"
+        },
+        {
+          "string_id": "14033",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6033",
+          "role": "action"
+        },
+        {
+          "string_id": "26033",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elephant_archer_unit",
+      "english": "Elephant Archer",
+      "category": "unit",
+      "gameplay_object": "unit 873",
+      "translation": "象弓騎兵",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5682",
+          "role": "name"
+        },
+        {
+          "string_id": "14682",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6682",
+          "role": "action"
+        },
+        {
+          "string_id": "26682",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_iron_pagoda_technology",
+      "english": "Elite Iron Pagoda",
+      "category": "technology",
+      "gameplay_object": "technology 991",
+      "translation": "精鋭鉄浮屠",
+      "decision": "revise",
+      "reason": "より歴史的名称かつ、中華圏ユニットらしく漢語に。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7464",
+          "role": "name"
+        },
+        {
+          "string_id": "17464",
+          "role": "compact_name",
+          "text": "精鋭\\n鉄浮屠"
+        },
+        {
+          "string_id": "8464",
+          "role": "action"
+        },
+        {
+          "string_id": "28464",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_magyar_huszar_unit",
+      "english": "Elite Magyar Huszar",
+      "category": "unit",
+      "gameplay_object": "unit 871",
+      "translation": "エリート マジャール ハサー",
+      "decision": "restore",
+      "reason": "旧版の名前に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5730",
+          "role": "name"
+        },
+        {
+          "string_id": "14730",
+          "role": "compact_name",
+          "text": "エリート マジャール\\nハサー"
+        },
+        {
+          "string_id": "6730",
+          "role": "action"
+        },
+        {
+          "string_id": "26730",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_serjeant_unit",
+      "english": "Elite Serjeant",
+      "category": "unit",
+      "gameplay_object": "unit 1659 / 1661",
+      "translation": "エリート セルジェアント",
+      "decision": "revise",
+      "reason": "旧版の方式の名前に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5540",
+          "role": "name"
+        },
+        {
+          "string_id": "14540",
+          "role": "compact_name",
+          "text": "エリート\\nセルジェアント"
+        },
+        {
+          "string_id": "6540",
+          "role": "action"
+        },
+        {
+          "string_id": "26540",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_steppe_lancer_unit",
+      "english": "Elite Steppe Lancer",
+      "category": "unit",
+      "gameplay_object": "unit 1372",
+      "translation": "エリート ステップ ランサー",
+      "decision": "revise",
+      "reason": "旧版の方式の名前に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5010",
+          "role": "name"
+        },
+        {
+          "string_id": "14010",
+          "role": "compact_name",
+          "text": "エリート\\nステップ ランサー"
+        },
+        {
+          "string_id": "6010",
+          "role": "action"
+        },
+        {
+          "string_id": "26010",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_urumi_swordsman_unit",
+      "english": "Elite Urumi Swordsman",
+      "category": "unit",
+      "gameplay_object": "unit 1737",
+      "translation": "精鋭ウルミ剣士",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5413",
+          "role": "name"
+        },
+        {
+          "string_id": "14413",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6413",
+          "role": "action"
+        },
+        {
+          "string_id": "26413",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "heavy_hei_guang_cavalry_technology",
+      "english": "Heavy Hei Guang Cavalry",
+      "category": "technology",
+      "gameplay_object": "technology 1033",
+      "translation": "重黒光鎧騎兵",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7471",
+          "role": "name"
+        },
+        {
+          "string_id": "17471",
+          "role": "compact_name",
+          "text": "重黒光鎧\\n騎兵"
+        },
+        {
+          "string_id": "8471",
+          "role": "action"
+        },
+        {
+          "string_id": "28471",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "magyar_huszar_unit",
+      "english": "Magyar Huszar",
+      "category": "unit",
+      "gameplay_object": "unit 869",
+      "translation": "マジャール ハサー",
+      "decision": "restore",
+      "reason": "旧版の名前に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5728",
+          "role": "name"
+        },
+        {
+          "string_id": "14728",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6728",
+          "role": "action"
+        },
+        {
+          "string_id": "26728",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "mounted_samurai_unit",
+      "english": "Mounted Samurai",
+      "category": "unit",
+      "gameplay_object": "unit 1568",
+      "translation": "騎馬武者",
+      "decision": "revise",
+      "reason": "より一般的で自然な名称に",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5039",
+          "role": "name"
+        },
+        {
+          "string_id": "14039",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6039",
+          "role": "action"
+        },
+        {
+          "string_id": "26039",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "steppe_lancer_unit",
+      "english": "Steppe Lancer",
+      "category": "unit",
+      "gameplay_object": "unit 1370",
+      "translation": "ステップ ランサー",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5009",
+          "role": "name"
+        },
+        {
+          "string_id": "14009",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6009",
+          "role": "action"
+        },
+        {
+          "string_id": "26009",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "throwing_axeman_unit",
+      "english": "Throwing Axeman",
+      "category": "unit",
+      "gameplay_object": "unit 281",
+      "translation": "フランカ スロウ",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5111",
+          "role": "name"
+        },
+        {
+          "string_id": "14111",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6111",
+          "role": "action"
+        },
+        {
+          "string_id": "26111",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "urumi_swordsman_unit",
+      "english": "Urumi Swordsman",
+      "category": "unit",
+      "gameplay_object": "unit 1735",
+      "translation": "ウルミ剣士",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5403",
+          "role": "name"
+        },
+        {
+          "string_id": "14403",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6403",
+          "role": "action"
+        },
+        {
+          "string_id": "26403",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "winged_hussar_unit",
+      "english": "Winged Hussar",
+      "category": "unit",
+      "gameplay_object": "unit 1707",
+      "translation": "ウイングド ハサー",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5577",
+          "role": "name"
+        },
+        {
+          "string_id": "14577",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6577",
+          "role": "action"
+        },
+        {
+          "string_id": "26577",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "bimaristan_technology",
+      "english": "Bimaristan",
+      "category": "technology",
+      "gameplay_object": "technology 28",
+      "translation": "ビマリスタン",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7451",
+          "role": "name"
+        },
+        {
+          "string_id": "17451",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8451",
+          "role": "action"
+        },
+        {
+          "string_id": "28451",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "camel_scout_unit",
+      "english": "Camel Scout",
+      "category": "unit",
+      "gameplay_object": "unit 1755",
+      "translation": "らくだ斥候",
+      "decision": "revise",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5441",
+          "role": "name"
+        },
+        {
+          "string_id": "14441",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6441",
+          "role": "action"
+        },
+        {
+          "string_id": "26441",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "demolition_raft_unit",
+      "english": "Demolition Raft",
+      "category": "unit",
+      "gameplay_object": "unit 1104",
+      "translation": "爆破工作いかだ",
+      "decision": "revise",
+      "reason": "Raft の意味とユニットの外観を踏まえ、「ボート」ではなく「いかだ」を採用。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5162",
+          "role": "name"
+        },
+        {
+          "string_id": "14162",
+          "role": "compact_name",
+          "text": "爆破工作\\nいかだ"
+        },
+        {
+          "string_id": "6162",
+          "role": "action"
+        },
+        {
+          "string_id": "26162",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_composite_bowman_technology",
+      "english": "Elite Composite Bowman",
+      "category": "technology",
+      "gameplay_object": "technology 918",
+      "translation": "精鋭戦闘弓射手",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7404",
+          "role": "name"
+        },
+        {
+          "string_id": "8404",
+          "role": "action"
+        },
+        {
+          "string_id": "28404",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_fire_lancer_technology",
+      "english": "Elite Fire Lancer",
+      "category": "technology",
+      "gameplay_object": "technology 982",
+      "translation": "精鋭火槍兵",
+      "decision": "revise",
+      "reason": "騎兵ではない。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7463",
+          "role": "name"
+        },
+        {
+          "string_id": "17463",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8463",
+          "role": "action"
+        },
+        {
+          "string_id": "28463",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_obuch_unit",
+      "english": "Elite Obuch",
+      "category": "unit",
+      "gameplay_object": "unit 1703",
+      "translation": "精鋭オブフ兵",
+      "decision": "revise",
+      "reason": "ポーランド語 obuch/ˈɔ.bux/の語末 ch は /x/。現行の「オブヒ」「オブシュ」の揺れを整理し、原語発音に近い「オブフ」に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5559",
+          "role": "name"
+        },
+        {
+          "string_id": "14559",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6559",
+          "role": "action"
+        },
+        {
+          "string_id": "26559",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "fire_lancer_unit",
+      "english": "Fire Lancer",
+      "category": "unit",
+      "gameplay_object": "unit 1901",
+      "translation": "火槍兵",
+      "decision": "revise",
+      "reason": "騎兵ではない。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5066",
+          "role": "name"
+        },
+        {
+          "string_id": "14066",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6066",
+          "role": "action"
+        },
+        {
+          "string_id": "26066",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "iroquois_warrior_unit",
+      "english": "Iroquois Warrior",
+      "category": "unit",
+      "gameplay_object": "unit 1374",
+      "translation": "イロコイ ウォリア",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5011",
+          "role": "name"
+        },
+        {
+          "string_id": "14011",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6011",
+          "role": "action"
+        },
+        {
+          "string_id": "26011",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "nomads_technology",
+      "english": "Nomads",
+      "category": "technology",
+      "gameplay_object": "technology 487",
+      "translation": "遊牧民",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7280",
+          "role": "name"
+        },
+        {
+          "string_id": "17280",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8280",
+          "role": "action"
+        },
+        {
+          "string_id": "28280",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "obuch_unit",
+      "english": "Obuch",
+      "category": "unit",
+      "gameplay_object": "unit 1701",
+      "translation": "オブフ兵",
+      "decision": "revise",
+      "reason": "ポーランド語 obuch /ˈɔ.bux/ の語末 ch は /x/。現行の「オブヒ」「オブシュ」の揺れを整理し、原語発音に近い「オブフ」に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5558",
+          "role": "name"
+        },
+        {
+          "string_id": "14558",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6558",
+          "role": "action"
+        },
+        {
+          "string_id": "26558",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "qizilbash_warrior_unit",
+      "english": "Qizilbash Warrior",
+      "category": "unit",
+      "gameplay_object": "unit 1817",
+      "translation": "クズルバシュ ウォリア",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5048",
+          "role": "name"
+        },
+        {
+          "string_id": "14048",
+          "role": "compact_name",
+          "text": "クズルバシュ\\nウォリア"
+        },
+        {
+          "string_id": "6048",
+          "role": "action"
+        },
+        {
+          "string_id": "26048",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "serjeant_unit",
+      "english": "Serjeant",
+      "category": "unit",
+      "gameplay_object": "unit 1658 / 1660",
+      "translation": "セルジェアント",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5538",
+          "role": "name"
+        },
+        {
+          "string_id": "14538",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6538",
+          "role": "action"
+        },
+        {
+          "string_id": "26538",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "silk_armor_technology",
+      "english": "Silk Armor",
+      "category": "technology",
+      "gameplay_object": "technology 687",
+      "translation": "絹の鎧",
+      "decision": "revise",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7309",
+          "role": "name"
+        },
+        {
+          "string_id": "17309",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8309",
+          "role": "action"
+        },
+        {
+          "string_id": "28309",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "sipahi_technology",
+      "english": "Sipahi",
+      "category": "technology",
+      "gameplay_object": "technology 491",
+      "translation": "スィパーヒー",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7285",
+          "role": "name"
+        },
+        {
+          "string_id": "17285",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8285",
+          "role": "action"
+        },
+        {
+          "string_id": "28285",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "sitting_tiger_technology",
+      "english": "Sitting Tiger",
+      "category": "technology",
+      "gameplay_object": "technology 1081",
+      "translation": "虎蹲砲",
+      "decision": "revise",
+      "reason": "より一般的で自然な名称に",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7481",
+          "role": "name"
+        },
+        {
+          "string_id": "17481",
+          "role": "compact_name",
+          "text": "虎蹲砲"
+        },
+        {
+          "string_id": "8481",
+          "role": "action"
+        },
+        {
+          "string_id": "28481",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "stone_shaft_mining_technology",
+      "english": "Stone Shaft Mining",
+      "category": "technology",
+      "gameplay_object": "technology 279",
+      "translation": "石の掘削",
+      "decision": "restore",
+      "reason": "旧版の名前に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7277",
+          "role": "name"
+        },
+        {
+          "string_id": "17277",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8277",
+          "role": "action"
+        },
+        {
+          "string_id": "28277",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "thalassocracy_technology",
+      "english": "Thalassocracy",
+      "category": "technology",
+      "gameplay_object": "technology 624",
+      "translation": "海洋覇権",
+      "decision": "revise",
+      "reason": "原語の意味を踏まえた意訳",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7293",
+          "role": "name"
+        },
+        {
+          "string_id": "17293",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8293",
+          "role": "action"
+        },
+        {
+          "string_id": "28293",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "war_galley_unit",
+      "english": "War Galley",
+      "category": "unit",
+      "gameplay_object": "unit 21",
+      "translation": "大型ガレー船",
+      "decision": "restore",
+      "reason": "旧版の名前に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5091",
+          "role": "name"
+        },
+        {
+          "string_id": "14091",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6091",
+          "role": "action"
+        },
+        {
+          "string_id": "26091",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "dromon_unit",
+      "english": "Dromon",
+      "category": "unit",
+      "gameplay_object": "unit 1795",
+      "translation": "ドロモン",
+      "decision": "revise",
+      "reason": "より一般的で自然な名称に",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5055",
+          "role": "name"
+        },
+        {
+          "string_id": "14055",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6055",
+          "role": "action"
+        },
+        {
+          "string_id": "26055",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_plumed_archer_unit",
+      "english": "Elite Plumed Archer",
+      "category": "unit",
+      "gameplay_object": "unit 765",
+      "translation": "精鋭羽飾射手",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5685",
+          "role": "name"
+        },
+        {
+          "string_id": "14685",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6685",
+          "role": "action"
+        },
+        {
+          "string_id": "26685",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "caravan_technology",
+      "english": "Caravan",
+      "category": "technology",
+      "gameplay_object": "technology 48",
+      "translation": "隊商",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7410",
+          "role": "name"
+        },
+        {
+          "string_id": "17410",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8410",
+          "role": "action"
+        },
+        {
+          "string_id": "28410",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "devotion_technology",
+      "english": "Devotion",
+      "category": "technology",
+      "gameplay_object": "technology 46",
+      "translation": "帰依",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7462",
+          "role": "name"
+        },
+        {
+          "string_id": "17462",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8462",
+          "role": "action"
+        },
+        {
+          "string_id": "28462",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "ironclad_technology",
+      "english": "Ironclad",
+      "category": "technology",
+      "gameplay_object": "technology 489",
+      "translation": "装甲板",
+      "decision": "restore",
+      "reason": "旧版の名前に統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7283",
+          "role": "name"
+        },
+        {
+          "string_id": "17283",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8283",
+          "role": "action"
+        },
+        {
+          "string_id": "28283",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "plumed_archer_unit",
+      "english": "Plumed Archer",
+      "category": "unit",
+      "gameplay_object": "unit 763",
+      "translation": "羽飾射手",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5683",
+          "role": "name"
+        },
+        {
+          "string_id": "14683",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6683",
+          "role": "action"
+        },
+        {
+          "string_id": "26683",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "savar_technology",
+      "english": "Savar",
+      "category": "technology",
+      "gameplay_object": "technology 526",
+      "translation": "サヴァール",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7442",
+          "role": "name"
+        },
+        {
+          "string_id": "8442",
+          "role": "action"
+        },
+        {
+          "string_id": "28442",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "transhumance_technology",
+      "english": "Transhumance",
+      "category": "technology",
+      "gameplay_object": "technology 1012",
+      "translation": "移動牧畜",
+      "decision": "keep_de",
+      "reason": "DE内での表記ブレ。統一。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7486",
+          "role": "name"
+        },
+        {
+          "string_id": "17486",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "8486",
+          "role": "action"
+        },
+        {
+          "string_id": "28486",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "eagle_warrior_unit",
+      "english": "Eagle Warrior",
+      "category": "unit",
+      "gameplay_object": "unit 753; Eagle tier 2 in 751 → 753 → 752",
+      "translation": "重装イーグル ウォリア",
+      "decision": "keep_de",
+      "reason": "tier-2 Help headingを同じunit 753の正式名へ揃え、tier-1裁定とのcross-concept collisionを除く。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5671",
+          "role": "name"
+        },
+        {
+          "string_id": "14671",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6671",
+          "role": "action"
+        },
+        {
+          "string_id": "26671",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "heavy_hei_guang_cavalry_unit",
+      "english": "Heavy Hei Guang Cavalry",
+      "category": "unit",
+      "gameplay_object": "unit 1946; upgraded from unit 1944 by technology 1033",
+      "translation": "重黒光鎧騎兵",
+      "decision": "keep_de",
+      "reason": "依頼本文で通常tier=黒光鎧騎兵、上位tier=重黒光鎧騎兵が明示され、上位unitのcompact/action/helpだけが下位名を残す。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5600",
+          "role": "name"
+        },
+        {
+          "string_id": "14600",
+          "role": "compact_name",
+          "text": "重黒光鎧\\n騎兵"
+        },
+        {
+          "string_id": "6600",
+          "role": "action"
+        },
+        {
+          "string_id": "26600",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "iron_pagoda_unit",
+      "english": "Iron Pagoda",
+      "category": "unit",
+      "gameplay_object": "base Iron Pagoda unit; Name 5594 / Help 26594; upgrades to Elite Iron Pagoda",
+      "translation": "鉄浮屠",
+      "decision": "revise",
+      "reason": "依頼本文で通常tierの訳が明示され、現行通常unitを放置するとElite側の裁定と名称体系が分断される。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5594",
+          "role": "name"
+        },
+        {
+          "string_id": "14594",
+          "role": "compact_name",
+          "text": "鉄浮屠"
+        },
+        {
+          "string_id": "6594",
+          "role": "action"
+        },
+        {
+          "string_id": "6595",
+          "role": "action"
+        },
+        {
+          "string_id": "26594",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_iron_pagoda_unit",
+      "english": "Elite Iron Pagoda",
+      "category": "unit",
+      "gameplay_object": "Elite Iron Pagoda unit; Name 5595 / Help 26595; result of technology 991",
+      "translation": "精鋭鉄浮屠",
+      "decision": "revise",
+      "reason": "同じElite tierを指す明示裁定済みupgrade technologyとunit name/helpを揃える。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5595",
+          "role": "name"
+        },
+        {
+          "string_id": "14595",
+          "role": "compact_name",
+          "text": "精鋭\\n鉄浮屠"
+        },
+        {
+          "string_id": "26595",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_fire_lancer_unit",
+      "english": "Elite Fire Lancer",
+      "category": "unit",
+      "gameplay_object": "unit 1903; upgraded from Fire Lancer unit 1901 by technology 982",
+      "translation": "精鋭火槍兵",
+      "decision": "keep_de",
+      "reason": "通常unitとElite upgrade technologyの双方が明示裁定済みで、Elite unit内の残存2表記だけが不整合。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5717",
+          "role": "name"
+        },
+        {
+          "string_id": "14717",
+          "role": "compact_name",
+          "text": "精鋭\\n火槍兵"
+        },
+        {
+          "string_id": "6717",
+          "role": "action"
+        },
+        {
+          "string_id": "26717",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_qizilbash_warrior_unit",
+      "english": "Elite Qizilbash Warrior",
+      "category": "unit",
+      "gameplay_object": "unit 1829; upgraded from Qizilbash Warrior unit 1817",
+      "translation": "精鋭クズルバシュ ウォリア",
+      "decision": "keep_de",
+      "reason": "Elite unitのcompactだけが通常tierで採用されたfamily語幹と同unitのfull/action/helpから外れる。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5254",
+          "role": "name"
+        },
+        {
+          "string_id": "14254",
+          "role": "compact_name",
+          "text": "精鋭クズルバシュ\\nウォリア"
+        },
+        {
+          "string_id": "6254",
+          "role": "action"
+        },
+        {
+          "string_id": "26254",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "savar_unit",
+      "english": "Savar",
+      "category": "unit",
+      "gameplay_object": "unit 1813; result of technology 526; kept distinct from the technology concept",
+      "translation": "サヴァール",
+      "decision": "keep_de",
+      "reason": "technology裁定をunitへ自動伝播できない。unitのfull/compactは一致するがaction/helpの異綴りが意図的かを別途裁定する必要がある。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "5703",
+          "role": "name"
+        },
+        {
+          "string_id": "14703",
+          "role": "compact_name"
+        },
+        {
+          "string_id": "6703",
+          "role": "action"
+        },
+        {
+          "string_id": "26703",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_serjeant_technology",
+      "english": "Elite Serjeant",
+      "category": "technology",
+      "gameplay_object": "technology 753; upgrades Serjeant unit 1658 to Elite Serjeant unit 1659",
+      "translation": "エリート セルジェアント",
+      "decision": "revise",
+      "reason": "同じElite upgradeのunit側が明示裁定済みで、technologyだけ旧tier prefixを残す。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7341",
+          "role": "name"
+        },
+        {
+          "string_id": "8341",
+          "role": "action"
+        },
+        {
+          "string_id": "28341",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "winged_hussar_technology",
+      "english": "Winged Hussar",
+      "category": "technology",
+      "gameplay_object": "technology 786; upgrades Hussar to Winged Hussar unit 1707",
+      "translation": "ウイングド ハサー",
+      "decision": "revise",
+      "reason": "unit側で人間がDE compact表記を採用しており、対応technologyの小書き差だけが残る。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7352",
+          "role": "name"
+        },
+        {
+          "string_id": "8352",
+          "role": "action"
+        },
+        {
+          "string_id": "28352",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_magyar_huszar_technology",
+      "english": "Elite Magyar Huszar",
+      "category": "technology",
+      "gameplay_object": "technology 472; upgrades Magyar Huszar unit 869 to Elite unit 871",
+      "translation": "エリート マジャール ハサー",
+      "decision": "restore",
+      "reason": "明示裁定されたElite unit名と、そのunitへのupgrade technology名が不一致になる。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7395",
+          "role": "name"
+        },
+        {
+          "string_id": "8395",
+          "role": "action"
+        },
+        {
+          "string_id": "28395",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_steppe_lancer_technology",
+      "english": "Elite Steppe Lancer",
+      "category": "technology",
+      "gameplay_object": "technology 715; upgrades Steppe Lancer unit 1370 to Elite unit 1372",
+      "translation": "エリート ステップ ランサー",
+      "decision": "revise",
+      "reason": "通常/Elite unit双方の明示裁定に対し、対応upgrade technologyだけ別prefixを残す。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7402",
+          "role": "name"
+        },
+        {
+          "string_id": "8402",
+          "role": "action"
+        },
+        {
+          "string_id": "28402",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "elite_obuch_technology",
+      "english": "Elite Obuch",
+      "category": "technology",
+      "gameplay_object": "technology 779; upgrades Obuch unit 1701 to Elite unit 1703",
+      "translation": "精鋭オブフ兵",
+      "decision": "revise",
+      "reason": "通常/Elite unit双方の明示裁定で語幹オブフが確定し、対応technologyだけオブヒを残す。",
+      "notes": null,
+      "targets": [
+        {
+          "string_id": "7346",
+          "role": "name"
+        },
+        {
+          "string_id": "8346",
+          "role": "action"
+        },
+        {
+          "string_id": "28346",
+          "role": "help_heading"
+        }
+      ]
+    },
+    {
+      "id": "context_6064_create_rocket_cart",
+      "english": "Create Rocket Cart",
+      "category": "ui",
+      "translation": "火箭車の作成",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "6064",
+          "role": "full_text",
+          "text": "火箭車の作成"
+        }
+      ]
+    },
+    {
+      "id": "context_6065_create_heavy_rocket_cart",
+      "english": "Create Heavy Rocket Cart",
+      "category": "ui",
+      "translation": "重装火箭車の作成",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "6065",
+          "role": "full_text",
+          "text": "重装火箭車の作成"
+        }
+      ]
+    },
+    {
+      "id": "context_8432_research_rocketry_scorpions_rocket_carts_and_lou",
+      "english": "Research Rocketry (Scorpions, Rocket Carts and Lou Chuans +25% attack; Lou Chuans fire rockets)",
+      "category": "ui",
+      "translation": "火箭術の研究 (スコーピオン、火箭車、楼船の攻撃力 +25%、楼船は火箭を発射するようになる)",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "8432",
+          "role": "full_text",
+          "text": "火箭術の研究 (スコーピオン、火箭車、楼船の攻撃力 +25%、楼船は火箭を発射するようになる)"
+        }
+      ]
+    },
+    {
+      "id": "context_8438_research_shinkichon_rocket_carts_and_turtle_ship",
+      "english": "Research Shinkichon (Rocket Carts and Turtle Ships +1 range, fire additional projectiles)",
+      "category": "ui",
+      "translation": "神機箭の研究 (火箭車と亀甲船の射程 +1、より多くの発射物を発射するようになる)",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "8438",
+          "role": "full_text",
+          "text": "神機箭の研究 (火箭車と亀甲船の射程 +1、より多くの発射物を発射するようになる)"
+        }
+      ]
+    },
+    {
+      "id": "context_8467_research_thunderclap_bombs_rocket_carts_grenadie",
+      "english": "Research Thunderclap Bombs (Rocket Carts, Grenadiers and Lou Chuans detonate when defeated; projectiles produce additional explosions)",
+      "category": "ui",
+      "translation": "雷鳴爆弾の研究 (火箭車、擲弾兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす)",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "8467",
+          "role": "full_text",
+          "text": "雷鳴爆弾の研究 (火箭車、擲弾兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす)"
+        }
+      ]
+    },
+    {
+      "id": "context_8470_upgrade_to_heavy_rocket_cart",
+      "english": "Upgrade to Heavy Rocket Cart",
+      "category": "ui",
+      "translation": "重装火箭車へのアップグレード",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "8470",
+          "role": "full_text",
+          "text": "重装火箭車へのアップグレード"
+        }
+      ]
+    },
+    {
+      "id": "context_14064_rocket_ncart",
+      "english": "Rocket\\nCart",
+      "category": "ui",
+      "translation": "火箭\\n車",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "14064",
+          "role": "full_text",
+          "text": "火箭\\n車"
+        }
+      ]
+    },
+    {
+      "id": "context_14065_heavy_nrocket_cart",
+      "english": "Heavy\\nRocket Cart",
+      "category": "ui",
+      "translation": "重装\\n火箭車",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "14065",
+          "role": "full_text",
+          "text": "重装\\n火箭車"
+        }
+      ]
+    },
+    {
+      "id": "context_17470_heavy_nrocket_cart",
+      "english": "Heavy\\nRocket Cart",
+      "category": "ui",
+      "translation": "重装\\n火箭車",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "17470",
+          "role": "full_text",
+          "text": "重装\\n火箭車"
+        }
+      ]
+    },
+    {
+      "id": "context_19285_mangonel_onager_rocket_cart",
+      "english": "Mangonel, Onager, Rocket Cart",
+      "category": "ui",
+      "translation": "投石機、改良型投石機、火箭車",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "19285",
+          "role": "full_text",
+          "text": "投石機、改良型投石機、火箭車"
+        }
+      ]
+    },
+    {
+      "id": "context_19476_tech_siege_onager_heavy_rocket_cart",
+      "english": "Tech: (Siege) Onager, Heavy Rocket Cart",
+      "category": "ui",
+      "translation": "テクノロジー: (攻囲) 改良型投石機、重装火箭車",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "19476",
+          "role": "full_text",
+          "text": "テクノロジー: (攻囲) 改良型投石機、重装火箭車"
+        }
+      ]
+    },
+    {
+      "id": "context_26064_build_b_rocket_cart_b_cost_nsiege_gunpowder_unit",
+      "english": "Build <b>Rocket Cart<b> (<cost>)\\nSiege Gunpowder Unit with ranged blast attack, but cannot attack at close range. Strong vs. tight groups of units. Weak vs. units at close range. Can attack ground.\\n<GREY><i>Upgrades: attack, range (University); to Heavy Rocket Cart (Siege Workshop); more resistant to Monks (Monastery).<i><DEFAULT>\\n<hp> <attack> <armor> <piercearmor> <range>",
+      "category": "description",
+      "translation": "<b>火箭車<b>の建造 (<cost>)\\n射撃爆破攻撃が可能な攻囲銃砲ユニットだが、近距離攻撃はできない。グループ化したユニットに対して有効。近距離ユニットを苦手とする。地点攻撃が可能。\\n<GREY><i>強化: 攻撃、射程 [大学]; 重装火箭車へのアップグレード [攻城兵器工房]; 聖職者に対する耐性 [修道所]<i><DEFAULT>\\n<hp> <attack> <armor> <piercearmor> <range>",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "26064",
+          "role": "full_text",
+          "text": "<b>火箭車<b>の建造 (<cost>)\\n射撃爆破攻撃が可能な攻囲銃砲ユニットだが、近距離攻撃はできない。グループ化したユニットに対して有効。近距離ユニットを苦手とする。地点攻撃が可能。\\n<GREY><i>強化: 攻撃、射程 [大学]; 重装火箭車へのアップグレード [攻城兵器工房]; 聖職者に対する耐性 [修道所]<i><DEFAULT>\\n<hp> <attack> <armor> <piercearmor> <range>"
+        }
+      ]
+    },
+    {
+      "id": "context_26065_build_b_heavy_rocket_cart_b_cost_nsiege_gunpowde",
+      "english": "Build <b>Heavy Rocket Cart<b> (<cost>)\\nSiege Gunpowder Unit with ranged blast attack, but cannot attack at close range. Strong vs. tight groups of units. Weak vs. units at close range. Can attack ground and destroy trees.\\n<GREY><i>Upgrades: attack, range (University); more resistant to Monks (Monastery).<i><DEFAULT>\\n<hp> <attack> <armor> <piercearmor> <range>",
+      "category": "description",
+      "translation": "<b>重装火箭車<b>の建造 (<cost>)\\n射撃爆破攻撃が可能な攻囲銃砲ユニットだが、近距離攻撃はできない。グループ化したユニットに対して有効。近距離ユニットを苦手とする。地点攻撃と、木を破壊することができる。\\n<GREY><i>強化: 攻撃、射程 [大学]; 聖職者に対する耐性 [修道所]<i><DEFAULT>\\n<hp> <attack> <armor> <piercearmor> <range>",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "26065",
+          "role": "full_text",
+          "text": "<b>重装火箭車<b>の建造 (<cost>)\\n射撃爆破攻撃が可能な攻囲銃砲ユニットだが、近距離攻撃はできない。グループ化したユニットに対して有効。近距離ユニットを苦手とする。地点攻撃と、木を破壊することができる。\\n<GREY><i>強化: 攻撃、射程 [大学]; 聖職者に対する耐性 [修道所]<i><DEFAULT>\\n<hp> <attack> <armor> <piercearmor> <range>"
+        }
+      ]
+    },
+    {
+      "id": "context_28432_research_b_rocketry_b_cost_nscorpions_rocket_car",
+      "english": "Research <b>Rocketry<b> (<cost>)\\nScorpions, Rocket Carts and Lou Chuans +25% attack; Lou Chuans fire rockets.",
+      "category": "description",
+      "translation": "<b>火箭術<b>の研究 (<cost>)\\nスコーピオン、火箭車、楼船の攻撃力 +25%、楼船は火箭を発射するようになる。",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "28432",
+          "role": "full_text",
+          "text": "<b>火箭術<b>の研究 (<cost>)\\nスコーピオン、火箭車、楼船の攻撃力 +25%、楼船は火箭を発射するようになる。"
+        }
+      ]
+    },
+    {
+      "id": "context_28438_research_b_shinkichon_b_cost_nrocket_carts_and_t",
+      "english": "Research <b>Shinkichon<b> (<cost>)\\nRocket Carts and Turtle Ships +1 range, fire additional projectiles.",
+      "category": "description",
+      "translation": "<b>神機箭<b>の研究 (<cost>)\\n火箭車と亀甲船の射程 +1、より多くの発射物を発射するようになる。",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "28438",
+          "role": "full_text",
+          "text": "<b>神機箭<b>の研究 (<cost>)\\n火箭車と亀甲船の射程 +1、より多くの発射物を発射するようになる。"
+        }
+      ]
+    },
+    {
+      "id": "context_28467_research_b_thunderclap_bombs_b_cost_nrocket_cart",
+      "english": "Research <b>Thunderclap Bombs<b> (<cost>)\\nRocket Carts, Grenadiers and Lou Chuans detonate when defeated; projectiles produce additional explosions.",
+      "category": "description",
+      "translation": "<b>雷鳴爆弾<b>の研究 (<cost>)\\n火箭車、グレネード兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす。",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "28467",
+          "role": "full_text",
+          "text": "<b>雷鳴爆弾<b>の研究 (<cost>)\\n火箭車、グレネード兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす。"
+        }
+      ]
+    },
+    {
+      "id": "context_28470_upgrade_to_b_heavy_rocket_cart_b_cost_nupgrades_",
+      "english": "Upgrade to <b>Heavy Rocket Cart<b> (<cost>)\\nUpgrades your Rocket Cart and lets you create Heavy Rocket Cart, which are stronger.",
+      "category": "description",
+      "translation": "<b>重装火箭車<b>へのアップグレード (<cost>)\\n火箭車をアップグレードして、より強力な重装火箭車を作成できるようになる。",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "28470",
+          "role": "full_text",
+          "text": "<b>重装火箭車<b>へのアップグレード (<cost>)\\n火箭車をアップグレードして、より強力な重装火箭車を作成できるようになる。"
+        }
+      ]
+    },
+    {
+      "id": "context_46709_your_scouts_report_n_n_genghis_khans_horde_orang",
+      "english": "Your scouts report:\\n\\n- Genghis Khan's horde (Orange) has assembled to the north of China.\\n\\n- The Jin (Yellow) live to the east and own a large fortified city. They will train Iron Pagodas, Steppe Lancers, and Grenadiers, and they will also construct Rocket Carts.\\n\\n- The Xi Xia (Green) control the Great Wall of China. Their army consists of Chu Ko Nu, Light Cavalry, and Scorpions.\\n\\n- The center of the map is controlled by the Tanguts (Red), who will train Crossbowmen, Battering Rams, Fire Lancers, and Rocket Carts.\\n\\n- The Song (Cyan) are the weakest of your opponents. They only own insignificant estates in the southwest that are guarded by archery units.\\n\\n- Camps of Chinese siege engineers (Blue) can be found in the northwestern and northeastern regions of the map.",
+      "category": "description",
+      "translation": "斥候からの報告:\\n\\n- チンギス ハーンの軍 (オレンジ) は、中国の北方に集結している。\\n\\n- 金 (黄) は、大きな城塞都市を有し、アイアン  パゴダ、平原槍騎兵、擲弾兵を育成することができ、火箭車を建造することもできる。\\n\\n- 西夏 (緑) は万里の長城を支配し、その軍は連弩兵、軽騎兵、スコーピオンによって構成されている。\\n\\n- マップ中央部は、弩兵、破城槌、火槍騎兵、火箭車を擁するタングート (赤) に支配されている。\\n\\n- 宋 (水色) は敵の中で最も弱い。射手ユニットに守られてはいるが、南西にあるその領土は慎ましいものだ。\\n\\n- 中国の攻囲技師 (青) が置かれている宿営地は、マップの北西と南東にある。",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "46709",
+          "role": "full_text",
+          "text": "斥候からの報告:\\n\\n- チンギス ハーンの軍 (オレンジ) は、中国の北方に集結している。\\n\\n- 金 (黄) は、大きな城塞都市を有し、アイアン  パゴダ、平原槍騎兵、擲弾兵を育成することができ、火箭車を建造することもできる。\\n\\n- 西夏 (緑) は万里の長城を支配し、その軍は連弩兵、軽騎兵、スコーピオンによって構成されている。\\n\\n- マップ中央部は、弩兵、破城槌、火槍騎兵、火箭車を擁するタングート (赤) に支配されている。\\n\\n- 宋 (水色) は敵の中で最も弱い。射手ユニットに守られてはいるが、南西にあるその領土は慎ましいものだ。\\n\\n- 中国の攻囲技師 (青) が置かれている宿営地は、マップの北西と南東にある。"
+        }
+      ]
+    },
+    {
+      "id": "context_90280_click_to_play_as_the_turks",
+      "english": "Click to play as the Turks.",
+      "category": "ui",
+      "translation": "クリックするとトルコをプレイできます。",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "90280",
+          "role": "full_text",
+          "text": "クリックするとトルコをプレイできます。"
+        }
+      ]
+    },
+    {
+      "id": "context_90313_click_to_play_as_the_romans",
+      "english": "Click to play as the Romans.",
+      "category": "ui",
+      "translation": "クリックするとローマをプレイできます。",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "90313",
+          "role": "full_text",
+          "text": "クリックするとローマをプレイできます。"
+        }
+      ]
+    },
+    {
+      "id": "context_90319_click_to_play_as_the_shu",
+      "english": "Click to play as the Shu.",
+      "category": "ui",
+      "translation": "クリックすると蜀をプレイできます。",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "90319",
+          "role": "full_text",
+          "text": "クリックすると蜀をプレイできます。"
+        }
+      ]
+    },
+    {
+      "id": "context_90327_click_to_play_as_the_muisca",
+      "english": "Click to play as the Muisca.",
+      "category": "ui",
+      "translation": "クリックするとムイスカをプレイできます。",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "90327",
+          "role": "full_text",
+          "text": "クリックするとムイスカをプレイできます。"
+        }
+      ]
+    },
+    {
+      "id": "context_90328_click_to_play_as_the_mapuche",
+      "english": "Click to play as the Mapuche.",
+      "category": "ui",
+      "translation": "クリックするとマプチェをプレイできます。",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "90328",
+          "role": "full_text",
+          "text": "クリックするとマプチェをプレイできます。"
+        }
+      ]
+    },
+    {
+      "id": "context_90329_click_to_play_as_the_tupi",
+      "english": "Click to play as the Tupi.",
+      "category": "ui",
+      "translation": "クリックするとトゥピをプレイできます。",
+      "decision": "revise",
+      "reason": "Canonical civilization-name normalization; explicitly reviewed and verified in-game.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "90329",
+          "role": "full_text",
+          "text": "クリックするとトゥピをプレイできます。"
+        }
+      ]
+    },
+    {
+      "id": "context_120155_archer_and_gunpowder_civilization_n_n_start_with",
+      "english": "Archer and Gunpowder civilization\\n\\n• Start with +3 Villagers, but -50 wood and -200 food\\n• Technologies cost -5/10/15% in Feudal/Castle/Imperial Age\\n• Town Centers +7 line of sight and provide +15 population space\\n• Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age\\n\\n<b>Unique Unit:<b> \\nChu Ko Nu (Foot Archer), Dragon Ship (Warship)\\n\\n<b>Unique Techs:<b> \\n• Great Wall (Walls, Watch Tower-line and Bombard Towers +30% HP)\\n• Rocketry (Scorpions, Rocket Carts and Lou Chuans +25% attack; Lou Chuans fire rockets)\\n\\n<b>Team Bonus:<b> \\nFarms +10% food",
+      "category": "description",
+      "translation": "射手および火薬文明\\n\\n• 町の人を +3 追加で開始するが、木材が -50、食料が -200 減少\\n• 技術コストが封建時代で -5%、城主の時代で -10%、帝国の時代で -15%\\n• 町の中心の視界が +7 、人口スペースが +15 提供される\\n• 火槍騎兵およびファイヤー シップの移動速度が城主の時代で +5%、帝国の時代で +10%\\n\\n<b>固有ユニット:<b> \\n連弩兵 (歩兵射手), ドラゴンシップ (軍艦)\\n\\n<b>固有テクノロジー:<b> \\n• 万里の長城 (壁、見張り台系統、砲台のHPが +30%)\\n• 火箭術 (スコーピオン、火箭車および楼船の攻撃力が +25%; 楼船が火箭を発射)\\n\\n<b>チーム ボーナス:<b> \\n畑の食料が +10%",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "120155",
+          "role": "full_text",
+          "text": "射手および火薬文明\\n\\n• 町の人を +3 追加で開始するが、木材が -50、食料が -200 減少\\n• 技術コストが封建時代で -5%、城主の時代で -10%、帝国の時代で -15%\\n• 町の中心の視界が +7 、人口スペースが +15 提供される\\n• 火槍騎兵およびファイヤー シップの移動速度が城主の時代で +5%、帝国の時代で +10%\\n\\n<b>固有ユニット:<b> \\n連弩兵 (歩兵射手), ドラゴンシップ (軍艦)\\n\\n<b>固有テクノロジー:<b> \\n• 万里の長城 (壁、見張り台系統、砲台のHPが +30%)\\n• 火箭術 (スコーピオン、火箭車および楼船の攻撃力が +25%; 楼船が火箭を発射)\\n\\n<b>チーム ボーナス:<b> \\n畑の食料が +10%"
+        }
+      ]
+    },
+    {
+      "id": "context_120167_defensive_and_naval_civilization_n_n_stone_miner",
+      "english": "Defensive and Naval civilization\\n\\n• Stone miners work +20% faster\\n• Ranged Soldiers and Infantry cost -50% wood\\n• Archer armor and tower upgrades free (Bombard Tower requires Chemistry)\\n• Warships cost -20% wood\\n\\n<b>Unique Units:<b> \\nWar Wagon (Mounted Archer), Turtle Ship (Warship)\\n\\n<b>Unique Techs:<b> \\n• Eupseong (Watch Tower-line +2 range)\\n• Shinkichon (Rocket Carts and Turtle Ships +1 range, fire additional projectiles)\\n\\n<b>Team Bonus:<b> \\nVillagers +3 line of sight",
+      "category": "description",
+      "translation": "守備および海軍文明\\n\\n• 石を採掘する人の作業速度が +20% 増加\\n• 射撃兵士および歩兵の木材コストが -50% 減少\\n• 射手の装甲および塔のアップグレードが無料 (射石砲塔は化学が必要)\\n• 軍艦の木材コストが -20% 減少\\n\\n<b>固有ユニット:<b> \\n戦車 (騎乗射手), 亀甲船 (軍艦)\\n\\n<b>固有テクノロジー:<b> \\n• 優城 (見張り台系統の射程が +2 増加)\\n• 神機箭 (火箭車および亀甲船の射程が +1 増加し、追加の弾を発射)\\n\\n<b>チーム ボーナス:<b> \\n町の人の視界が +3 増加",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "120167",
+          "role": "full_text",
+          "text": "守備および海軍文明\\n\\n• 石を採掘する人の作業速度が +20% 増加\\n• 射撃兵士および歩兵の木材コストが -50% 減少\\n• 射手の装甲および塔のアップグレードが無料 (射石砲塔は化学が必要)\\n• 軍艦の木材コストが -20% 減少\\n\\n<b>固有ユニット:<b> \\n戦車 (騎乗射手), 亀甲船 (軍艦)\\n\\n<b>固有テクノロジー:<b> \\n• 優城 (見張り台系統の射程が +2 増加)\\n• 神機箭 (火箭車および亀甲船の射程が +1 増加し、追加の弾を発射)\\n\\n<b>チーム ボーナス:<b> \\n町の人の視界が +3 増加"
+        }
+      ]
+    },
+    {
+      "id": "context_120201_cavalry_and_gunpowder_civilization_n_n_meat_of_h",
+      "english": "Cavalry and Gunpowder civilization\\n\\n• Meat of hunted and livestock animals doesn't decay\\n• Mounted Units and Fire Lancers attack +25% faster starting in Feudal Age\\n• Siege Engineers available in Castle Age\\n• Siege and Fortification upgrades cost -75% wood and research +100% faster\\n• Units receive -50% friendly fire damage\\n\\n<b>Unique Units:<b>\\nIron Pagoda (Cavalry), Grenadier (Gunpowder Unit)\\n\\n<b>Unique Techs:<b>\\n• Fortified Bastions (Fortifications regenerate 500 HP per minute)\\n• Thunderclap Bombs (Rocket Carts, Grenadiers and Lou Chuans detonate when defeated; projectiles produce additional explosions)\\n\\n<b>Team Bonus:<b>\\nGunpowder Units +2 line of sight",
+      "category": "description",
+      "translation": "騎兵と火薬文明\\n\\n• ハントした動物や家畜の肉は腐らない\\n• 騎乗ユニットと火槍兵は領主の時代から攻撃速度が +25%\\n• 城主の時代から攻囲技師が利用可能\\n• 攻囲兵器と要塞のアップグレードに必要な木材が -75%、研究速度が +100%\\n• ユニットが味方から受けるダメージが -50%\\n\\n<b>固有ユニット:<b>\\nアイアンパゴダ (騎兵)、擲弾兵 (火薬ユニット)\\n\\n<b>固有テクノロジー:<b>\\n• 強化要塞 (要塞は毎分 HP を 500 回復)\\n• 雷鳴爆弾 (火箭車、擲弾兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす)\\n\\n<b>チーム ボーナス:<b>\\n火薬ユニットの視界 +2",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "120201",
+          "role": "full_text",
+          "text": "騎兵と火薬文明\\n\\n• ハントした動物や家畜の肉は腐らない\\n• 騎乗ユニットと火槍兵は領主の時代から攻撃速度が +25%\\n• 城主の時代から攻囲技師が利用可能\\n• 攻囲兵器と要塞のアップグレードに必要な木材が -75%、研究速度が +100%\\n• ユニットが味方から受けるダメージが -50%\\n\\n<b>固有ユニット:<b>\\nアイアンパゴダ (騎兵)、擲弾兵 (火薬ユニット)\\n\\n<b>固有テクノロジー:<b>\\n• 強化要塞 (要塞は毎分 HP を 500 回復)\\n• 雷鳴爆弾 (火箭車、擲弾兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす)\\n\\n<b>チーム ボーナス:<b>\\n火薬ユニットの視界 +2"
+        }
+      ]
+    },
+    {
+      "id": "context_170300_return_to_main_menu",
+      "english": "Return to Main Menu",
+      "category": "ui",
+      "translation": "メイン メニューに戻る",
+      "decision": "revise",
+      "reason": "Explicit human UI-style adjudication. The user verified with a manual local Mod that String ID 170300 owns the displayed UI text and that the adopted concise form appears in game. This exact occurrence only; no propagation.",
+      "notes": "Explicit reviewed UI text at this occurrence only; no terminology or sentence-style propagation.",
+      "targets": [
+        {
+          "string_id": "170300",
+          "role": "full_text",
+          "text": "メイン メニューに戻る"
+        }
+      ]
+    },
+    {
+      "id": "context_ids_civtips_52_3_research_thunderclap_bombs_in_your_castle_to_mak",
+      "english": "Research Thunderclap Bombs in your Castle to make your Grenadiers and Rocket Carts even more deadly.",
+      "category": "description",
+      "translation": "城で雷鳴爆弾を研究して、擲弾兵と火箭車の威力を向上させよう。",
+      "decision": "revise",
+      "reason": "Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form.",
+      "notes": "Explicit reviewed full text at this occurrence only; no global rocket substitution.",
+      "targets": [
+        {
+          "string_id": "IDS_CIVTIPS_52_3",
+          "role": "full_text",
+          "text": "城で雷鳴爆弾を研究して、擲弾兵と火箭車の威力を向上させよう。"
+        }
+      ]
+    }
+  ]
+}
+
