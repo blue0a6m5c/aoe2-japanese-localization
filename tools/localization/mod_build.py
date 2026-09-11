@@ -31,12 +31,13 @@ def unchanged(roots,expected):
     if snapshot(roots)!=expected: raise ValueError('Protected source/review files changed during generation')
 
 
-def patch_bytes(raw,label,operations):
+def patch_bytes(raw,label,operations,*,authorized_token_changes=()):
     """Change quoted value substrings only, preserving all other source bytes."""
     text=raw.decode('utf-8-sig',errors='strict')
     parsed=parse_text(text,label)
     parts=re.split(r'(\r\n|\n|\r)',text)
     original=list(parts)
+    authorized_token_changes=set(authorized_token_changes)
     seen=set();ids=set();by_line={}
     for op in operations:
         line=op['source_line'];sid=op['string_id']
@@ -62,7 +63,8 @@ def patch_bytes(raw,label,operations):
         if op['replacement_type']!=('full_value' if full else 'span'):
             raise ValueError('Replacement type mismatch')
         if after!=op['after'] or after==before:raise ValueError('Expected result mismatch or no-op')
-        if tokens(before)!=tokens(after):raise ValueError('Technical token sequence changed')
+        if tokens(before)!=tokens(after) and op['operation_id'] not in authorized_token_changes:
+            raise ValueError('Technical token sequence changed')
         index=(line-1)*2
         header=HEADER.match(parts[index])
         if not header or header[1]!=sid:raise ValueError('Physical record mismatch')
@@ -89,6 +91,7 @@ def patch_bytes(raw,label,operations):
         if new.value!=expected:raise ValueError('Output value verification failed')
         applied+=old.line in by_line
     if applied!=len(operations):raise ValueError('Missing or excess application')
+    if authorized_token_changes-set(ids):raise ValueError('Unused token-change authorization')
     return result
 
 

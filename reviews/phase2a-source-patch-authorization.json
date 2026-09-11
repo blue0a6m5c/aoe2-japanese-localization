@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "authorization_id": "phase2a-source-patch-2026-09-11",
+  "authority": "explicit project-owner approval to apply the existing Phase 2A operation plan",
+  "status": "approved",
+  "scope": "source_patch_only",
+  "source_state_certificate_sha256": "b3e2b6c533d49e7eed044675009a46cc4e85d2823d10d362ee4fe92a1b0ba920",
+  "expected": {
+    "baseline_operations": 387,
+    "phase2a_operations": 141,
+    "merged_operations": 528,
+    "unique_ids": 528,
+    "full_value": 287,
+    "span": 241,
+    "phase2a_concepts": 64,
+    "phase2a_target_bindings": 249
+  }
+}

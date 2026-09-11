@@ -19,6 +19,7 @@ from . import mod_package
 from .human_reviews import load_ledger, DEFAULT_LEDGER
 from . import context_overrides
 from . import term_audit
+from . import source_apply
 
 
 def positive(value: str) -> int:
@@ -29,7 +30,7 @@ def positive(value: str) -> int:
 
 
 def argument_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description='Read-only AoK/AoC/HD/DE localization analysis')
+    parser = argparse.ArgumentParser(description='AoK/AoC/HD/DE localization analysis and authenticated source apply')
     parser.add_argument('--source-root', type=Path, default=Path('source'))
     parser.add_argument('--config', type=Path, help='JSON object mapping dataset names to directories under source-root')
     commands = parser.add_subparsers(dest='command', required=True)
@@ -68,6 +69,11 @@ def argument_parser() -> argparse.ArgumentParser:
     layout.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
     layout.add_argument('--layout-ledger', type=Path, default=Path('reviews/phase1d-layout-decisions.json'))
     layout.add_argument('--output-dir', type=Path, default=Path('reports/phase1d-layout'))
+    apply = commands.add_parser('apply', help='Apply the authenticated baseline and Phase 2A source plan')
+    apply.add_argument('--authorization', type=Path, default=source_apply.DEFAULT_AUTHORIZATION)
+    apply.add_argument('--ledger', type=Path, default=DEFAULT_LEDGER)
+    apply.add_argument('--layout-ledger', type=Path, default=source_apply.DEFAULT_LAYOUT_LEDGER)
+    apply.add_argument('--dry-run', action='store_true')
     build = commands.add_parser('mod-build', help='Generate a verified independent Mod payload; never install')
     build.add_argument('--plan', type=Path, default=Path('reports/phase1d-layout/patch-plan.json'))
     build.add_argument('--scope-dir', type=Path, default=Path('reports/phase1c-normalized'))
@@ -170,6 +176,15 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     plan_blocked = False
     try:
+        if args.command == 'apply':
+            if args.config:
+                raise ValueError('Source apply uses the audited default dataset layout; --config is unsupported')
+            bundle = source_apply.prepare(args.source_root, authorization_path=args.authorization,
+                                          ledger_path=args.ledger, layout_path=args.layout_ledger)
+            result = source_apply.execute(bundle, dry_run=args.dry_run)
+            print(json.dumps({'mode':'dry-run' if args.dry_run else 'apply', **result},
+                             ensure_ascii=True, indent=2))
+            return 0
         if args.command == 'mod-package':
             if args.config:raise ValueError('Local package requires the audited default dataset layout')
             bundle=mod_package.prepare(args.source_root,args.plan,args.ledger,args.layout_ledger,args.scope_dir,args.input_dir)
