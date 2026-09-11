@@ -370,6 +370,17 @@ unless legacy maintenance is explicitly required.
 
 ## Intended Workflow
 
+The standard Production commands are:
+
+``` console
+python -m tools.localization validate
+python -m tools.localization build
+```
+
+The build writes the localization Mod to
+`dist/local-mod/AoE2-DE-Japanese-Localization/` and regenerates the
+human-readable decision view at `glossary/terms.md`.
+
 For ordinary localization work, the intended workflow is:
 
 1.  Research a term or localization issue using the evidence appropriate

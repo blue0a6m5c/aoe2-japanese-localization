@@ -1,151 +1,232 @@
-# 正式裁定用語集（派生資料）
+# 翻訳裁定一覧
 
-本ファイルは `reviews/phase1b-decisions.json`（review_id: phase2a-historical-restoration-corrected-2026-09-09、裁定 104 件）からの機械的な転記である。
-正式裁定の正本は `reviews/` であり、矛盾がある場合は本ファイルではなく正本を優先する。
-新しい裁定を本ファイルへ直接追加してはならない。運用規則は [README](README.md) を参照。
+> **AUTO-GENERATED — DO NOT EDIT**
+>
+> Source: `decisions/translations.json`. This is a generated view; `decisions/` is the source of truth.
 
-凡例: 根拠メモは正本 `notes` の転記であり、理由の新設はしない。署名は正本 `signature` の先頭 12 文字（照合用）。関連 Help は正本 `help_ids` の転記。
+Decision records: **195**
 
-## Legacy 復元として採用（81 件）
+## building (10)
 
-AoK/AoC 日本語版の確立用語へ戻す人間裁定。旧訳を機械的な正解とは扱わない方針のもと一件ずつ承認されたもの。
+| Decision ID | English | Approved Japanese | Type | Reason | Targets | Notes |
+|---|---|---|---|---|---|---|
+| archery_range_building | Archery Range | 射手育成所 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5128 (name), 26128 (help_heading) |  |
+| blacksmith_building | Blacksmith | 鉄工所 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5131 (name), 26131 (help_heading) |  |
+| caravanserai_building | Caravanserai | キャラバンサライ | keep_de | DE内での表記ブレ。統一。 | 5440 (name), 6440 (action), 14440 (compact_name), 26440 (help_heading) |  |
+| fortified_palisade_wall_building | Fortified Palisade Wall | 強化柵 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5205 (name), 26205 (help_heading) |  |
+| monastery_building | Monastery | 神殿 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5138 (name), 26138 (help_heading) |  |
+| outpost_building | Outpost | 前哨 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5504 (name), 26504 (help_heading) |  |
+| palisade_gate_building | Palisade Gate | 柵の門 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5186 (name), 26186 (help_heading) |  |
+| palisade_wall_building | Palisade Wall | 柵 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5202 (name), 26202 (help_heading) |  |
+| siege_workshop_building | Siege Workshop | 包囲攻撃訓練所 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5169 (name), 14169 (compact_name), 26169 (help_heading) |  |
+| university_building | University | 学問所 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5176 (name), 26176 (help_heading) |  |
 
-| 採用日本語 | 英語 | 代表 ID | 関連 Help | 署名 | 根拠メモ |
-|---|---|---|---|---|---|
-| 石弓射手 | Crossbowman | 5084 | 26084, 28100 | 10fc4a0fa749 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| ロングボウ | Longbowman | 5107 | 26107 | b0588196be57 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| チュートン ナイト | Teutonic Knight | 5112 | 26112 | 432f446e44b1 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 火炎放射器 | Flamethrower | 5118 | 26118 | 3f24326b6912 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 射手育成所 | Archery Range | 5128 | 26128 | 4aa06bb4b054 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 改良型オルガン砲 | Elite Organ Gun | 5130 | 26130, 28237 | 83658e1f7b52 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 鉄工所 | Blacksmith | 5131 | 26131 | a60c450bda53 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 神殿 | Monastery | 5138 | 26138 | c7b6beb2011f | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 包囲攻撃訓練所 | Siege Workshop | 5169 | 26169 | 07105cb385db | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 学問所 | University | 5176 | 26176 | a1e96d83ad10 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 柵の門 | Palisade Gate | 5186 | 26186 | 7204a19b6d0f | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 柵 | Palisade Wall | 5202 | 26202 | 021ea90e6d37 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 強化柵 | Fortified Palisade Wall | 5205 | 26205 | 5bb1529c7ecf | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| キャノン ガリオン船 | Cannon Galleon | 5287 | 26287, 28037 | 36e192fcf665 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| ガリオン船 | Galleon | 5309 | 26309 | 590715bdad3b | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 聖なる箱 | Relic | 5350 |  | 034e972162eb | Explicit human legacy-restoration adjudication for Relic. This reviewed structural non-production concept adopts the legacy Japanese name without extending the decision into prose or other concepts. |
-| 火炎船 | Fire Ship | 5426 | 26426 | 1c914e1a6634 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| ヘビー スコーピオン | Heavy Scorpion | 5439 | 26439, 28244 | c78038b4ab33 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 騎兵 | Light Cavalry | 5444 | 26444, 28261 | eb307b3dea77 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート カタフラクト | Elite Cataphract | 5451 | 26451, 28382 | 72c791acc470 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 改良型連弩兵 | Elite Chu Ko Nu | 5452 | 26452, 28384 | f4e56fd49323 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート マムルーク | Elite Mameluke | 5453 | 26453, 28390 | b327dbe3c32b | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ハスカール | Elite Huskarl | 5454 | 26454, 28386 | 9ed976407975 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ロングボウ | Elite Longbowman | 5456 | 26456, 28381 | 9c77220ee1ce | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 重装バイキング船 | Elite Longboat | 5457 | 26457, 28393 | 76545721d13e | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート マングダイ | Elite Mangudai | 5458 | 26458, 28388 | 31bb4dba1d04 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート エレファント | Elite War Elephant | 5459 | 26459, 28389 | 24ab09232d56 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 剣豪 | Elite Samurai | 5460 | 26460, 28387 | 3ee760f2d1b1 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート フランカ スロウ | Elite Throwing Axeman | 5461 | 26461, 28394 | ab9ae750e047 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート チュートン ナイト | Elite Teutonic Knight | 5462 | 26462, 28391 | ffa202edffb6 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ウォード レイダー | Elite Woad Raider | 5463 | 26463, 28383 | 2abd0c8ad85b | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 前哨 | Outpost | 5504 | 26504 | e100f667baa4 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 機動キャノン ガリオン船 | Elite Cannon Galleon | 5573 | 26573, 28375 | b98c001f2468 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ベルセルク | Elite Berserk | 5576 | 26576, 28401 | 465540f388a6 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| ハサー | Hussar | 5661 | 26661, 28417 | 2118a45117bf | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ジャガー ウォリア | Elite Jaguar Warrior | 5669 | 26669, 28434 | e64296c3006c | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート イーグル ウォリア | Elite Eagle Warrior | 5673 | 26673, 28433 | 6dbb8f9c726b | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート タルカン | Elite Tarkan | 5677 | 26677, 28418 | 51a00575641a | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート コンキスタドール | Elite Conquistador | 5689 | 26689, 28317 | f2a7b6cae8b4 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 強化戦車 | Elite War Wagon | 5729 | 26729, 28436 | 9430ae96c2f5 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 重装亀甲船 | Elite Turtle Ship | 5732 | 26732, 28437 | bf64a8d7219a | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 貨幣制度 | Coinage | 7023 | 28023 | 6541608d2196 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| キャノン ガリオン船 | Cannon Galleon | 7037 | 26287, 28037 | b4378ff19ae3 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 金の採掘 | Gold Mining | 7055 | 28055 | 6d50fb5f8e58 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 鋳造 | Iron Casting | 7068 | 28068 | fc828ce8870d | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 歩兵用うろこの鎧 | Scale Mail Armor | 7074 | 28074 | 3fcc64220821 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 騎馬用うろこの鎧 | Scale Barding Armor | 7081 | 28081 | 8ea870b8bb14 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 石弓射手 | Crossbowman | 7100 | 26084, 28100 | 93ce6f0e06fa | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 帝王の時代 | Imperial Age | 7103 | 28103 | 585ce94590d4 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 金の掘削 | Gold Shaft Mining | 7180 | 28180 | 55d0cc1b9758 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 武者修行 | Squires | 7210 | 28210 | d4434f0b4048 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| ヘビー スコーピオン | Heavy Scorpion | 7244 | 26439, 28244 | 659e3aeba9aa | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 騎兵 | Light Cavalry | 7261 | 26444, 28261 | 429590a0a14f | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 石の切り出し | Stone Mining | 7276 | 28276 | 9501b2aa6d64 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート コンキスタドール | Elite Conquistador | 7317 | 26689, 28317 | f4d75c37c306 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 火砲学 | Heated Shot | 7374 | 28374 | 18923a7dc6cf | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 機動キャノン ガリオン船 | Elite Cannon Galleon | 7375 | 26573, 28375 | 8cd69d8ee984 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 包囲攻撃技術 | Siege Engineers | 7378 | 28378 | 8d8cc4c3ee0b | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ロングボウ | Elite Longbowman | 7381 | 26456, 28381 | 2c741dd15948 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート カタフラクト | Elite Cataphract | 7382 | 26451, 28382 | cf6c0f5e45f0 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ウォード レイダー | Elite Woad Raider | 7383 | 26463, 28383 | 596acb5bd3fe | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 改良型連弩兵 | Elite Chu Ko Nu | 7384 | 26452, 28384 | 982f59bb8e3a | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ハスカール | Elite Huskarl | 7386 | 26454, 28386 | 9fd0cf60f492 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 剣豪 | Elite Samurai | 7387 | 26460, 28387 | d424820d681b | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート マングダイ | Elite Mangudai | 7388 | 26458, 28388 | 1fe4c3286bd3 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート エレファント | Elite War Elephant | 7389 | 26459, 28389 | 6a4234d5e43b | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート マムルーク | Elite Mameluke | 7390 | 26453, 28390 | b1a4c2971035 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート チュートン ナイト | Elite Teutonic Knight | 7391 | 26462, 28391 | a629a9b1428e | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 重装バイキング船 | Elite Longboat | 7393 | 26457, 28393 | 3bce0850f899 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート フランカ スロウ | Elite Throwing Axeman | 7394 | 26461, 28394 | 2734125830d0 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ベルセルク | Elite Berserk | 7401 | 26576, 28401 | c0c1f52f8bfa | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 諜報/反逆 | Spies/Treason | 7408 | 28408 | 69d15942c37d | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| パルティアン戦術 | Parthian Tactics | 7415 | 28415 | 88aef7a3ba40 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| ハサー | Hussar | 7417 | 26661, 28417 | ab4df363f1e1 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート タルカン | Elite Tarkan | 7418 | 26677, 28418 | 99b7815136b5 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 栄誉戦 | Garland Wars | 7429 | 28429 | 679024f284c2 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート イーグル ウォリア | Elite Eagle Warrior | 7433 | 26673, 28433 | af352dbfd443 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| エリート ジャガー ウォリア | Elite Jaguar Warrior | 7434 | 26669, 28434 | 5e0450125172 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 強化戦車 | Elite War Wagon | 7436 | 26729, 28436 | cd9e28628d7f | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| 重装亀甲船 | Elite Turtle Ship | 7437 | 26732, 28437 | 231957922fb2 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
-| パーフュージョン | Perfusion | 7439 | 28439 | 5119158b84e9 | Restored by explicit human adjudication based on established legacy Japanese terminology. |
+## description (11)
 
-## 新規・修正裁定（21 件）
+| Decision ID | English | Approved Japanese | Type | Reason | Targets | Notes |
+|---|---|---|---|---|---|---|
+| context_120155_archer_and_gunpowder_civilization_n_n_start_with | Archer and Gunpowder civilization\n\n• Start with +3 Villagers, but -50 wood and -200 food\n• Technologies cost -5/10/15% in Feudal/Castle/Imperial Age\n• Town Centers +7 line of sight and provide +15 population space\n• Fire Lancers and Fire Ships move +5/10% faster in Castle/Imperial Age\n\n&lt;b&gt;Unique Unit:&lt;b&gt; \nChu Ko Nu (Foot Archer), Dragon Ship (Warship)\n\n&lt;b&gt;Unique Techs:&lt;b&gt; \n• Great Wall (Walls, Watch Tower-line and Bombard Towers +30% HP)\n• Rocketry (Scorpions, Rocket Carts and Lou Chuans +25% attack; Lou Chuans fire rockets)\n\n&lt;b&gt;Team Bonus:&lt;b&gt; \nFarms +10% food | 射手および火薬文明\n\n• 町の人を +3 追加で開始するが、木材が -50、食料が -200 減少\n• 技術コストが封建時代で -5%、城主の時代で -10%、帝国の時代で -15%\n• 町の中心の視界が +7 、人口スペースが +15 提供される\n• 火槍騎兵およびファイヤー シップの移動速度が城主の時代で +5%、帝国の時代で +10%\n\n&lt;b&gt;固有ユニット:&lt;b&gt; \n連弩兵 (歩兵射手), ドラゴンシップ (軍艦)\n\n&lt;b&gt;固有テクノロジー:&lt;b&gt; \n• 万里の長城 (壁、見張り台系統、砲台のHPが +30%)\n• 火箭術 (スコーピオン、火箭車および楼船の攻撃力が +25%; 楼船が火箭を発射)\n\n&lt;b&gt;チーム ボーナス:&lt;b&gt; \n畑の食料が +10% | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 120155 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_120167_defensive_and_naval_civilization_n_n_stone_miner | Defensive and Naval civilization\n\n• Stone miners work +20% faster\n• Ranged Soldiers and Infantry cost -50% wood\n• Archer armor and tower upgrades free (Bombard Tower requires Chemistry)\n• Warships cost -20% wood\n\n&lt;b&gt;Unique Units:&lt;b&gt; \nWar Wagon (Mounted Archer), Turtle Ship (Warship)\n\n&lt;b&gt;Unique Techs:&lt;b&gt; \n• Eupseong (Watch Tower-line +2 range)\n• Shinkichon (Rocket Carts and Turtle Ships +1 range, fire additional projectiles)\n\n&lt;b&gt;Team Bonus:&lt;b&gt; \nVillagers +3 line of sight | 守備および海軍文明\n\n• 石を採掘する人の作業速度が +20% 増加\n• 射撃兵士および歩兵の木材コストが -50% 減少\n• 射手の装甲および塔のアップグレードが無料 (射石砲塔は化学が必要)\n• 軍艦の木材コストが -20% 減少\n\n&lt;b&gt;固有ユニット:&lt;b&gt; \n戦車 (騎乗射手), 亀甲船 (軍艦)\n\n&lt;b&gt;固有テクノロジー:&lt;b&gt; \n• 優城 (見張り台系統の射程が +2 増加)\n• 神機箭 (火箭車および亀甲船の射程が +1 増加し、追加の弾を発射)\n\n&lt;b&gt;チーム ボーナス:&lt;b&gt; \n町の人の視界が +3 増加 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 120167 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_120201_cavalry_and_gunpowder_civilization_n_n_meat_of_h | Cavalry and Gunpowder civilization\n\n• Meat of hunted and livestock animals doesn't decay\n• Mounted Units and Fire Lancers attack +25% faster starting in Feudal Age\n• Siege Engineers available in Castle Age\n• Siege and Fortification upgrades cost -75% wood and research +100% faster\n• Units receive -50% friendly fire damage\n\n&lt;b&gt;Unique Units:&lt;b&gt;\nIron Pagoda (Cavalry), Grenadier (Gunpowder Unit)\n\n&lt;b&gt;Unique Techs:&lt;b&gt;\n• Fortified Bastions (Fortifications regenerate 500 HP per minute)\n• Thunderclap Bombs (Rocket Carts, Grenadiers and Lou Chuans detonate when defeated; projectiles produce additional explosions)\n\n&lt;b&gt;Team Bonus:&lt;b&gt;\nGunpowder Units +2 line of sight | 騎兵と火薬文明\n\n• ハントした動物や家畜の肉は腐らない\n• 騎乗ユニットと火槍兵は領主の時代から攻撃速度が +25%\n• 城主の時代から攻囲技師が利用可能\n• 攻囲兵器と要塞のアップグレードに必要な木材が -75%、研究速度が +100%\n• ユニットが味方から受けるダメージが -50%\n\n&lt;b&gt;固有ユニット:&lt;b&gt;\nアイアンパゴダ (騎兵)、擲弾兵 (火薬ユニット)\n\n&lt;b&gt;固有テクノロジー:&lt;b&gt;\n• 強化要塞 (要塞は毎分 HP を 500 回復)\n• 雷鳴爆弾 (火箭車、擲弾兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす)\n\n&lt;b&gt;チーム ボーナス:&lt;b&gt;\n火薬ユニットの視界 +2 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 120201 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_26064_build_b_rocket_cart_b_cost_nsiege_gunpowder_unit | Build &lt;b&gt;Rocket Cart&lt;b&gt; (&lt;cost&gt;)\nSiege Gunpowder Unit with ranged blast attack, but cannot attack at close range. Strong vs. tight groups of units. Weak vs. units at close range. Can attack ground.\n&lt;GREY&gt;&lt;i&gt;Upgrades: attack, range (University); to Heavy Rocket Cart (Siege Workshop); more resistant to Monks (Monastery).&lt;i&gt;&lt;DEFAULT&gt;\n&lt;hp&gt; &lt;attack&gt; &lt;armor&gt; &lt;piercearmor&gt; &lt;range&gt; | &lt;b&gt;火箭車&lt;b&gt;の建造 (&lt;cost&gt;)\n射撃爆破攻撃が可能な攻囲銃砲ユニットだが、近距離攻撃はできない。グループ化したユニットに対して有効。近距離ユニットを苦手とする。地点攻撃が可能。\n&lt;GREY&gt;&lt;i&gt;強化: 攻撃、射程 [大学]; 重装火箭車へのアップグレード [攻城兵器工房]; 聖職者に対する耐性 [修道所]&lt;i&gt;&lt;DEFAULT&gt;\n&lt;hp&gt; &lt;attack&gt; &lt;armor&gt; &lt;piercearmor&gt; &lt;range&gt; | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 26064 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_26065_build_b_heavy_rocket_cart_b_cost_nsiege_gunpowde | Build &lt;b&gt;Heavy Rocket Cart&lt;b&gt; (&lt;cost&gt;)\nSiege Gunpowder Unit with ranged blast attack, but cannot attack at close range. Strong vs. tight groups of units. Weak vs. units at close range. Can attack ground and destroy trees.\n&lt;GREY&gt;&lt;i&gt;Upgrades: attack, range (University); more resistant to Monks (Monastery).&lt;i&gt;&lt;DEFAULT&gt;\n&lt;hp&gt; &lt;attack&gt; &lt;armor&gt; &lt;piercearmor&gt; &lt;range&gt; | &lt;b&gt;重装火箭車&lt;b&gt;の建造 (&lt;cost&gt;)\n射撃爆破攻撃が可能な攻囲銃砲ユニットだが、近距離攻撃はできない。グループ化したユニットに対して有効。近距離ユニットを苦手とする。地点攻撃と、木を破壊することができる。\n&lt;GREY&gt;&lt;i&gt;強化: 攻撃、射程 [大学]; 聖職者に対する耐性 [修道所]&lt;i&gt;&lt;DEFAULT&gt;\n&lt;hp&gt; &lt;attack&gt; &lt;armor&gt; &lt;piercearmor&gt; &lt;range&gt; | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 26065 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_28432_research_b_rocketry_b_cost_nscorpions_rocket_car | Research &lt;b&gt;Rocketry&lt;b&gt; (&lt;cost&gt;)\nScorpions, Rocket Carts and Lou Chuans +25% attack; Lou Chuans fire rockets. | &lt;b&gt;火箭術&lt;b&gt;の研究 (&lt;cost&gt;)\nスコーピオン、火箭車、楼船の攻撃力 +25%、楼船は火箭を発射するようになる。 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 28432 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_28438_research_b_shinkichon_b_cost_nrocket_carts_and_t | Research &lt;b&gt;Shinkichon&lt;b&gt; (&lt;cost&gt;)\nRocket Carts and Turtle Ships +1 range, fire additional projectiles. | &lt;b&gt;神機箭&lt;b&gt;の研究 (&lt;cost&gt;)\n火箭車と亀甲船の射程 +1、より多くの発射物を発射するようになる。 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 28438 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_28467_research_b_thunderclap_bombs_b_cost_nrocket_cart | Research &lt;b&gt;Thunderclap Bombs&lt;b&gt; (&lt;cost&gt;)\nRocket Carts, Grenadiers and Lou Chuans detonate when defeated; projectiles produce additional explosions. | &lt;b&gt;雷鳴爆弾&lt;b&gt;の研究 (&lt;cost&gt;)\n火箭車、グレネード兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす。 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 28467 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_28470_upgrade_to_b_heavy_rocket_cart_b_cost_nupgrades_ | Upgrade to &lt;b&gt;Heavy Rocket Cart&lt;b&gt; (&lt;cost&gt;)\nUpgrades your Rocket Cart and lets you create Heavy Rocket Cart, which are stronger. | &lt;b&gt;重装火箭車&lt;b&gt;へのアップグレード (&lt;cost&gt;)\n火箭車をアップグレードして、より強力な重装火箭車を作成できるようになる。 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 28470 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_46709_your_scouts_report_n_n_genghis_khans_horde_orang | Your scouts report:\n\n- Genghis Khan's horde (Orange) has assembled to the north of China.\n\n- The Jin (Yellow) live to the east and own a large fortified city. They will train Iron Pagodas, Steppe Lancers, and Grenadiers, and they will also construct Rocket Carts.\n\n- The Xi Xia (Green) control the Great Wall of China. Their army consists of Chu Ko Nu, Light Cavalry, and Scorpions.\n\n- The center of the map is controlled by the Tanguts (Red), who will train Crossbowmen, Battering Rams, Fire Lancers, and Rocket Carts.\n\n- The Song (Cyan) are the weakest of your opponents. They only own insignificant estates in the southwest that are guarded by archery units.\n\n- Camps of Chinese siege engineers (Blue) can be found in the northwestern and northeastern regions of the map. | 斥候からの報告:\n\n- チンギス ハーンの軍 (オレンジ) は、中国の北方に集結している。\n\n- 金 (黄) は、大きな城塞都市を有し、アイアン  パゴダ、平原槍騎兵、擲弾兵を育成することができ、火箭車を建造することもできる。\n\n- 西夏 (緑) は万里の長城を支配し、その軍は連弩兵、軽騎兵、スコーピオンによって構成されている。\n\n- マップ中央部は、弩兵、破城槌、火槍騎兵、火箭車を擁するタングート (赤) に支配されている。\n\n- 宋 (水色) は敵の中で最も弱い。射手ユニットに守られてはいるが、南西にあるその領土は慎ましいものだ。\n\n- 中国の攻囲技師 (青) が置かれている宿営地は、マップの北西と南東にある。 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 46709 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_ids_civtips_52_3_research_thunderclap_bombs_in_your_castle_to_mak | Research Thunderclap Bombs in your Castle to make your Grenadiers and Rocket Carts even more deadly. | 城で雷鳴爆弾を研究して、擲弾兵と火箭車の威力を向上させよう。 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | IDS_CIVTIPS_52_3 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
 
-DE 新規要素・旧訳の問題・文明名正規化など、復元ではなく新たな訳を定めた人間裁定。
+## other (2)
 
-| 採用日本語 | 英語 | 代表 ID | 関連 Help | 署名 | 根拠メモ |
-|---|---|---|---|---|---|
-| 火箭車 | Rocket Cart | 5064 | 26064 | cabfc507f583 | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. |
-| 重装火箭車 | Heavy Rocket Cart | 5065 | 26065, 28470 | a1c91b499e3a | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. |
-| エリート イェニチェリ | Elite Janissary | 5455 | 26455, 28392 | 3fef588d8d8f | Explicit human terminology adjudication: retain イェニチェリ for Janissary and use エリート イェニチェリ for Elite Janissary. |
-| エリート イェニチェリ | Elite Janissary | 7392 | 26455, 28392 | fe1cf6e1684e | Explicit human terminology adjudication: retain イェニチェリ for Janissary and use エリート イェニチェリ for Elite Janissary. |
-| 火箭術 | Rocketry | 7432 | 28432 | 5fce559bc1dc | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. |
-| 神機箭 | Shinkichon | 7438 | 28438 | 7a3f08ec2bce | Explicit user follow-up adjudication: adopt Shinkichon as 神機箭 for name IDs 7438 and 17438; consistent with approved contextual overrides 8438, 28438 and 120167. Name authority only; existing full-text decisions remain unchanged. |
-| 重装火箭車 | Heavy Rocket Cart | 7470 | 26065, 28470 | 9eb6b576a1eb | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. |
-| トルコ | Turks | 10280 |  | 86c45dd64dec | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| ローマ | Romans | 10313 |  | cc5d07c36a05 | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| 蜀 | Shu | 10319 |  | f961c92c979e | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| ムイスカ | Muisca | 10327 |  | c85b51a38493 | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| マプチェ | Mapuche | 10328 |  | 447670a8560e | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| トゥピ | Tupi | 10329 |  | 571917870ae9 | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| 火箭術 | Rocketry | 17432 | 28432 | 2e5d2433920b | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. |
-| 神機箭 | Shinkichon | 17438 | 28438 | 5598928ace49 | Explicit user follow-up adjudication: adopt Shinkichon as 神機箭 for name IDs 7438 and 17438; consistent with approved contextual overrides 8438, 28438 and 120167. Name authority only; existing full-text decisions remain unchanged. |
-| ムイスカ | The Muisca | 20310 |  | bf995a787509 | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| ローマ | The Romans | 20348 |  | f834371b656b | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| 蜀 | The Shu | 20350 |  | 72495c7b07b8 | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| トルコ | The Turks | 20356 |  | ae6edb9ff2ea | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| マプチェ | The Mapuche | 20361 |  | 89406561db1e | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
-| トゥピ | The Tupi | 20380 |  | 18cfcdd330ae | Canonical civilization-name normalization; explicitly reviewed and verified in-game. |
+| Decision ID | English | Approved Japanese | Type | Reason | Targets | Notes |
+|---|---|---|---|---|---|---|
+| imperial_age_other | Imperial Age | 帝王の時代 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7103 (name), 28103 (help_heading) |  |
+| relic_other | Relic | 聖なる箱 | restore | Explicit human legacy-restoration adjudication for Relic. This reviewed structural non-production concept adopts the legacy Japanese name without extending the decision into prose or other concepts. | 5350 (name) |  |
 
-## DE 維持（2 件）
+## technology (71)
 
-Legacy 復元を見送り現行 DE 訳を維持する人間裁定。DE 訳の優劣評価ではなく個別根拠による。
+| Decision ID | English | Approved Japanese | Type | Reason | Targets | Notes |
+|---|---|---|---|---|---|---|
+| bagains_technology | Bagains | バガイン | keep_de | DE内での表記ブレ。統一。 | 7308 (name), 8308 (action), 17308 (compact_name), 28308 (help_heading) |  |
+| bimaristan_technology | Bimaristan | ビマリスタン | keep_de | DE内での表記ブレ。統一。 | 7451 (name), 8451 (action), 17451 (compact_name), 28451 (help_heading) |  |
+| cannon_galleon_technology | Cannon Galleon | キャノン ガリオン船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7037 (name), 28037 (help_heading) |  |
+| caravan_technology | Caravan | 隊商 | keep_de | DE内での表記ブレ。統一。 | 7410 (name), 8410 (action), 17410 (compact_name), 28410 (help_heading) |  |
+| coinage_technology | Coinage | 貨幣制度 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7023 (name), 28023 (help_heading) |  |
+| crossbowman_technology | Crossbowman | 石弓射手 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7100 (name), 28100 (help_heading) |  |
+| devotion_technology | Devotion | 帰依 | keep_de | DE内での表記ブレ。統一。 | 7462 (name), 8462 (action), 17462 (compact_name), 28462 (help_heading) |  |
+| elite_berserk_technology | Elite Berserk | エリート ベルセルク | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7401 (name), 28401 (help_heading) |  |
+| elite_cannon_galleon_technology | Elite Cannon Galleon | 機動キャノン ガリオン船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7375 (name), 17375 (compact_name), 28375 (help_heading) |  |
+| elite_cataphract_technology | Elite Cataphract | エリート カタフラクト | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7382 (name), 28382 (help_heading) |  |
+| elite_chu_ko_nu_technology | Elite Chu Ko Nu | 改良型連弩兵 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7384 (name), 17384 (compact_name), 28384 (help_heading) |  |
+| elite_composite_bowman_technology | Elite Composite Bowman | 精鋭戦闘弓射手 | keep_de | DE内での表記ブレ。統一。 | 7404 (name), 8404 (action), 28404 (help_heading) |  |
+| elite_conquistador_technology | Elite Conquistador | エリート コンキスタドール | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7317 (name), 28317 (help_heading) |  |
+| elite_eagle_warrior_technology | Elite Eagle Warrior | エリート イーグル ウォリア | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7433 (name), 28433 (help_heading) |  |
+| elite_fire_lancer_technology | Elite Fire Lancer | 精鋭火槍兵 | revise | 騎兵ではない。 | 7463 (name), 8463 (action), 17463 (compact_name), 28463 (help_heading) |  |
+| elite_huskarl_technology | Elite Huskarl | エリート ハスカール | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7386 (name), 28386 (help_heading) |  |
+| elite_iron_pagoda_technology | Elite Iron Pagoda | 精鋭鉄浮屠 | revise | より歴史的名称かつ、中華圏ユニットらしく漢語に。 | 7464 (name), 8464 (action), 17464 (compact_name), 28464 (help_heading) |  |
+| elite_jaguar_warrior_technology | Elite Jaguar Warrior | エリート ジャガー ウォリア | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7434 (name), 28434 (help_heading) |  |
+| elite_janissary_technology | Elite Janissary | エリート イェニチェリ | revise | Explicit human terminology adjudication: retain イェニチェリ for Janissary and use エリート イェニチェリ for Elite Janissary. | 7392 (name), 28392 (help_heading) |  |
+| elite_longboat_technology | Elite Longboat | 重装バイキング船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7393 (name), 17393 (compact_name), 28393 (help_heading) |  |
+| elite_longbowman_technology | Elite Longbowman | エリート ロングボウ | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7381 (name), 17381 (compact_name), 28381 (help_heading) |  |
+| elite_magyar_huszar_technology | Elite Magyar Huszar | エリート マジャール ハサー | restore | 明示裁定されたElite unit名と、そのunitへのupgrade technology名が不一致になる。 | 7395 (name), 8395 (action), 28395 (help_heading) |  |
+| elite_mameluke_technology | Elite Mameluke | エリート マムルーク | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7390 (name), 28390 (help_heading) |  |
+| elite_mangudai_technology | Elite Mangudai | エリート マングダイ | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7388 (name), 28388 (help_heading) |  |
+| elite_obuch_technology | Elite Obuch | 精鋭オブフ兵 | revise | 通常/Elite unit双方の明示裁定で語幹オブフが確定し、対応technologyだけオブヒを残す。 | 7346 (name), 8346 (action), 28346 (help_heading) |  |
+| elite_samurai_technology | Elite Samurai | 剣豪 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7387 (name), 28387 (help_heading) |  |
+| elite_serjeant_technology | Elite Serjeant | エリート セルジェアント | revise | 同じElite upgradeのunit側が明示裁定済みで、technologyだけ旧tier prefixを残す。 | 7341 (name), 8341 (action), 28341 (help_heading) |  |
+| elite_steppe_lancer_technology | Elite Steppe Lancer | エリート ステップ ランサー | revise | 通常/Elite unit双方の明示裁定に対し、対応upgrade technologyだけ別prefixを残す。 | 7402 (name), 8402 (action), 28402 (help_heading) |  |
+| elite_tarkan_technology | Elite Tarkan | エリート タルカン | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7418 (name), 28418 (help_heading) |  |
+| elite_teutonic_knight_technology | Elite Teutonic Knight | エリート チュートン ナイト | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7391 (name), 28391 (help_heading) |  |
+| elite_throwing_axeman_technology | Elite Throwing Axeman | エリート フランカ スロウ | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7394 (name), 28394 (help_heading) |  |
+| elite_turtle_ship_technology | Elite Turtle Ship | 重装亀甲船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7437 (name), 28437 (help_heading) |  |
+| elite_war_elephant_technology | Elite War Elephant | エリート エレファント | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7389 (name), 28389 (help_heading) |  |
+| elite_war_wagon_technology | Elite War Wagon | 強化戦車 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7436 (name), 28436 (help_heading) |  |
+| elite_woad_raider_technology | Elite Woad Raider | エリート ウォード レイダー | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7383 (name), 28383 (help_heading) |  |
+| first_crusade_technology | First Crusade | 第一次十字軍 | revise | DE内での表記ブレ。統一。 | 7344 (name), 8344 (action), 17344 (compact_name), 28344 (help_heading) |  |
+| garland_wars_technology | Garland Wars | 栄誉戦 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7429 (name), 28429 (help_heading) |  |
+| gold_mining_technology | Gold Mining | 金の採掘 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7055 (name), 28055 (help_heading) |  |
+| gold_shaft_mining_technology | Gold Shaft Mining | 金の掘削 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7180 (name), 28180 (help_heading) |  |
+| heated_shot_technology | Heated Shot | 火砲学 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7374 (name), 28374 (help_heading) |  |
+| heavy_hei_guang_cavalry_technology | Heavy Hei Guang Cavalry | 重黒光鎧騎兵 | keep_de | DE内での表記ブレ。統一。 | 7471 (name), 8471 (action), 17471 (compact_name), 28471 (help_heading) |  |
+| heavy_rocket_cart_technology | Heavy Rocket Cart | 重装火箭車 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 7470 (name) |  |
+| heavy_scorpion_technology | Heavy Scorpion | ヘビー スコーピオン | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7244 (name), 28244 (help_heading) |  |
+| hill_forts_technology | Hill Forts | ヒルフォート | revise | 実質的な関連性は薄いが、AoMの"ヒルフォート"と統一する。 | 7399 (name), 8399 (action), 17399 (compact_name), 28399 (help_heading) |  |
+| hussar_technology | Hussar | ハサー | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7417 (name), 28417 (help_heading) |  |
+| iron_casting_technology | Iron Casting | 鋳造 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7068 (name), 28068 (help_heading) |  |
+| ironclad_technology | Ironclad | 装甲板 | restore | 旧版の名前に統一。 | 7283 (name), 8283 (action), 17283 (compact_name), 28283 (help_heading) |  |
+| light_cavalry_technology | Light Cavalry | 騎兵 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7261 (name), 28261 (help_heading) |  |
+| nomads_technology | Nomads | 遊牧民 | keep_de | DE内での表記ブレ。統一。 | 7280 (name), 8280 (action), 17280 (compact_name), 28280 (help_heading) |  |
+| orthodoxy_technology | Orthodoxy | 正統主義 | restore | DE内での表記ブレ。HDと統一。 | 7268 (name), 8268 (action), 17268 (compact_name), 28268 (help_heading) |  |
+| parthian_tactics_technology | Parthian Tactics | パルティアン戦術 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7415 (name), 17415 (compact_name), 28415 (help_heading) |  |
+| perfusion_technology | Perfusion | パーフュージョン | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7439 (name), 28439 (help_heading) |  |
+| rocketry_technology | Rocketry | 火箭術 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 7432 (name), 17432 (compact_name) |  |
+| savar_technology | Savar | サヴァール | keep_de | DE内での表記ブレ。統一。 | 7442 (name), 8442 (action), 28442 (help_heading) |  |
+| scale_barding_armor_technology | Scale Barding Armor | 騎馬用うろこの鎧 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7081 (name), 17081 (compact_name), 28081 (help_heading) |  |
+| scale_mail_armor_technology | Scale Mail Armor | 歩兵用うろこの鎧 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7074 (name), 17074 (compact_name), 28074 (help_heading) |  |
+| shinkichon_technology | Shinkichon | 神機箭 | revise | Explicit user follow-up adjudication: adopt Shinkichon as 神機箭 for name IDs 7438 and 17438; consistent with approved contextual overrides 8438, 28438 and 120167. Name authority only; existing full-text decisions remain unchanged. | 7438 (name), 17438 (compact_name) |  |
+| siege_engineers_technology | Siege Engineers | 包囲攻撃技術 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7378 (name), 28378 (help_heading) |  |
+| silk_armor_technology | Silk Armor | 絹の鎧 | revise | DE内での表記ブレ。統一。 | 7309 (name), 8309 (action), 17309 (compact_name), 28309 (help_heading) |  |
+| sipahi_technology | Sipahi | スィパーヒー | keep_de | DE内での表記ブレ。統一。 | 7285 (name), 8285 (action), 17285 (compact_name), 28285 (help_heading) |  |
+| sitting_tiger_technology | Sitting Tiger | 虎蹲砲 | revise | より一般的で自然な名称に | 7481 (name), 8481 (action), 17481 (compact_name), 28481 (help_heading) |  |
+| spies_treason_technology | Spies/Treason | 諜報/反逆 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7408 (name), 28408 (help_heading) |  |
+| squires_technology | Squires | 武者修行 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7210 (name), 28210 (help_heading) |  |
+| steppe_husbandry_technology | Steppe Husbandry | ステップ牧畜 | revise | 単なる草原ではなく、ステップ地帯の民族の固有のテクノロジーであることを強調。説明の「斥候部隊」は「斥候系統」に変更。 | 7311 (name), 8311 (action), 17311 (compact_name), 28311 (help_heading) |  |
+| stirrups_technology | Stirrups | あぶみ | keep_de | DE内での表記ブレ。統一。 | 7307 (name), 8307 (action), 17307 (compact_name), 28307 (help_heading) |  |
+| stone_mining_technology | Stone Mining | 石の切り出し | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 7276 (name), 28276 (help_heading) |  |
+| stone_shaft_mining_technology | Stone Shaft Mining | 石の掘削 | restore | 旧版の名前に統一。 | 7277 (name), 8277 (action), 17277 (compact_name), 28277 (help_heading) |  |
+| thalassocracy_technology | Thalassocracy | 海洋覇権 | revise | 原語の意味を踏まえた意訳 | 7293 (name), 8293 (action), 17293 (compact_name), 28293 (help_heading) |  |
+| timurid_siegecraft_technology | Timurid Siegecraft | ティムール式攻城術 | revise | ティムール個人の戦術というよりも、それを踏襲した技術であることを強調。 | 7310 (name), 8310 (action), 17310 (compact_name), 28310 (help_heading) |  |
+| transhumance_technology | Transhumance | 移動牧畜 | keep_de | DE内での表記ブレ。統一。 | 7486 (name), 8486 (action), 17486 (compact_name), 28486 (help_heading) |  |
+| winged_hussar_technology | Winged Hussar | ウイングド ハサー | revise | unit側で人間がDE compact表記を採用しており、対応technologyの小書き差だけが残る。 | 7352 (name), 8352 (action), 28352 (help_heading) |  |
 
-| 採用日本語 | 英語 | 代表 ID | 関連 Help | 署名 | 根拠メモ |
-|---|---|---|---|---|---|
-| イェニチェリ | Janissary | 5105 | 26105 | c70077d6f102 | Explicit human adjudication to retain the current DE Japanese terminology. |
-| 近衛イェニチェリ | Royal Janissary | 5115 | 26115 | 6e9774707152 | Explicit human adjudication to retain the current DE Japanese terminology. |
+## ui (30)
 
-## 文脈付き全文専用（29 件・用語として引用禁止）
+| Decision ID | English | Approved Japanese | Type | Reason | Targets | Notes |
+|---|---|---|---|---|---|---|
+| context_14064_rocket_ncart | Rocket\nCart | 火箭\n車 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 14064 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_14065_heavy_nrocket_cart | Heavy\nRocket Cart | 重装\n火箭車 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 14065 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_170300_return_to_main_menu | Return to Main Menu | メイン メニューに戻る | revise | Explicit human UI-style adjudication. The user verified with a manual local Mod that String ID 170300 owns the displayed UI text and that the adopted concise form appears in game. This exact occurrence only; no propagation. | 170300 (full_text) | Explicit reviewed UI text at this occurrence only; no terminology or sentence-style propagation. |
+| context_17470_heavy_nrocket_cart | Heavy\nRocket Cart | 重装\n火箭車 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 17470 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_19285_mangonel_onager_rocket_cart | Mangonel, Onager, Rocket Cart | 投石機、改良型投石機、火箭車 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 19285 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_19476_tech_siege_onager_heavy_rocket_cart | Tech: (Siege) Onager, Heavy Rocket Cart | テクノロジー: (攻囲) 改良型投石機、重装火箭車 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 19476 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_6064_create_rocket_cart | Create Rocket Cart | 火箭車の作成 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 6064 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_6065_create_heavy_rocket_cart | Create Heavy Rocket Cart | 重装火箭車の作成 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 6065 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_8432_research_rocketry_scorpions_rocket_carts_and_lou | Research Rocketry (Scorpions, Rocket Carts and Lou Chuans +25% attack; Lou Chuans fire rockets) | 火箭術の研究 (スコーピオン、火箭車、楼船の攻撃力 +25%、楼船は火箭を発射するようになる) | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 8432 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_8438_research_shinkichon_rocket_carts_and_turtle_ship | Research Shinkichon (Rocket Carts and Turtle Ships +1 range, fire additional projectiles) | 神機箭の研究 (火箭車と亀甲船の射程 +1、より多くの発射物を発射するようになる) | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 8438 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_8467_research_thunderclap_bombs_rocket_carts_grenadie | Research Thunderclap Bombs (Rocket Carts, Grenadiers and Lou Chuans detonate when defeated; projectiles produce additional explosions) | 雷鳴爆弾の研究 (火箭車、擲弾兵、楼船は倒されると爆発し、発射物は追加の爆発を引き起こす) | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 8467 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_8470_upgrade_to_heavy_rocket_cart | Upgrade to Heavy Rocket Cart | 重装火箭車へのアップグレード | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 8470 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_90280_click_to_play_as_the_turks | Click to play as the Turks. | クリックするとトルコをプレイできます。 | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 90280 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_90313_click_to_play_as_the_romans | Click to play as the Romans. | クリックするとローマをプレイできます。 | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 90313 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_90319_click_to_play_as_the_shu | Click to play as the Shu. | クリックすると蜀をプレイできます。 | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 90319 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_90327_click_to_play_as_the_muisca | Click to play as the Muisca. | クリックするとムイスカをプレイできます。 | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 90327 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_90328_click_to_play_as_the_mapuche | Click to play as the Mapuche. | クリックするとマプチェをプレイできます。 | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 90328 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| context_90329_click_to_play_as_the_tupi | Click to play as the Tupi. | クリックするとトゥピをプレイできます。 | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 90329 (full_text) | Explicit reviewed full text at this occurrence only; no global rocket substitution. |
+| mapuche_ui | Mapuche | マプチェ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 10328 (name) |  |
+| muisca_ui | Muisca | ムイスカ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 10327 (name) |  |
+| romans_ui | Romans | ローマ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 10313 (name) |  |
+| shu_ui | Shu | 蜀 | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 10319 (name) |  |
+| the_mapuche_ui | The Mapuche | マプチェ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 20361 (name) |  |
+| the_muisca_ui | The Muisca | ムイスカ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 20310 (name) |  |
+| the_romans_ui | The Romans | ローマ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 20348 (name) |  |
+| the_shu_ui | The Shu | 蜀 | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 20350 (name) |  |
+| the_tupi_ui | The Tupi | トゥピ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 20380 (name) |  |
+| the_turks_ui | The Turks | トルコ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 20356 (name) |  |
+| tupi_ui | Tupi | トゥピ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 10329 (name) |  |
+| turks_ui | Turks | トルコ | revise | Canonical civilization-name normalization; explicitly reviewed and verified in-game. | 10280 (name) |  |
 
-以下は `reviews/context-overrides.json`（context-overrides-fire-arrow-civ-labels-ui-170300）の全文裁定であり、指定出現位置の全文だけを所有する。
-名称への逆伝播・別文章への語句置換はしない。用語集の用語として扱ってはならない。全文は正本を参照。
+## unit (71)
 
-対象 String ID: 6064, 6065, 8432, 8438, 8467, 8470, 14064, 14065, 17470, 19285, 19476, 26064, 26065, 28432, 28438, 28467, 28470, 46709, 90280, 90313, 90319, 90327, 90328, 90329, 120155, 120167, 120201, 170300, IDS_CIVTIPS_52_3
-
-## layout のみ（13 件・語彙裁定ではない）
-
-以下は `reviews/phase1d-layout-decisions.json`（phase1d-human-layout-13）の空白・改行等の配置裁定であり、語彙の裁定ではない。
-用語集の用語として扱ってはならない。置換内容は正本を参照。
-
-対象 String ID: 14130, 14169, 14452, 14456, 14457, 14573, 17074, 17081, 17375, 17381, 17384, 17393, 17415
-
-## 掲載対象外
-
-- Phase 2A-1 の findings／unresolved: 監査資料であり裁定ではないため、承認されるまで掲載しない。
-- Chronicles 固有概念: 標準 AoE2 用語への機械的統一をしない方針のため、文脈付き裁定がない限り掲載しない。現行 104 件に Chronicles 固有名称は含まれていない。
+| Decision ID | English | Approved Japanese | Type | Reason | Targets | Notes |
+|---|---|---|---|---|---|---|
+| camel_scout_unit | Camel Scout | らくだ斥候 | revise | DE内での表記ブレ。統一。 | 5441 (name), 6441 (action), 14441 (compact_name), 26441 (help_heading) |  |
+| cannon_galleon_unit | Cannon Galleon | キャノン ガリオン船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5287 (name), 26287 (help_heading) |  |
+| composite_bowman_unit | Composite Bowman | 戦闘弓射手 | revise | DE内での表記ブレ。統一。 | 5033 (name), 6033 (action), 14033 (compact_name), 26033 (help_heading) |  |
+| crossbowman_unit | Crossbowman | 石弓射手 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5084 (name), 26084 (help_heading) |  |
+| demolition_raft_unit | Demolition Raft | 爆破工作いかだ | revise | Raft の意味とユニットの外観を踏まえ、「ボート」ではなく「いかだ」を採用。 | 5162 (name), 6162 (action), 14162 (compact_name), 26162 (help_heading) |  |
+| dromon_unit | Dromon | ドロモン | revise | より一般的で自然な名称に | 5055 (name), 6055 (action), 14055 (compact_name), 26055 (help_heading) |  |
+| eagle_scout_unit | Eagle Scout | イーグル ウォリア | restore | DE移行時の表記ブレ。旧版へ戻す。 | 5672 (name), 6672 (action), 14672 (compact_name), 26672 (help_heading) |  |
+| eagle_warrior_unit | Eagle Warrior | 重装イーグル ウォリア | keep_de | tier-2 Help headingを同じunit 753の正式名へ揃え、tier-1裁定とのcross-concept collisionを除く。 | 5671 (name), 6671 (action), 14671 (compact_name), 26671 (help_heading) |  |
+| elephant_archer_unit | Elephant Archer | 象弓騎兵 | keep_de | DE内での表記ブレ。統一。 | 5682 (name), 6682 (action), 14682 (compact_name), 26682 (help_heading) |  |
+| elite_berserk_unit | Elite Berserk | エリート ベルセルク | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5576 (name), 26576 (help_heading) |  |
+| elite_cannon_galleon_unit | Elite Cannon Galleon | 機動キャノン ガリオン船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5573 (name), 14573 (compact_name), 26573 (help_heading) |  |
+| elite_cataphract_unit | Elite Cataphract | エリート カタフラクト | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5451 (name), 26451 (help_heading) |  |
+| elite_chu_ko_nu_unit | Elite Chu Ko Nu | 改良型連弩兵 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5452 (name), 14452 (compact_name), 26452 (help_heading) |  |
+| elite_conquistador_unit | Elite Conquistador | エリート コンキスタドール | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5689 (name), 26689 (help_heading) |  |
+| elite_eagle_warrior_unit | Elite Eagle Warrior | エリート イーグル ウォリア | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5673 (name), 26673 (help_heading) |  |
+| elite_elephant_archer_unit | Elite Elephant Archer | 精鋭象弓騎兵 | restore | DE内での表記ブレ。HDと統一。 | 5684 (name), 6684 (action), 14684 (compact_name), 26684 (help_heading) |  |
+| elite_fire_lancer_unit | Elite Fire Lancer | 精鋭火槍兵 | keep_de | 通常unitとElite upgrade technologyの双方が明示裁定済みで、Elite unit内の残存2表記だけが不整合。 | 5717 (name), 6717 (action), 14717 (compact_name), 26717 (help_heading) |  |
+| elite_huskarl_unit | Elite Huskarl | エリート ハスカール | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5454 (name), 26454 (help_heading) |  |
+| elite_hussite_wagon_unit | Elite Hussite Wagon | 精鋭戦闘馬車 | keep_de | DE内での表記ブレ。統一。 | 5563 (name), 6563 (action), 14563 (compact_name), 26563 (help_heading) |  |
+| elite_iron_pagoda_unit | Elite Iron Pagoda | 精鋭鉄浮屠 | revise | 同じElite tierを指す明示裁定済みupgrade technologyとunit name/helpを揃える。 | 5595 (name), 14595 (compact_name), 26595 (help_heading) |  |
+| elite_jaguar_warrior_unit | Elite Jaguar Warrior | エリート ジャガー ウォリア | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5669 (name), 26669 (help_heading) |  |
+| elite_janissary_unit | Elite Janissary | エリート イェニチェリ | revise | Explicit human terminology adjudication: retain イェニチェリ for Janissary and use エリート イェニチェリ for Elite Janissary. | 5455 (name), 26455 (help_heading) |  |
+| elite_longboat_unit | Elite Longboat | 重装バイキング船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5457 (name), 14457 (compact_name), 26457 (help_heading) |  |
+| elite_longbowman_unit | Elite Longbowman | エリート ロングボウ | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5456 (name), 14456 (compact_name), 26456 (help_heading) |  |
+| elite_magyar_huszar_unit | Elite Magyar Huszar | エリート マジャール ハサー | restore | 旧版の名前に統一。 | 5730 (name), 6730 (action), 14730 (compact_name), 26730 (help_heading) |  |
+| elite_mameluke_unit | Elite Mameluke | エリート マムルーク | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5453 (name), 26453 (help_heading) |  |
+| elite_mangudai_unit | Elite Mangudai | エリート マングダイ | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5458 (name), 26458 (help_heading) |  |
+| elite_obuch_unit | Elite Obuch | 精鋭オブフ兵 | revise | ポーランド語 obuch/ˈɔ.bux/の語末 ch は /x/。現行の「オブヒ」「オブシュ」の揺れを整理し、原語発音に近い「オブフ」に統一。 | 5559 (name), 6559 (action), 14559 (compact_name), 26559 (help_heading) |  |
+| elite_organ_gun_unit | Elite Organ Gun | 改良型オルガン砲 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5130 (name), 14130 (compact_name), 26130 (help_heading), 28237 (help_heading) |  |
+| elite_plumed_archer_unit | Elite Plumed Archer | 精鋭羽飾射手 | keep_de | DE内での表記ブレ。統一。 | 5685 (name), 6685 (action), 14685 (compact_name), 26685 (help_heading) |  |
+| elite_qizilbash_warrior_unit | Elite Qizilbash Warrior | 精鋭クズルバシュ ウォリア | keep_de | Elite unitのcompactだけが通常tierで採用されたfamily語幹と同unitのfull/action/helpから外れる。 | 5254 (name), 6254 (action), 14254 (compact_name), 26254 (help_heading) |  |
+| elite_samurai_unit | Elite Samurai | 剣豪 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5460 (name), 26460 (help_heading) |  |
+| elite_serjeant_unit | Elite Serjeant | エリート セルジェアント | revise | 旧版の方式の名前に統一。 | 5540 (name), 6540 (action), 14540 (compact_name), 26540 (help_heading) |  |
+| elite_steppe_lancer_unit | Elite Steppe Lancer | エリート ステップ ランサー | revise | 旧版の方式の名前に統一。 | 5010 (name), 6010 (action), 14010 (compact_name), 26010 (help_heading) |  |
+| elite_tarkan_unit | Elite Tarkan | エリート タルカン | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5677 (name), 26677 (help_heading) |  |
+| elite_teutonic_knight_unit | Elite Teutonic Knight | エリート チュートン ナイト | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5462 (name), 26462 (help_heading) |  |
+| elite_throwing_axeman_unit | Elite Throwing Axeman | エリート フランカ スロウ | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5461 (name), 26461 (help_heading) |  |
+| elite_turtle_ship_unit | Elite Turtle Ship | 重装亀甲船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5732 (name), 26732 (help_heading) |  |
+| elite_urumi_swordsman_unit | Elite Urumi Swordsman | 精鋭ウルミ剣士 | keep_de | DE内での表記ブレ。統一。 | 5413 (name), 6413 (action), 14413 (compact_name), 26413 (help_heading) |  |
+| elite_war_elephant_unit | Elite War Elephant | エリート エレファント | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5459 (name), 26459 (help_heading) |  |
+| elite_war_wagon_unit | Elite War Wagon | 強化戦車 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5729 (name), 26729 (help_heading) |  |
+| elite_woad_raider_unit | Elite Woad Raider | エリート ウォード レイダー | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5463 (name), 26463 (help_heading) |  |
+| fire_lancer_unit | Fire Lancer | 火槍兵 | revise | 騎兵ではない。 | 5066 (name), 6066 (action), 14066 (compact_name), 26066 (help_heading) |  |
+| fire_ship_unit | Fire Ship | 火炎船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5426 (name), 26426 (help_heading) |  |
+| flamethrower_unit | Flamethrower | 火炎放射器 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5118 (name), 26118 (help_heading) |  |
+| galleon_unit | Galleon | ガリオン船 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5309 (name), 26309 (help_heading) |  |
+| heavy_hei_guang_cavalry_unit | Heavy Hei Guang Cavalry | 重黒光鎧騎兵 | keep_de | 依頼本文で通常tier=黒光鎧騎兵、上位tier=重黒光鎧騎兵が明示され、上位unitのcompact/action/helpだけが下位名を残す。 | 5600 (name), 6600 (action), 14600 (compact_name), 26600 (help_heading) |  |
+| heavy_rocket_cart_unit | Heavy Rocket Cart | 重装火箭車 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 5065 (name) |  |
+| heavy_scorpion_unit | Heavy Scorpion | ヘビー スコーピオン | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5439 (name), 26439 (help_heading) |  |
+| hussar_unit | Hussar | ハサー | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5661 (name), 26661 (help_heading) |  |
+| hussite_wagon_unit | Hussite Wagon | 戦闘馬車 | keep_de | DE内での表記ブレ。統一。 | 5561 (name), 6561 (action), 14561 (compact_name), 26561 (help_heading) |  |
+| iron_pagoda_unit | Iron Pagoda | 鉄浮屠 | revise | 依頼本文で通常tierの訳が明示され、現行通常unitを放置するとElite側の裁定と名称体系が分断される。 | 5594 (name), 6594 (action), 6595 (action), 14594 (compact_name), 26594 (help_heading) |  |
+| iroquois_warrior_unit | Iroquois Warrior | イロコイ ウォリア | keep_de | DE内での表記ブレ。統一。 | 5011 (name), 6011 (action), 14011 (compact_name), 26011 (help_heading) |  |
+| janissary_unit | Janissary | イェニチェリ | keep_de | Explicit human adjudication to retain the current DE Japanese terminology. | 5105 (name), 26105 (help_heading) |  |
+| light_cavalry_unit | Light Cavalry | 騎兵 | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5444 (name), 26444 (help_heading) |  |
+| longbowman_unit | Longbowman | ロングボウ | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5107 (name), 26107 (help_heading) |  |
+| magyar_huszar_unit | Magyar Huszar | マジャール ハサー | restore | 旧版の名前に統一。 | 5728 (name), 6728 (action), 14728 (compact_name), 26728 (help_heading) |  |
+| mounted_samurai_unit | Mounted Samurai | 騎馬武者 | revise | より一般的で自然な名称に | 5039 (name), 6039 (action), 14039 (compact_name), 26039 (help_heading) |  |
+| obuch_unit | Obuch | オブフ兵 | revise | ポーランド語 obuch /ˈɔ.bux/ の語末 ch は /x/。現行の「オブヒ」「オブシュ」の揺れを整理し、原語発音に近い「オブフ」に統一。 | 5558 (name), 6558 (action), 14558 (compact_name), 26558 (help_heading) |  |
+| plumed_archer_unit | Plumed Archer | 羽飾射手 | keep_de | DE内での表記ブレ。統一。 | 5683 (name), 6683 (action), 14683 (compact_name), 26683 (help_heading) |  |
+| qizilbash_warrior_unit | Qizilbash Warrior | クズルバシュ ウォリア | keep_de | DE内での表記ブレ。統一。 | 5048 (name), 6048 (action), 14048 (compact_name), 26048 (help_heading) |  |
+| rocket_cart_unit | Rocket Cart | 火箭車 | revise | Explicit terminology review: Chinese rocket weapon terminology uses Fire Arrow terminology; Korean Shinkichon uses the standard Japanese character form. | 5064 (name) |  |
+| royal_janissary_unit | Royal Janissary | 近衛イェニチェリ | keep_de | Explicit human adjudication to retain the current DE Japanese terminology. | 5115 (name), 26115 (help_heading) |  |
+| savar_unit | Savar | サヴァール | keep_de | technology裁定をunitへ自動伝播できない。unitのfull/compactは一致するがaction/helpの異綴りが意図的かを別途裁定する必要がある。 | 5703 (name), 6703 (action), 14703 (compact_name), 26703 (help_heading) |  |
+| serjeant_unit | Serjeant | セルジェアント | keep_de | DE内での表記ブレ。統一。 | 5538 (name), 6538 (action), 14538 (compact_name), 26538 (help_heading) |  |
+| steppe_lancer_unit | Steppe Lancer | ステップ ランサー | keep_de | DE内での表記ブレ。統一。 | 5009 (name), 6009 (action), 14009 (compact_name), 26009 (help_heading) |  |
+| teutonic_knight_unit | Teutonic Knight | チュートン ナイト | restore | Restored by explicit human adjudication based on established legacy Japanese terminology. | 5112 (name), 26112 (help_heading) |  |
+| throwing_axeman_unit | Throwing Axeman | フランカ スロウ | keep_de | DE内での表記ブレ。統一。 | 5111 (name), 6111 (action), 14111 (compact_name), 26111 (help_heading) |  |
+| urumi_swordsman_unit | Urumi Swordsman | ウルミ剣士 | keep_de | DE内での表記ブレ。統一。 | 5403 (name), 6403 (action), 14403 (compact_name), 26403 (help_heading) |  |
+| war_galley_unit | War Galley | 大型ガレー船 | restore | 旧版の名前に統一。 | 5091 (name), 6091 (action), 14091 (compact_name), 26091 (help_heading) |  |
+| winged_hussar_unit | Winged Hussar | ウイングド ハサー | keep_de | DE内での表記ブレ。統一。 | 5577 (name), 6577 (action), 14577 (compact_name), 26577 (help_heading) |  |

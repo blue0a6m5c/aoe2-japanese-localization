@@ -21,6 +21,7 @@ from . import context_overrides
 from . import term_audit
 from . import source_apply
 from . import validator
+from . import builder
 
 
 def positive(value: str) -> int:
@@ -37,6 +38,8 @@ def argument_parser() -> argparse.ArgumentParser:
     commands = parser.add_subparsers(dest='command', required=True)
     validate = commands.add_parser('validate', help='Validate approved decisions and resolve final values')
     validate.add_argument('--decisions', type=Path, default=validator.DEFAULT_DECISIONS)
+    production_build = commands.add_parser('build', help='Build the decision-driven Production Mod and glossary')
+    production_build.add_argument('--decisions', type=Path, default=validator.DEFAULT_DECISIONS)
     commands.add_parser('stats', help='Counts, categories, and source SHA-256 inventory')
     commands.add_parser('legacy-stats', help='Legacy DLL counts, ranges, overlaps, and generation ID intersections')
     terms = commands.add_parser('term-audit', help='Phase 2A-1 structural concept review; no decisions or patches')
@@ -194,6 +197,19 @@ def main(argv=None) -> int:
             print(f'resolved: {len(result.resolved)}')
             print('errors: 0')
             print('roles: ' + ', '.join(f'{role}={count}' for role, count in result.role_counts.items()))
+            return 0
+        if args.command == 'build':
+            result = builder.build_repository(args.decisions, args.source_root)
+            print('Build completed')
+            print(f'decisions: {result.decisions}')
+            print(f'targets: {result.targets}')
+            print(f'overrides: {result.overrides}')
+            print(f'unchanged: {result.unchanged}')
+            if result.mod_path is None:
+                print('No overrides required; Mod payload was not published')
+            else:
+                print(f'mod: {result.mod_path.as_posix()}')
+            print(f'glossary: {result.glossary_path.as_posix()}')
             return 0
         if args.command == 'apply':
             if args.config:

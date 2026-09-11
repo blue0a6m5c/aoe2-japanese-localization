@@ -1,56 +1,11 @@
-# glossary（正式裁定の派生用語集）
+# glossary（正式裁定の生成ビュー）
 
-## glossary の目的
+翻訳裁定の唯一の正本は `decisions/` です。
 
-正式裁定済みのゲーム用語を、第三者が理解・再利用できる最小用語集としてまとめる。
-目的は String ID ごとの翻訳一覧の複製ではなく、
-概念 → 採用日本語 → 英語名称 → 根拠・適用上の注意を人間が把握できることである。
+[terms.md](terms.md) は `decisions/translations.json` にある全裁定を人間が読みやすい形へ変換した生成ビューです。第二の正本ではなく、直接編集してはいけません。
 
-本体は [terms.md](terms.md)。104 件の名称裁定を決定種別ごとに転記する。
+次の Production build によって Mod と一緒に再生成されます。
 
-## reviews/ との責務の違い
-
-| | reviews/ | glossary/ |
-|---|---|---|
-| 役割 | 正式裁定の Source of Truth（正本） | 正本の派生資料（参照用） |
-| 内容 | 採用訳・署名・binding・全文・layout 置換 | 用語の読みやすい一覧＋適用注意 |
-| 機械処理 | patch / Mod 生成の入力 | 入力にしない（パイプ表は人手照合用） |
-| 更新 | 人間の明示裁定のみ | 正本の変更後に転記し直すのみ |
-
-authoritative なのは `reviews/` である。
-`glossary/` を新たな裁定正本にしてはならない。
-
-## 派生資料の原則
-
-- 矛盾時は `reviews/` を優先する。`glossary/` は正本を修正しない。
-- 新しい裁定を `glossary/` へ直接追加してはならない。新規判断・未裁定 findings の採用は禁止。
-- `terms.md` の各行は正本レコードの機械的転記であり、新たな翻訳判断を含まない。
-  根拠メモは正本 `notes` の転記であり、理由を新設していない。
-- context override（29 件）・layout（13 件）は用語として引用してはならない。
-  `terms.md` には対象 ID の列挙と参照先のみを記し、全文・置換内容は転記しない。
-  これらは名称への伝播が禁止されているためである（`docs/context-overrides.md` 参照）。
-
-## Phase 2A 監査との関係
-
-- Phase 2A-1（`docs/phase2a-1.md`）の findings／unresolved は監査資料であり裁定ではない。
-  人間が承認し `reviews/` に登録されるまで `glossary/` に掲載しない。
-- 例: Relic「聖なる箱」は名称正本の正式裁定（5350・restore）のため掲載する。
-- 例: Fire Ship「火炎船」は名称正本の正式裁定（5426・restore）のため掲載する。
-
-## ファイル構成
-
-- `README.md`（本ファイル）: 運用規則。
-- `terms.md`: 用語集本体。Markdown のパイプ表は GitHub で読め、機械的にも解析できる単一形式。
-  第二の形式（TSV/JSON 等）は持たない。形式を分けると乖離の原因になるためである。
-
-## 再生成手順
-
-正本が更新された場合のみ、以下の機械的転記をやり直す（既存ファイルの直接編集ではない）。
-
-1. 件数を確認する（名称 104 件・context 29 件・layout 13 件が変わっていないか）。
-2. 一時領域の生成スクリプトで `terms.md` を作り直す（入力は `reviews/` の 3 正本のみ）。
-   重複 ID・両正本への二重登録・未裁定語の混入がないことを表明検査する。
-3. `git diff --check` と `git status` で差分を確認する。
-
-`source/`、`reviews/`、`translations/`、`dist/` は変更しない。
-patch／Mod 生成・ゲームへのコピー・commit・push は本作業の範囲外である。
+``` console
+python -m tools.localization build
+```
