@@ -2177,7 +2177,7 @@
       "gameplay_object": "technology 689",
       "translation": "ステップ牧畜",
       "decision": "revise",
-      "reason": "単なる草原ではなく、ステップ地帯の民族の固有のテクノロジーであることを強調。",
+      "reason": "単なる草原ではなく、ステップ地帯の民族の固有のテクノロジーであることを強調。説明の「斥候部隊」は「斥候系統」に変更。",
       "notes": null,
       "targets": [
         {
@@ -2191,7 +2191,8 @@
         },
         {
           "string_id": "8311",
-          "role": "action"
+          "role": "action",
+          "text": "ステップ牧畜\\n(斥候系統、ステップ ランサーおよび弓騎兵の育成速度+100%)"
         },
         {
           "string_id": "28311",

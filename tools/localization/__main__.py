@@ -20,6 +20,7 @@ from .human_reviews import load_ledger, DEFAULT_LEDGER
 from . import context_overrides
 from . import term_audit
 from . import source_apply
+from . import validator
 
 
 def positive(value: str) -> int:
@@ -34,6 +35,8 @@ def argument_parser() -> argparse.ArgumentParser:
     parser.add_argument('--source-root', type=Path, default=Path('source'))
     parser.add_argument('--config', type=Path, help='JSON object mapping dataset names to directories under source-root')
     commands = parser.add_subparsers(dest='command', required=True)
+    validate = commands.add_parser('validate', help='Validate approved decisions and resolve final values')
+    validate.add_argument('--decisions', type=Path, default=validator.DEFAULT_DECISIONS)
     commands.add_parser('stats', help='Counts, categories, and source SHA-256 inventory')
     commands.add_parser('legacy-stats', help='Legacy DLL counts, ranges, overlaps, and generation ID intersections')
     terms = commands.add_parser('term-audit', help='Phase 2A-1 structural concept review; no decisions or patches')
@@ -176,6 +179,22 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     plan_blocked = False
     try:
+        if args.command == 'validate':
+            try:
+                result = validator.validate_repository(args.decisions, args.source_root)
+            except validator.ValidationError as exc:
+                print('Validation failed', file=sys.stderr)
+                for diagnostic in exc.diagnostics:
+                    print('- ' + diagnostic.render(), file=sys.stderr)
+                print(f'errors: {len(exc.diagnostics)}', file=sys.stderr)
+                return 1
+            print('Validation passed')
+            print(f'decisions: {result.decisions}')
+            print(f'targets: {result.targets}')
+            print(f'resolved: {len(result.resolved)}')
+            print('errors: 0')
+            print('roles: ' + ', '.join(f'{role}={count}' for role, count in result.role_counts.items()))
+            return 0
         if args.command == 'apply':
             if args.config:
                 raise ValueError('Source apply uses the audited default dataset layout; --config is unsupported')
