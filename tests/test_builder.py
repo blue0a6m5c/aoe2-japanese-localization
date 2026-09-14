@@ -288,7 +288,7 @@ class BuilderTests(unittest.TestCase):
             actual = {entry.string_id: entry.value for entry in parsed.entries}
             self.assertEqual(actual, expected)
             self.assertEqual((result.decisions, result.targets, result.overrides, result.unchanged),
-                             (195, 865, len(expected), 865 - len(expected)))
+                             (195, 869, len(expected), 869 - len(expected)))
             glossary = (root / 'glossary/terms.md').read_text(encoding='utf-8')
             data = validator.load_decisions(ROOT / 'decisions/translations.json')
             self.assertEqual(sum(record['id'] in glossary for record in data['records']), 195)

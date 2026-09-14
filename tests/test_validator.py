@@ -52,7 +52,7 @@ class DecisionValidatorTests(unittest.TestCase):
     @unittest.skipUnless(SOURCE_EN.is_file() and SOURCE_JP.is_file(), 'local DE source is not installed')
     def test_current_decisions_all_pass(self):
         result = validate_repository(ROOT / 'decisions/translations.json', ROOT / 'source')
-        self.assertEqual((result.decisions, result.targets, len(result.resolved)), (195, 865, 865))
+        self.assertEqual((result.decisions, result.targets, len(result.resolved)), (195, 869, 869))
 
     def assert_rejected(self, data, en=None, jp=None, contains=None):
         en, jp = (en, jp) if en is not None else sources()
